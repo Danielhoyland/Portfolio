@@ -1,0 +1,124 @@
+-- 1. Retrieve all users and their associated products
+SELECT Users.Username, Products.Name
+FROM Users
+INNER JOIN Users_Lists ON Users.ID = Users_Lists.User_ID
+INNER JOIN Products ON Users_Lists.Product_ID = Products.ID;
+
+-- 2. Retrieve all recipes and their descriptions
+SELECT Name, Description
+FROM recipe;
+
+-- 3. Retrieve the recipe names and the users who added them
+SELECT recipe.Name, Users.Username
+FROM recipe
+INNER JOIN users_recipe ON recipe.ID = users_recipe.Recipe_ID
+INNER JOIN Users ON users_recipe.User_ID = Users.ID;
+
+-- 4. Retrieve the products associated with a specific recipe (e.g., Recipe 1)
+SELECT Products.Name
+FROM Products
+INNER JOIN recipe_products ON Products.ID = recipe_products.Product_ID
+WHERE recipe_products.Recipe_ID = 1;
+
+-- 5. Find the user who added a specific recipe (e.g., Recipe 3)
+SELECT Users.Username
+FROM Users
+INNER JOIN users_recipe ON Users.ID = users_recipe.User_ID
+WHERE users_recipe.Recipe_ID = 3;
+
+-- 6. Retrieve all users and their total number of products in their lists
+SELECT Users.Username, COUNT(Users_Lists.Product_ID) AS Total_Products
+FROM Users
+LEFT JOIN Users_Lists ON Users.ID = Users_Lists.User_ID
+GROUP BY Users.ID;
+
+-- 7. Find the products with a type of 'Dairy'
+SELECT Name
+FROM Products
+WHERE Type_food = 'Dairy';
+
+-- 8. Find the recipes that use 'Milk' as an ingredient
+SELECT recipe.Name
+FROM recipe
+INNER JOIN recipe_products ON recipe.ID = recipe_products.Recipe_ID
+INNER JOIN Products ON recipe_products.Product_ID = Products.ID
+WHERE Products.Name = 'Milk';
+
+-- 9. Find the users who have 'Eggs' in their lists
+SELECT DISTINCT Users.Username
+FROM Users
+INNER JOIN Users_Lists ON Users.ID = Users_Lists.User_ID
+INNER JOIN Products ON Users_Lists.Product_ID = Products.ID
+WHERE Products.Name = 'Eggs';
+
+-- 10. Retrieve the expiration dates for all products in a user's list (e.g., User 1)
+SELECT Products.Name, Users_Lists.Expiration_date
+FROM Products
+INNER JOIN Users_Lists ON Products.ID = Users_Lists.Product_ID
+WHERE Users_Lists.User_ID = 1;
+
+-- 11. Find recipes added by a specific user (e.g., User 2)
+SELECT recipe.Name
+FROM recipe
+INNER JOIN users_recipe ON recipe.ID = users_recipe.Recipe_ID
+WHERE users_recipe.User_ID = 2;
+
+-- 12. Retrieve the total base measure of all products used in a recipe (e.g., Recipe 2)
+SELECT SUM(Products.Base_measure) AS Total_Base_Measure
+FROM Products
+INNER JOIN recipe_products ON Products.ID = recipe_products.Product_ID
+WHERE recipe_products.Recipe_ID = 2;
+
+-- 13. Find the users who have products with an expiration date in September 2023
+SELECT DISTINCT Users.Username
+FROM Users
+INNER JOIN Users_Lists ON Users.ID = Users_Lists.User_ID
+WHERE Users_Lists.Expiration_date BETWEEN '2023-09-01' AND '2023-09-30';
+
+-- 14. Retrieve the usernames of users who have added a recipe (e.g., Recipe 1)
+SELECT Users.Username
+FROM Users
+INNER JOIN users_recipe ON Users.ID = users_recipe.User_ID
+WHERE users_recipe.Recipe_ID = 1;
+
+-- 15. Find recipes that use both 'Milk' and 'Flour' as ingredients
+SELECT recipe.Name
+FROM recipe
+INNER JOIN recipe_products AS rp1 ON recipe.ID = rp1.Recipe_ID
+INNER JOIN recipe_products AS rp2 ON rp1.Recipe_ID = rp2.Recipe_ID
+INNER JOIN Products AS p1 ON rp1.Product_ID = p1.ID
+INNER JOIN Products AS p2 ON rp2.Product_ID = p2.ID
+WHERE p1.Name = 'Milk' AND p2.Name = 'Flour';
+
+-- 16. Retrieve the usernames of users who have added at least two recipes
+SELECT Users.Username
+FROM Users
+INNER JOIN (
+    SELECT User_ID
+    FROM users_recipe
+    GROUP BY User_ID
+    HAVING COUNT(Recipe_ID) >= 2
+) AS UserWithTwoOrMoreRecipes ON Users.ID = UserWithTwoOrMoreRecipes.User_ID;
+
+-- 17. Find recipes added by a specific user (e.g., User 1)
+SELECT recipe.Name
+FROM recipe
+INNER JOIN users_recipe ON recipe.ID = users_recipe.Recipe_ID
+WHERE users_recipe.User_ID = 1;
+
+-- 18. Retrieve the names of products not used in any recipe
+SELECT Products.Name
+FROM Products
+LEFT JOIN recipe_products ON Products.ID = recipe_products.Product_ID
+WHERE recipe_products.Recipe_ID IS NULL;
+
+-- 19. Find recipes that do not have any associated products
+SELECT recipe.Name
+FROM recipe
+LEFT JOIN recipe_products ON recipe.ID = recipe_products.Recipe_ID
+WHERE recipe_products.Product_ID IS NULL;
+
+-- 20. Find the recipes with descriptions that contain the word 'Italian'
+SELECT Name, Description
+FROM recipe
+WHERE Description LIKE '%Italian%';

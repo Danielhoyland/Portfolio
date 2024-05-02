@@ -1,0 +1,42 @@
+1. Verdier fra bruker
+select Username from users;
+
+2. Velg en user ut fra brukernavn
+select Username from users WHERE Username='Daniel';
+
+3. Velg en user ut fra Email
+select Username from users WHERE Email='Daniehoy@stud.ntnu.no';
+
+4. få en user ut fra Email sine varer
+SELECT p.Name, ul.Amount, p.Base_measure, p.Type_food, ul.Expiration_date, ul.Image_ID
+FROM users_lists ul
+INNER JOIN products p ON ul.Product_ID = p.ID
+WHERE ul.User_ID = 'Daniehoy@stud.ntnu.no';
+
+
+5. oppskrifter for brukeren
+SELECT u.Email AS User_Email, r.Name AS Recipe_Name, r.Description AS Recipe_Description,
+       GROUP_CONCAT(p.Name) AS Necessary_Ingredients
+FROM users u
+INNER JOIN users_recipe ur ON u.Email = ur.User_ID
+INNER JOIN recipe r ON ur.Recipe_ID = r.ID
+LEFT JOIN recipe_products rp ON r.ID = rp.Recipe_ID
+LEFT JOIN products p ON rp.Product_ID = p.ID
+WHERE u.Email = 'Daniehoy@stud.ntnu.no'
+GROUP BY u.Email, r.Name, r.Description;
+
+6. alle oppskrifter i systemet:
+SELECT r.ID AS Recipe_ID, r.Name AS Recipe_Name, r.Description AS Recipe_Description,
+       GROUP_CONCAT(p.Name) AS Necessary_Ingredients
+FROM recipe r
+LEFT JOIN recipe_products rp ON r.ID = rp.Recipe_ID
+LEFT JOIN products p ON rp.Product_ID = p.ID
+GROUP BY r.ID, r.Name, r.Description;
+
+7. alle produkter:
+SELECT p.ID AS Product_ID, p.Name AS Product_Name, p.Base_measure AS Product_Base_Measure, p.Type_food AS Product_Type,
+       GROUP_CONCAT(r.Name) AS Used_In_Recipes
+FROM products p
+LEFT JOIN recipe_products rp ON p.ID = rp.Product_ID
+LEFT JOIN recipe r ON rp.Recipe_ID = r.ID
+GROUP BY p.ID, p.Name, p.Base_measure, p.Type_food;

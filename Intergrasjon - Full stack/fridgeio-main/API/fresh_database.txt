@@ -1,0 +1,110 @@
+-- SQLite SQL Dump
+-- version 3.33.0
+-- https://www.sqlite.org/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Sep 19, 2023 at 02:10 PM
+
+BEGIN TRANSACTION;
+PRAGMA foreign_keys = ON; -- Enable foreign key constraints
+
+-- Database: fridgeio
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `Email` TEXT NOT NULL PRIMARY KEY,
+  `Username` TEXT NOT NULL,
+  `Password` TEXT NOT NULL
+);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `products`
+--
+
+CREATE TABLE IF NOT EXISTS `products` (
+  `ID` INTEGER PRIMARY KEY,
+  `Name` TEXT NOT NULL,
+  `Base_measure` TEXT NOT NULL,
+  `Type_food` TEXT NOT NULL
+);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `recipe`
+--
+
+CREATE TABLE IF NOT EXISTS `recipe` (
+  `ID` INTEGER PRIMARY KEY,
+  `Name` TEXT NOT NULL,
+  `Description` TEXT
+);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `recipe_products`
+--
+
+CREATE TABLE IF NOT EXISTS `recipe_products` (
+  `User_Email` TEXT,
+  `Product_ID` INTEGER,
+  `Amount` REAL,
+  FOREIGN KEY (`User_Email`) REFERENCES `users` (`Email`),
+  FOREIGN KEY (`Product_ID`) REFERENCES `products` (`ID`)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users_lists`
+--
+
+CREATE TABLE IF NOT EXISTS `users_lists` (
+  `User_Email` TEXT,
+  `Product_ID` INTEGER,
+  `Expiration_date` DATE,
+  `Amount` REAL,
+  `Image_ID` INTEGER,
+  FOREIGN KEY (`User_Email`) REFERENCES `users` (`Email`),
+  FOREIGN KEY (`Product_ID`) REFERENCES `products` (`ID`)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users_recipe`
+--
+
+CREATE TABLE IF NOT EXISTS `users_recipe` (
+  `User_Email` TEXT,
+  `Recipe_ID` INTEGER,
+  FOREIGN KEY (`User_Email`) REFERENCES `users` (`Email`),
+  FOREIGN KEY (`Recipe_ID`) REFERENCES `recipe` (`ID`)
+);
+
+-- --------------------------------------------------------
+
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `products`
+--
+
+CREATE UNIQUE INDEX IF NOT EXISTS `products_ID_uindex` ON `products` (`ID`);
+
+--
+-- Indexes for table `users`
+--
+
+CREATE UNIQUE INDEX IF NOT EXISTS `users_Email_uindex` ON `users` (`Email`);
+
+COMMIT;

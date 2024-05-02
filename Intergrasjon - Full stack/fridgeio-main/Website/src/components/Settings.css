@@ -1,0 +1,21 @@
+#delete_user {
+  background-color: #e1ecf4;
+  border-radius: 3px;
+  border: 1px solid #7aa7c7;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  width: 100px;
+  height: 60px;
+  margin-top: 30px;
+  justify-self: center;
+}
+#delete_user:hover{
+  background-color: #b3d3ea;
+  color: #2c5777;
+}
+#delete_user:active {
+  background-color: #a0c7e4;
+  color: #2c5777;
+}

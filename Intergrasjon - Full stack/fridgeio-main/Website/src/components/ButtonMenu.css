@@ -1,0 +1,77 @@
+.buttonmenu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    grid-row: 6;
+    grid-column: 1 / 2;
+    background-color: #ffffff;
+    overflow: auto;
+    height: 100%;
+}
+.navbutton { 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    border-radius: 5px;
+    background: #ffffff;
+    border: thin solid #5a80b1;
+    color: rgb(0, 0, 0);
+    width: 45%;
+    height: 45%;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Quicksand';
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none; 
+    outline: none;
+    margin-top: 5px;
+}
+.navbutton:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    outline: none;
+    color: rgb(0, 0, 0);
+    background: #dfe9f7;
+}
+.navbutton:active {
+  transform: translateY(2px);
+  color: rgb(0, 0, 0);
+}
+
+#icon_fridge { width: 10%; }
+#icon_book { width: 15%;}
+#icon_carrot { width: 20%;}
+#icon_settings { width: 18%; }
+
+link {
+    text-decoration: none;
+}
+
+/* DESKTOP STYLING */
+@media only screen and (min-width: 768px){
+    .buttonmenu {
+        grid-row: 4 / 9;
+        grid-column: 1;
+        overflow: hidden;
+        flex-direction: column;
+        justify-content: start;
+        flex-wrap: nowrap;
+        overflow-y: auto;
+        background-color: transparent;
+    }
+    #icon_fridge { width: 20px; }
+    #icon_book { width: 20px; }
+    #icon_carrot { width: 20px; }
+    #icon_settings { width: 30px; }
+    .navbutton {
+        flex-direction: row; 
+        width: 90%;
+        height: 50px;
+        font-size: 20px;
+        align-items: center;
+        margin-bottom: 10px;
+        margin-top: 0; 
+    }
+}

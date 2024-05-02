@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  # Service name is react-app
+  react-app:
+  # build from Dockerfile
+    build: Website/
+    # expose 3000 as hosting port & 3000 in container port
+    ports:
+      - "3000:80"
+  api-app:
+    build: API/
+    ports:
+      - "8080:8080"
