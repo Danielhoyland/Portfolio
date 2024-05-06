@@ -1,0 +1,35 @@
+#overview-grid {
+    display: grid;
+    grid-template-columns: 20px 280px 20px 1fr 20px;
+    grid-template-rows: 20px 1fr 20px;
+    width: 100vw; /* Set the width to 100% of the viewport width */
+    height: calc(100vh - 102px); /* Set the height to 100% of the viewport height */
+}
+#graphWrapper {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+    height: 100%;
+    width: 100%;
+}
+#settings {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    height: 100%;
+    width: 100%;
+}
+#sorting {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    height: 100%;
+    width: 100%;
+}
+#accordion-bar{
+    display: grid;
+    grid-template-columns: 1fr 3px 30px;
+    grid-template-rows: 40px;
+}
+#accordion-machine{
+    display: grid;
+    grid-template-columns: 1fr 3px 30px;
+    grid-template-rows: 40px;
+}

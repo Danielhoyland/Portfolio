@@ -1,0 +1,23 @@
+stages:
+  - deploy
+  - prod
+
+deploy-job:
+  tags:
+    - development
+  stage: deploy
+  only:
+    - dev-branch
+  environment: development
+  script:
+    - docker compose -f docker-compose-1.yaml up --build -d
+
+production-job:
+  tags:
+    - production
+  stage: prod
+  only:
+    - main
+  environment: production
+  script:
+    - docker compose -f docker-compose.yaml up --build -d

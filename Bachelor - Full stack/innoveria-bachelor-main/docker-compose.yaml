@@ -1,0 +1,81 @@
+version: "0.1"
+
+services:
+  #INPUT API, THE ONE THAT RECIVES DATA
+  ingressapi:
+    volumes:
+      - type: bind
+        source: /home/ubuntu/envars/ingress/.env
+        target: /app/.env
+      - type: bind
+        source: /home/ubuntu/etc/letsencrypt
+        target: /etc/letsencrypt
+
+    build: Backend/API/
+    ports:
+      - "9090:9090"
+  
+  #OUTPUT API, THE ONE THAT SENDS DATA TO FRONTEND
+  egressapi:
+    volumes:
+      - type: bind
+        source: /home/ubuntu/envars/egress/.env
+        target: /app/.env
+      - type: bind
+        source: /home/ubuntu/etc/letsencrypt
+        target: /etc/letsencrypt
+    build: Backend/EgressAPI/
+    ports:
+      - "9091:9091"
+
+  website:
+    volumes:
+      - type: bind
+        source: /home/ubuntu/etc/letsencrypt
+        target: /etc/letsencrypt
+
+      - type: bind
+        source: /home/ubuntu/var/www/certbot
+        target: /var/www/certbot
+    build:
+      context: Frontend/power-tracker/
+      dockerfile: prod.Dockerfile
+    ports:
+      - "80:80"
+      - "443:443"
+
+  adminpage:
+    build:
+      context: Frontend/sys-admin/
+      dockerfile: prod.Dockerfile
+
+    volumes:
+      - type: bind
+        source: /home/ubuntu/etc/letsencrypt
+        target: /etc/letsencrypt
+
+      - type: bind
+        source: /home/ubuntu/var/www/certbot
+        target: /var/www/certbot
+    ports:
+      - "9093:80"
+      - "9094:443"
+
+
+# CERTBOT COMPOSE SETUP USED FOR SSL 
+#  certbot:
+#    image: certbot/certbot
+#    container_name: certbot
+#    volumes:
+#      - ./certbot/conf:/etc/letsencrypt
+#      - ./certbot/www:/var/www/certbot
+#      - type: bind
+#        source: /home/ubuntu/etc/letsencrypt
+#        target: /etc/letsencrypt
+
+#      - type: bind
+#        source: /home/ubuntu/var/www/certbot
+#        target: /var/www/certbot
+#    command: certonly --webroot -w /var/www/certbot --force-renewal --email odinaa@stud.ntnu.no -d powertracker.public.skyhigh.iik.ntnu.no --agree-tos
+  
+

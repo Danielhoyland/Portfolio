@@ -1,0 +1,19 @@
+#header {
+    vertical-align:middle;
+}
+
+#loginButton {
+    color: black
+}
+
+#loginpage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#logincard {
+    padding-bottom: 200px;
+    width: 400px;
+}

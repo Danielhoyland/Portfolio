@@ -1,0 +1,19 @@
+.panel-layout {
+    display: flex;
+}
+
+.filler {
+    width: 200px;
+}
+
+.spacer {
+    height: 25px;
+    width: 100%;
+}
+
+.center {
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,39 @@
+version: "0.1"
+
+services:
+  #INPUT API, THE ONE THAT RECIVES DATA
+  ingressapi:
+    volumes:
+      - type: bind
+        source: /home/ubuntu/envars/ingress/.env
+        target: /app/.env
+
+    build: Backend/API/
+    ports:
+      - "9090:9090"
+  
+  #OUTPUT API, THE ONE THAT SENDS DATA TO FRONTEND
+  egressapi:
+    volumes:
+      - type: bind
+        source: /home/ubuntu/envars/egress/.env
+        target: /app/.env
+    build: Backend/EgressAPI/
+    ports:
+      - "9091:9091"
+
+  website:
+    build:
+      context: Frontend/power-tracker/
+      dockerfile: dev.Dockerfile
+    ports:
+      - "9092:80"
+  
+  adminpage:
+    build:
+      context: Frontend/sys-admin/
+      dockerfile: dev.Dockerfile
+    ports:
+      - "9093:80"
+    
+

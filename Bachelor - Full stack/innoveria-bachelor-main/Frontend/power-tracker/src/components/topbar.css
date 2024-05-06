@@ -1,0 +1,44 @@
+#menubar{
+    display: flex;
+    flex-direction: column;
+}
+
+#topbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 50px;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+}
+
+.logout {
+   margin-left: 10px;
+   margin-right: 10px;
+}
+
+#topbar-start{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 150px;
+}
+
+#topbar-end{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 150px;
+}
+
+.elem { 
+    margin-left: 10px;
+    align-self: center;
+}
