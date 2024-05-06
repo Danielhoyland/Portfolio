@@ -1,3 +1,2 @@
-Dette er bachelor proskjektet mitt.
-
-Oppgaven jeg og gruppen min fikk var [Dette](Epost krav.pdf)
+This is my bachelor thesis.
+My task for me and my group was [this](/Bachelor%20-%20Full%20stack/Epost%20krav.pdf).
