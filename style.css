@@ -1,0 +1,106 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #f1f1f1;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  
+  a {
+    color: #00aaff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Header and footer styling */
+  .site-header, .site-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .site-header nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .site-header nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  .site-header nav ul li a {
+    color: #fff;
+  }
+  
+  /* Grid layout */
+  .portfolio-content {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+  
+  .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+  }
+  
+  /* Large grid item for images and description */
+  .grid-item.large {
+    grid-column: span 3;
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .grid-item.large img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .grid-item.large p {
+    color: #bbb;
+    font-size: 1.2rem;
+  }
+  
+  /* Small grid items for links */
+  .grid-item.small {
+    background-color: #444;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .grid-item.small a {
+    color: #f4f4f4;
+    font-size: 1rem;
+  }
+  
+  .grid-item.small:hover {
+    background-color: #555;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .row {
+      grid-template-columns: 1fr;
+    }
+  }
+  
