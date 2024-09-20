@@ -3,7 +3,7 @@ email: danielhoyland@hotmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   My portfolio, preview some of my skills and previous projects. Feel free to send me an E-mail!
 baseurl: "/Portfolio/PortfolioWebsite" # the subpath of your site, e.g. /blog
-url: "https://danielhoyland.github.io/Portfolio" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://danielhoyland.github.io/Portfolio/" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  Daniehoy
 # Build settings
 theme: minima
