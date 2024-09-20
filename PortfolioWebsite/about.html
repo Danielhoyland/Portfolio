@@ -8,6 +8,8 @@
     </head>
 
 	<body>
+        <!-- Include header -->
+        <div id="header"></div>
 		<div class="grid-item" id="about">
             <h1>About me</h1>
             <p>
@@ -15,5 +17,17 @@
                 I am an avid learner, i belive that you are never truly finished learning. I love exploring new technologies, figuring out how they work, and how to use them effectivley.
             </p>
         </div>
+        <!-- Include footer -->
+        <div id="footer"></div>
+        <script>
+        // Dynamically load the header and footer
+        fetch('PortfolioWebsite/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+    
+        fetch('PortfolioWebsite/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+        </script>
 	</body>
 </html>
