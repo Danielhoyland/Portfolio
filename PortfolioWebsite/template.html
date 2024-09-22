@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Subject Template</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Main Header -->
+  <header class="main-header">
+    <h1>Subject Title</h1>
+  </header>
+
+  <!-- Description Section -->
+  <section class="description-section">
+    <p>This section provides a general description of the subject. It covers the overview of the topic, goals, and significance.</p>
+  </section>
+
+  <!-- Learning and Technology Section -->
+  <section class="learning-tech-section">
+    <div class="what-i-learned">
+      <h2>What I Have Learned</h2>
+      <p>This section explains the core takeaways from the subject. It details how the subject helped me grow and develop new skills.</p>
+    </div>
+    
+    <div class="tech-used">
+      <h3>Technologies & Programming Languages Used</h3>
+      <ul>
+        <li>Programming Language 1</li>
+        <li>Programming Language 2</li>
+        <li>Technology 1</li>
+        <li>Technology 2</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Alternating Text and Image Sections -->
+  <section class="alternating-sections">
+    <!-- Text Left, Image Right -->
+    <div class="row">
+      <div class="text">
+        <h3>Subtopic 1</h3>
+        <p>Explanation or description of the subtopic. This section provides insights into a specific aspect of the subject, with text positioned on the left.</p>
+      </div>
+      <div class="image">
+        <img src="path-to-your-image-1.jpg" alt="Image description 1">
+      </div>
+    </div>
+
+    <!-- Image Left, Text Right -->
+    <div class="row">
+      <div class="image">
+        <img src="path-to-your-image-2.jpg" alt="Image description 2">
+      </div>
+      <div class="text">
+        <h3>Subtopic 2</h3>
+        <p>Another detailed explanation of a different aspect of the subject. Here, the text is positioned on the right, while the image is on the left.</p>
+      </div>
+    </div>
+  </section>
+  <script>
+    // Function to create a dot at the mouse position
+    function createDot(x, y) {
+      const dot = document.createElement('div');
+      dot.classList.add('dot');
+      
+      // Set initial position of the dot based on the mouse location
+      dot.style.left = `${x}px`;
+      dot.style.top = `${y}px`;
+  
+      // Append the dot to the body
+      document.body.appendChild(dot);
+  
+      // Remove the dot from the DOM after the animation ends
+      setTimeout(() => {
+        dot.remove();
+      }, 1000); // Matches the duration of the fadeOut animation
+    }
+  
+    // Listen for mousemove event on the body
+    document.body.addEventListener('mousemove', (event) => {
+      // Get the mouse position
+      const x = event.clientX;
+      const y = event.clientY + window.scrollY; // Adjust y by scroll position
+      
+      // Create a small spray of dots around the cursor
+      for (let i = 0; i < 5; i++) {
+        // Create a random offset for the dots to spread around the cursor
+        const offsetX = Math.random() * 20 - 10;
+        const offsetY = Math.random() * 20 - 10;
+        
+        // Create the dot at the randomized position around the cursor
+        createDot(x + offsetX, y + offsetY);
+      }
+    });
+  </script>
+
+</body>
+</html>

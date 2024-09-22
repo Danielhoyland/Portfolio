@@ -1,0 +1,142 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 20px;
+  }
+  
+  /* Spray effect: Dot styling */
+  .dot {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: black; /* Black pixel spray */
+    border-radius: 50%;
+    pointer-events: none; /* Prevent dots from interfering with any other element */
+    animation: fadeOut 1s forwards;
+    z-index: 0; /* Keep dots behind the grid items */
+  }
+  
+  /* Fade out animation for dots */
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+      transform: translateY(20px); /* Makes dots drift downward */
+    }
+  }
+  h1, h2, h3 {
+    margin-bottom: 15px;
+  }
+  
+  /* Main Header */
+  .main-header {
+    background-color: #4A90E2;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .main-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  /* Description Section */
+  .description-section {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #eee;
+    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .description-section p {
+    font-size: 1.2rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Learning and Technologies Section */
+  .learning-tech-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .what-i-learned {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tech-used {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tech-used h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+  
+  .tech-used ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .tech-used ul li {
+    padding: 5px 0;
+  }
+  
+  /* Alternating Sections */
+  .alternating-sections .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .alternating-sections .text {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .alternating-sections .image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .learning-tech-section, .alternating-sections .row {
+      grid-template-columns: 1fr;
+    }
+  
+    .alternating-sections .image img {
+      margin-top: 20px;
+    }
+  }
+  
