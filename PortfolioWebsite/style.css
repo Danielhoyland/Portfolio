@@ -170,3 +170,29 @@ h3 {
         margin-top: 20px;
     }
 }
+
+/* Header and footer styling */
+.site-header, .site-footer {
+    position: relative;
+    z-index: 1; /* Content is above dots */
+    background-color: #f8f9fa; /* Light header/footer background */
+    color: #333; /* Darker text color */
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #e0e0e0; /* Subtle border for definition */
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .site-header nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .site-header nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  .site-header nav ul li a {
+    color: #0077cc;
+  }
