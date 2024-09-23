@@ -6,23 +6,48 @@ body {
   color: #333;
 }
 
-/* Spray effect: Dot styling */
 .dot {
   position: absolute;
-  width: 5px;
-  height: 5px;
-  background-color: black; /* Black pixel spray */
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  pointer-events: none; /* Prevent dots from interfering with any other element */
-  animation: fadeOut 1s forwards;
-  z-index: 0; /* Keep dots behind the grid items */
+  background-color: #ff5733; /* Starting color (Red) */
+  opacity: 1;
+  animation: colorChange 1s infinite ease-out, fadeOut 1s forwards; /* Color change and fade-out */
+  transition: transform 1s ease-out; /* Smooth movement */
 }
 
-/* Fade out animation for dots */
+/* Fade-out effect */
 @keyframes fadeOut {
-  to {
-    opacity: 0;
-    transform: translateY(20px); /* Makes dots drift downward */
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Color changing effect */
+@keyframes colorChange {
+  0% {
+      background-color: #ff5733;
+      /* Red */
+  }
+
+  25% {
+      background-color: #33ff57;
+      /* Green */
+  }
+
+  50% {
+      background-color: #3357ff;
+      /* Blue */
+  }
+
+  75% {
+      background-color: #f3ff33;
+      /* Yellow */
+  }
+
+  100% {
+      background-color: #ff5733;
+      /* Back to Red */
   }
 }
 
