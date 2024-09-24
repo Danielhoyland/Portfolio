@@ -11,14 +11,9 @@ fetch('footer.html')
 
         // Dynamically set the correct path based on the current URL location
         const githubIcon = document.getElementById('github-icon');
-        const currentPath = window.location.pathname;
-        let iconPath;
-
-        if (currentPath.includes('/subfolder/')) {
-            iconPath = 'images/Octicons-mark-github.svg';
-        } else {
-            iconPath = 'PortfolioWebsite/images/Octicons-mark-github.svg';
-        }
+        
+        let iconPath = 'images/Octicons-mark-github.svg';
+        
 
         githubIcon.src = iconPath;
     });
