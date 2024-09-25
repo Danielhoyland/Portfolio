@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Subject Template</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Include header -->
+    <div id="header"></div>
+    <div class="sectionDiv">
+        <!-- Main Header -->
+        <header class="main-header">
+            <h1>Bachelor Thesis</h1>
+            <h2>PROG2900</h2>
+        </header>
+
+        <!-- Description Section -->
+        <section class="description-section">
+            <h2>Description</h2>
+            <p>The bachelor thesis is based on either a problem/thesis proposal obtained from business, public sector or
+                the academic community. The proposals must be pre-approved by the course coordinator. Through the
+                assignment, students will identify, formulate and solve relevant problems within programmers' field of
+                work. The candidate must use knowledge and skills from several subject areas in the study, as well as
+                independent specialization where necessary. Through the bachelor thesis, the candidate must contribute
+                to either research or development. The candidate must also acquire skills in project management,
+                planning, implementation and documentation of a project work.
+
+                The bachelor thesis must include software development, and may also have elements of research,
+                innovation or entrepreneurship.</p>
+
+            <p>Read more at the <a href="https://www.ntnu.edu/studies/courses/PROG2900/#tab=omEmnet">subject site</a>
+            </p>
+        </section>
+
+        <!-- Learning and Technology Section -->
+        <section class="learning-tech-section">
+            <div class="what-i-learned">
+                <h2>What the Bachelor for was about </h2>
+                <p>Me and my group got a task from Innoveria with the the following task from them</p>
+                <p>
+                    Our task is to create a web application that collects, stores, and displays electrical usages from
+                    sensors placed on machines within a factory setting. The application should be available on PC and
+                    tablet and deliver an intuitive user experience. It should also be scalable and expandable, allowing
+                    new features to be added with relative ease by a new developer.
+                </p>
+                <p>
+                    Additionally, the application should contain the following functionality:
+                </p>
+                <ul>
+                    <li>Overview page that displays collected data:
+                        <ul>
+                            <li>Graph view</li>
+                            <li>Table view</li>
+                            <li>Layered sorting system, layered into:
+                                <ul>
+                                    <li>Building</li>
+                                    <li>Department (optional)</li>
+                                    <li>Production line</li>
+                                    <li>Machine</li>
+                                </ul>
+                            </li>
+                            <li>Filtering results by layer, individual machine, highest consumer, and/or time of data
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Access rights</li>
+                    <li>Page for ENØK measures:
+                        <ul>
+                            <li>Accepted/proposed measures</li>
+                            <li>An ENØK superuser with permissions to accept/discard proposed measures</li>
+                        </ul>
+                    </li>
+                    <li>Adding and removing sensors</li>
+                    <li>Adding and removing gateways</li>
+                </ul>
+
+            </div>
+
+            <div class="tech-used">
+                <h3>Technologies Used:</h3>
+                <ul>
+                    <li>Docker and Docker compose</li>
+                    <li>ShadCN</li>
+                    <li>Chirpstack</li>
+                    <li>Vite</li>
+                    <li><a href="https://vutility.com/hotdrop">Vutility HotDrop</a></li>
+                    <li><a
+                            href="https://store.rakwireless.com/products/rak7268-8-channel-indoor-lorawan-gateway?m=3&h=wisgate-edge&variant=42316476678342">WisGate
+                            Edge Lite 2</a></li>
+                </ul>
+                <h3>Programming Languages Used:</h3>
+                <ul>
+                    <li>React.js</li>
+                    <li>Golang</li>
+                    <li>MySQL</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Alternating Text and Image Sections -->
+        <section class="alternating-sections">
+            <!-- Text Left, Image Right -->
+            <div class="row">
+                <div class="text">
+                    <h3>The Project</h3>
+                    <p>The project was divided into three main components: Frontend (design), Backend (APIs and
+                        Database), and the LoRaWAN server (connection and data collection).</p>
+                    <p>Throughout the project, the team utilized Scrum as an agile framework.</p>
+                    <p>The project was successful, and you can view the final product on the right. It was built using
+                        the technologies and programming languages mentioned above. This system integrates the database,
+                        the website, and Rak gateways through APIs, automatically collecting, processing, and storing
+                        data from sensors monitoring the power usage of manufacturing machines. Users can view this data
+                        in near real-time.</p>
+                    <p>If you are interested in a more detailed overview of the project, you can read the full report <a
+                            href="https://ntnuopen.ntnu.no/ntnu-xmlui/handle/11250/3137511">here</a>.</p>
+                </div>
+                <div class="image">
+                    <img src="images/bachelor-overview.png" alt="The product">
+                </div>
+            </div>
+
+            <!-- Image Left, Text Right -->
+            <div>
+                <div class="text" style="text-align: center; padding-right: 25%; padding-left: 25%;">
+                    <h3>What I learned from the project</h3>
+                    <p>I gained significant experience from this project, including improving database structuring,
+                        automating data processing and storage, and developing with React.js. I also applied Scrum
+                        methodology in a real-world setting, working on a practical task. Additionally, I enhanced my
+                        skills in client interaction by participating in meetings to refine the project based on
+                        feedback..</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Include footer -->
+    <div id="footer"></div>
+    <script src="header&footer.js"></script>
+
+    <script src="dots.js"></script>
+
+</body>
+
+</html>
