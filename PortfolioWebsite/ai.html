@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Subject Template</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Include header -->
+    <div id="header"></div>
+    <div class="sectionDiv">
+        <!-- Main Header -->
+        <header class="main-header">
+            <h1>Artificial Intelligence</h1>
+            <h2>PROG2051</h2>
+        </header>
+
+        <!-- Description Section -->
+        <section class="description-section">
+            <h2>Description</h2>
+            <p>The course focus on data-driven AI topics including machine learning, Bayesian networks, deep learning
+                and we will look at popular and successful applications of these techniques in image processing and
+                natural language processing. Practical applications and real world examples will be carefully walked
+                through so that the students can follow and understand a complete AI project. Lab exercises, and
+                obligatory assignments are important instruments to ensure learning progress with well-defined
+                milestones.</p>
+            <p>Read more at the <a href="https://www.ntnu.edu/studies/courses/PROG2051/#tab=omEmnet">subject site</a>
+        </section>
+
+        <!-- Learning and Technology Section -->
+        <section class="learning-tech-section">
+            <div class="what-i-learned">
+                <h2>What I Have Learned</h2>
+                <p>In this subject, I gained a fundemental understanding of the mathematical foundations behind AI and
+                    how it
+                    creates connections. Additionally, I learned how to develop simple AI models capable of detecting
+                    language and categorizing text, images, videos, and performing more detailed detection tasks.</p>
+            </div>
+
+            <div class="tech-used">
+                <h3>Technologies Used</h3>
+                <ul>
+                    <li>Jupyter Notebook</li>
+                    <li>Google collab</li>
+                    <li>PyTorch</li>
+                </ul>
+                <h3>Programming Languages Used</h3>
+                <ul>
+                    <li>Python</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Alternating Text and Image Sections -->
+        <section class="alternating-sections">
+            <!-- Text Left, Image Right -->
+            <div class="row">
+                <div class="text">
+                    <h3>Example of a AI I created under the course</h3>
+                    <p>As shown in the image to the right, we applied image detection AI during the course. For
+                        instance, we used it to differentiate between cats and dogs, and to detect cars in images, as
+                        demonstrated by the mask on the right. In this task, we trained an AI model on car images,
+                        enabling it to generate a mask that highlights all objects identified as cars.</p>
+                </div>
+                <div class="image">
+                    <img src="Images/CarMask.jpg" alt="AI car mask">
+                </div>
+            </div>
+
+            <!-- Image Left, Text Right -->
+            <div class="row">
+                <div class="image">
+                    <img src="Images/suprise.png" alt="Emotion detection" style="width: 49.5%;">
+                    <img src="Images/fearSad.png" alt="Emotion detection" style="width: 49.5%;">
+                </div>
+                <div class="text">
+                    <h3>Example of more complex AI detection</h3>
+                    <p>In a similar manner to the previous example, I developed an emotion detection AI. It was trained
+                        using facial images displaying various emotions, allowing the model to learn how to identify
+                        emotions in human faces. However, this task required significantly more RAM than earlier
+                        projects, as each emotion needed a large set of images for the AI to learn effectively.
+                        Unfortunately, due to insufficient RAM, I had to reduce the number of training images and limit
+                        the number of epochs. As a result, the AI achieved only 53% accuracy.</p>
+                    <p>If you are interested in the code of the tasks i did in this subject, click <a
+                            href="https://github.com/Danielhoyland/Portfolio/tree/main/Kunstliginteligens">here</a>.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Include footer -->
+    <div id="footer"></div>
+    <script src="header&footer.js"></script>
+
+    <script src="dots.js"></script>
+
+</body>
+
+</html>
