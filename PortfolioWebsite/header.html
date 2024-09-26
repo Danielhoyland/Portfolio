@@ -12,7 +12,7 @@
   <header class="site-header">
     <h1><a class="index-link" href="index.html">Daniel Høyland's Portfolio</a> </h1>
     <nav>
-      <ul>
+      <ul id="portfolio-list">
         <li><a class="portfolio-link" href="PortfolioWebsite/about.html">About Me</a></li>
         <li><a class="portfolio-link" href="PortfolioWebsite/bachelor.html">Bachelor</a></li>
         <li><a class="portfolio-link" href="PortfolioWebsite/intergrasjon.html">Integration</a></li>
@@ -26,6 +26,22 @@
       </ul>
     </nav>
   </header>
+  <script>
+    const list = document.getElementById('portfolio-list');
+    const items = Array.from(list.getElementsByTagName('li'));
+
+    // Sort the items based on the inner text of the <a> element
+    items.sort((a, b) => a.textContent.trim().localeCompare(b.textContent.trim()));
+
+    // Remove all the current list items
+    while (list.firstChild) {
+      list.removeChild(list.firstChild);
+    }
+
+    // Append the sorted items back into the list
+    items.forEach(item => list.appendChild(item));
+
+  </script>
 </body>
 
 </html>
