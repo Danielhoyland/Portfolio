@@ -224,13 +224,22 @@ a:hover {
     margin-bottom: 15px;
   }
 }
+
 .index-link {
-  color: black;           /* Set link color to black */
-  text-decoration: none;  /* Remove underline */
-  font-weight: bold;      /* Make the link text bold for better visibility */
+  color: black;
+  /* Default color */
+  text-decoration: none;
+  /* Remove underline */
+  transition: transform 0.3s ease, color 0.3s ease;
+  /* Smooth transition */
 }
 
+
 .index-link:hover {
-  color: #FF5733;         /* Change color when hovered (use any noticeable color you like) */
-  cursor: pointer;        /* Show pointer cursor on hover to indicate it's a link */
+  transform: scale(1.1);
+  /* Slightly enlarge the text on hover */
+  color: #FF5733;
+  /* Optional: Change color on hover */
+  cursor: pointer;
+  /* Show pointer to indicate it's a link */
 }

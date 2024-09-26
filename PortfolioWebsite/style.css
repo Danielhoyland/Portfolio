@@ -3,29 +3,38 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #fafafa; /* Light background */
+    background-color: #fafafa;
+    /* Light background */
     color: #333;
-  }
+}
 
 .sectionDiv {
     padding: 20px;
-} 
+}
 
 .dot {
     position: absolute;
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #ff5733; /* Starting color (Red) */
+    background-color: #ff5733;
+    /* Starting color (Red) */
     opacity: 1;
-    animation: colorChange 1s infinite ease-out, fadeOut 1s forwards; /* Color change and fade-out */
-    transition: transform 1s ease-out; /* Smooth movement */
+    animation: colorChange 1s infinite ease-out, fadeOut 1s forwards;
+    /* Color change and fade-out */
+    transition: transform 1s ease-out;
+    /* Smooth movement */
 }
 
 /* Fade-out effect */
 @keyframes fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 /* Color changing effect */
@@ -85,7 +94,7 @@ h3 {
     border-radius: 8px;
     position: relative;
     z-index: 1;
-    text-align: center; 
+    text-align: center;
     font-size: 1.2rem;
 }
 
@@ -165,93 +174,113 @@ h3 {
 }
 
 /* Header and footer styling */
-.site-header, .site-footer {
+.site-header,
+.site-footer {
     position: relative;
-    z-index: 1; /* Content is above dots */
-    background-color: #f8f9fa; /* Light header/footer background */
-    color: #333; /* Darker text color */
+    z-index: 1;
+    /* Content is above dots */
+    background-color: #f8f9fa;
+    /* Light header/footer background */
+    color: #333;
+    /* Darker text color */
     padding: 20px;
     text-align: center;
-    border-top: 1px solid #e0e0e0; /* Subtle border for definition */
+    border-top: 1px solid #e0e0e0;
+    /* Subtle border for definition */
     border-bottom: 1px solid #e0e0e0;
-  }
-  
-  .site-header nav ul {
+}
+
+.site-header nav ul {
     list-style: none;
     padding: 0;
-  }
-  
-  .site-header nav ul li {
+}
+
+.site-header nav ul li {
     display: inline;
     margin: 0 15px;
-  }
-  
-  .site-header nav ul li a {
+}
+
+.site-header nav ul li a {
     color: #0077cc;
-  }
-  .site-footer {
-    background-color: #f9f9f9; /* Light background */
+}
+
+.site-footer {
+    background-color: #f9f9f9;
+    /* Light background */
     padding: 20px;
     border-top: 1px solid #ddd;
-  }
-  
-  .footer-content {
+}
+
+.footer-content {
     display: flex;
-    justify-content: space-between; /* Align columns horizontally */
+    justify-content: space-between;
+    /* Align columns horizontally */
     max-width: 1200px;
     margin: 0 auto;
-  }
-  
-  .footer-section {
-    flex: 1; /* Equal width for each column */
+}
+
+.footer-section {
+    flex: 1;
+    /* Equal width for each column */
     padding: 10px;
-  }
-  
-  .footer-section h3 {
+}
+
+.footer-section h3 {
     margin-bottom: 5px;
     font-size: 1.2rem;
-  }
-  
-  .footer-section p, .footer-section a {
+}
+
+.footer-section p,
+.footer-section a {
     font-size: 1rem;
     color: #333;
     text-decoration: none;
-  }
-  
-  .footer-section a:hover {
+}
+
+.footer-section a:hover {
     text-decoration: underline;
-  }
-  
-  .footer-section a {
-    color: #0078d4; /* Matching link color from your image */
-  }
-  
-  /* GitHub icon styling (assuming you use Font Awesome) */
-  .footer-section i {
+}
+
+.footer-section a {
+    color: #0078d4;
+    /* Matching link color from your image */
+}
+
+/* GitHub icon styling (assuming you use Font Awesome) */
+.footer-section i {
     margin-right: 5px;
     color: #333;
     font-size: 1.2rem;
-  }
-  
-  /* Responsive design */
-  @media (max-width: 768px) {
-    .footer-content {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-  
-    .footer-section {
-      margin-bottom: 15px;
-    }
-  }
-  .index-link {
-    color: black;           /* Set link color to black */
-    text-decoration: none;  /* Remove underline */
-    font-weight: bold;      /* Make the link text bold for better visibility */
 }
 
+/* Responsive design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 15px;
+    }
+}
+
+.index-link {
+    color: black;
+    /* Default color */
+    text-decoration: none;
+    /* Remove underline */
+    transition: transform 0.3s ease, color 0.3s ease;
+    /* Smooth transition */
+}
+
+
 .index-link:hover {
-    color: #FF5733;         /* Change color when hovered (use any noticeable color you like) */
-    cursor: pointer;        /* Show pointer cursor on hover to indicate it's a link */
+    transform: scale(1.1);
+    /* Slightly enlarge the text on hover */
+    color: #FF5733;
+    /* Optional: Change color on hover */
+    cursor: pointer;
+    /* Show pointer to indicate it's a link */
 }
