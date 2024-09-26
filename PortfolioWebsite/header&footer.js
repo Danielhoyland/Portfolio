@@ -28,7 +28,7 @@ fetch('footer.html')
         githubIcon.src = iconPath;
 
         const link = document.querySelector('.index-link');
-        if (!link.href.startsWith('./')) {
-            link.href = './' + link.getAttribute('href');
+        if (!link.href.startsWith('../')) {
+            link.href = '../' + link.getAttribute('href');
         }
     });
