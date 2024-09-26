@@ -1,7 +1,17 @@
 // Dynamically load the header and footer
 fetch('header.html')
     .then(response => response.text())
-    .then(data => document.getElementById('header').innerHTML = data);
+    .then(data => {
+        // Insert the fetched HTML into the header
+        document.getElementById('header').innerHTML = data;
+
+        // Now modify the href values of the links with the class "portfolio-link"
+        document.querySelectorAll('.portfolio-link').forEach(link => {
+            link.href = link.href.replace('PortfolioWebsite/', '');
+        });
+    });
+
+
 
 
 fetch('footer.html')
