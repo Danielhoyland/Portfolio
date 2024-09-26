@@ -239,10 +239,10 @@ a {
   /* Show pointer to indicate it's a link */
 }
 
-.porfolio-link {
+.porfolio-link a {
   text-decoration: none;
 }
 
-.porfolio-link:hover {
+.porfolio-link a:hover {
   text-decoration: underline;
 }
