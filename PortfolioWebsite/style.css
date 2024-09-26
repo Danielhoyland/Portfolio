@@ -273,6 +273,7 @@ h3 {
     /* Remove underline */
     transition: transform 0.3s ease, color 0.3s ease;
     /* Smooth transition */
+    display: inline-block;
 }
 
 
