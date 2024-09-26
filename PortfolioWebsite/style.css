@@ -245,3 +245,13 @@ h3 {
       margin-bottom: 15px;
     }
   }
+  .index-link {
+    color: black;           /* Set link color to black */
+    text-decoration: none;  /* Remove underline */
+    font-weight: bold;      /* Make the link text bold for better visibility */
+}
+
+.index-link:hover {
+    color: #FF5733;         /* Change color when hovered (use any noticeable color you like) */
+    cursor: pointer;        /* Show pointer cursor on hover to indicate it's a link */
+}
