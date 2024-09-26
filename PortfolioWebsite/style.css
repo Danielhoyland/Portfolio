@@ -284,10 +284,10 @@ h3 {
     /* Show pointer to indicate it's a link */
 }
 
-.porfolio-link a {
+.portfolio-link a {
     text-decoration: none;
 }
 
-.porfolio-link a:hover {
+.portfolio-link a:hover {
     text-decoration: underline;
   }
