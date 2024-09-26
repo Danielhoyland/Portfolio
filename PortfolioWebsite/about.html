@@ -1,27 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>About Me</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
 
-	<body>
-        <!-- Include header -->
-        <div id="header"></div>
-		<div class="grid-item" id="about">
-            <h1>About me</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Include header -->
+    <div id="header"></div>
+    <div class="sectionDiv">
+        <header class="main-header">
+            <h1>About Me</h1>
+        </header>
+
+
+        <section class="description-section">
             <p>
-                My name is Daniel Høyland, i have finished my bachelor in Programming at NTNU in Gjøvik. I have experience with many different languages, libraries and frameworks.
-                I am an avid learner, i belive that you are never truly finished learning. I love exploring new technologies, figuring out how they work, and how to use them effectivley.
+                Hi! My name is Daniel Høyland. I'm from Sandnes, a city near Stavanger in Norway, and I currently live
+                in
+                Trondheim as a student. I have completed my bachelor's degree in Programming at NTNU in Gjøvik and have
+                experience with a variety of programming languages, libraries, and frameworks.
             </p>
+            <p>
+                I am passionate about continuous learning and believe that you can never truly stop growing. I enjoy
+                exploring new technologies, understanding how they work, and learning how to use them effectively. I am
+                always eager to enhance my skills in programming techniques, code structuring, and emerging technologies
+                to
+                become an even better programmer.
+            </p>
+            <div>
+                <img src="images/portrett2.jpg" alt="Daniel Høyland" style="height: 500px; width: auto;">
+                <p style="font-size: 12px; text-align: center;">Photo by Deborah Anna Ognøy</p>
+            </div>
+
+        </section>
+        <section class="alternating-sections" style="text-align: center;">
+        <div class="text">
+            <h1>Studies</h1>
+            <p>
+                I completed a Bachelor's degree in Programming at NTNU Gjøvik. Currently, during 2024-2025, I am taking
+                additional courses in preparation for applying to a Master's program in Informatics.
+            </p>
+            <div>
+                <img src="images/NTNUTrd.jpg" alt="Daniel Høyland">
+            </div>
         </div>
-        <!-- Include footer -->
-        <div id="footer"></div>
+        </section>
+        <section class="alternating-sections" style="text-align: center;">
+            <div class="text">
+            <h1>Free Time</h1>
+            <p>
+                In my free time, I enjoy playing games and creating programs for myself or my friends, whether to
+                support other hobbies or just for fun. I also like to play chess, engage in tabletop games with friends,
+                and stay active through training.
+            </p>
+            <div>
+                <img src="images/Freetime.jpg" alt="Daniel Høyland" style="height: 400px; width: auto;">
+            </div>
+        </div>
+        </section>
+    </div>
+    <!-- Include footer -->
+    <div id="footer"></div>
 
-        <script src="header&footer.js"></script>
+    <script src="header&footer.js"></script>
 
-        <script src="dots.js"></script>
-	</body>
+    <script src="dots.js"></script>
+</body>
+
 </html>

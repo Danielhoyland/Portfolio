@@ -36,7 +36,7 @@ document.body.addEventListener('mousemove', (event) => {
     const y = event.clientY + window.scrollY; // Adjust y by scroll position
 
     // Create a small spray of dots around the cursor
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 3; i++) {
         // Create a random offset for the dots to spread around the cursor
         const offsetX = Math.random() * 20 - 10;
         const offsetY = Math.random() * 20 - 10;

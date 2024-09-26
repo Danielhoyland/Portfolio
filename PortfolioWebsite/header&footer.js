@@ -21,9 +21,14 @@ fetch('footer.html')
 
         // Dynamically set the correct path based on the current URL location
         const githubIcon = document.getElementById('github-icon');
-        
+
         let iconPath = 'images/Octicons-mark-github.svg';
-        
+
 
         githubIcon.src = iconPath;
+
+        const link = document.querySelector('.index-link');
+        if (!link.href.startsWith('./')) {
+            link.href = './' + link.getAttribute('href');
+        }
     });
