@@ -236,10 +236,8 @@ a:hover {
 
 
 .index-link:hover {
-  transform: scale(1.1);
+  transform: scale(1.4);
   /* Slightly enlarge the text on hover */
-  color: #FF5733;
-  /* Optional: Change color on hover */
   cursor: pointer;
   /* Show pointer to indicate it's a link */
 }
