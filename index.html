@@ -1,78 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+  <body>
+    <!-- Include header -->
+    <div id="header"></div>
 
-<body>
+    <main class="portfolio-content">
+      <!-- Grid layout: 4 rows -->
+      <div class="grid">
+        <!-- Row 1 -->
+        <div class="row">
+          <div class="grid-item large">
+            <img
+              src="PortfolioWebsite/images/portrett.jpg"
+              alt="Project Image"
+              style="width: 400px; height: auto"
+            />
+            <p>My name is Daniel and this is my portfolio!</p>
+          </div>
+        </div>
+        <div style="padding: 30px; text-align: center;">
+          <h2>Project pages:</h2>
+        </div>
+        <!-- Row 2 -->
+        <div class="row">
+          <div class="grid-item small">
+            <a href="PortfolioWebsite/bachelor.html">Bachelor project</a>
+          </div>
+          <div class="grid-item small">
+            <a href="PortfolioWebsite/intergrasjon.html"
+              >Intergration project</a
+            >
+          </div>
+          <div class="grid-item small">
+            <a href="PortfolioWebsite/mobile.html">Mobile programming</a>
+          </div>
+        </div>
 
-  <!-- Include header -->
-  <div id="header"></div>
+        <!-- Row 3 -->
+        <div class="row">
+          <div class="grid-item small">
+            <a href="PortfolioWebsite/ai.html">Artificial intelligence</a>
+          </div>
+          <div class="grid-item small">
+            <a href="PortfolioWebsite/cloud.html">Cloud Technologies</a>
+          </div>
+          <div class="grid-item small">
+            <a href="PortfolioWebsite/avansert.html">Advance Programming</a>
+          </div>
+        </div>
 
-  <main class="portfolio-content">
-    <!-- Grid layout: 4 rows -->
-    <div class="grid">
-      <!-- Row 1 -->
-      <div class="row">
-        <div class="grid-item large">
-          <img src="PortfolioWebsite/images/portrett.jpg" alt="Project Image" style="width: 400px; height: auto;">
-          <p>My name is Daniel and this is my portfolio!</p>
+        <!-- Row 4 -->
+        <div class="row">
+          <div class="grid-item small">
+            <a href="PortfolioWebsite/database.html">Database</a>
+          </div>
+          <div class="grid-item small">
+            <a href="PortfolioWebsite/game.html">Game programming</a>
+          </div>
+          <div class="grid-item small">
+            <a href="PortfolioWebsite/graphic.html">Graphic programming</a>
+          </div>
         </div>
       </div>
+    </main>
 
-      <!-- Row 2 -->
-      <div class="row">
-        <div class="grid-item small"><a href="PortfolioWebsite/bachelor.html">Bachelor project</a></div>
-        <div class="grid-item small"><a href="PortfolioWebsite/intergrasjon.html">Intergration project</a></div>
-        <div class="grid-item small"><a href="PortfolioWebsite/mobile.html">Mobile programming</a></div>
-      </div>
+    <!-- Include footer -->
+    <div id="footer"></div>
 
-      <!-- Row 3 -->
-      <div class="row">
-        <div class="grid-item small"><a href="PortfolioWebsite/ai.html">Artificial intelligence</a></div>
-        <div class="grid-item small"><a href="PortfolioWebsite/cloud.html">Cloud Technologies</a></div>
-        <div class="grid-item small"><a href="PortfolioWebsite/avansert.html">Advance Programming</a></div>
-      </div>
+    <script>
+      // Dynamically load the header and footer
+      fetch("PortfolioWebsite/header.html")
+        .then((response) => response.text())
+        .then((data) => (document.getElementById("header").innerHTML = data));
 
-      <!-- Row 4 -->
-      <div class="row">
-        <div class="grid-item small"><a href="PortfolioWebsite/database.html">Database</a></div>
-        <div class="grid-item small"><a href="PortfolioWebsite/game.html">Game programming</a></div>
-        <div class="grid-item small"><a href="PortfolioWebsite/algoritmic.html">Algorithmic Methods</a></div>
-      </div>
-    </div>
-  </main>
+      fetch("PortfolioWebsite/footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
 
-  <!-- Include footer -->
-  <div id="footer"></div>
-  
-  <script>
-    // Dynamically load the header and footer
-    fetch('PortfolioWebsite/header.html')
-      .then(response => response.text())
-      .then(data => document.getElementById('header').innerHTML = data);
+          // Dynamically set the correct path based on the current URL location
+          const githubIcon = document.getElementById("github-icon");
 
-    fetch('PortfolioWebsite/footer.html')
-    .then(response => response.text())
-    .then(data => {
-        document.getElementById('footer').innerHTML = data;
+          let iconPath = "PortfolioWebsite/images/Octicons-mark-github.svg";
 
-        // Dynamically set the correct path based on the current URL location
-        const githubIcon = document.getElementById('github-icon');
-        
-        let iconPath = 'PortfolioWebsite/images/Octicons-mark-github.svg';
-        
+          githubIcon.src = iconPath;
+        });
+    </script>
 
-        githubIcon.src = iconPath;
-    });
-  </script>
-
-<script src="PortfolioWebsite/dots.js"></script>
-
-</body>
-
+    <script src="PortfolioWebsite/dots.js"></script>
+  </body>
 </html>

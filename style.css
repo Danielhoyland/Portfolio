@@ -69,9 +69,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
-}
 
 /* Header and footer styling */
 .site-header, .site-footer {
@@ -232,12 +229,21 @@ a:hover {
   /* Remove underline */
   transition: transform 0.3s ease, color 0.3s ease;
   /* Smooth transition */
+  display: inline-block;
 }
 
 
 .index-link:hover {
-  transform: scale(1.4);
+  transform: scale(1.2);
   /* Slightly enlarge the text on hover */
   cursor: pointer;
   /* Show pointer to indicate it's a link */
+}
+
+.porfolio-link {
+  text-decoration: none;
+}
+
+.porfolio-link:hover {
+  text-decoration: underline;
 }

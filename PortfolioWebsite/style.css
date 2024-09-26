@@ -278,8 +278,16 @@ h3 {
 
 
 .index-link:hover {
-    transform: scale(1.4);
+    transform: scale(1.2);
     /* Slightly enlarge the text on hover */
     cursor: pointer;
     /* Show pointer to indicate it's a link */
 }
+
+.porfolio-link {
+    text-decoration: none;
+}
+
+.porfolio-link:hover {
+    text-decoration: underline;
+  }
