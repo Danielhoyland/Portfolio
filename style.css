@@ -87,7 +87,7 @@ a {
 }
 
 .site-header nav ul li {
-  display: inline;
+  display: none;
   margin: 0 15px;
 }
 

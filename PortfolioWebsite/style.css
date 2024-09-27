@@ -196,7 +196,7 @@ h3 {
 }
 
 .site-header nav ul li {
-    display: inline;
+    display: none;
     margin: 0 15px;
 }
 

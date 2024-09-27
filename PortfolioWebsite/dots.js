@@ -3,7 +3,19 @@ function createDot(x, y) {
     const dot = document.createElement('div');
     dot.classList.add('dot');
 
-    // Set initial position of the dot based on the mouse location
+    const dotSize = 10; // Define the size of the dot (px)
+    
+    // Get the full scrollable area dimensions
+    const pageWidth = document.documentElement.scrollWidth;
+    const pageHeight = document.documentElement.scrollHeight;
+
+    // Adjust x and y to ensure the dot is created at least dotSize away from edges
+    if (x > pageWidth - dotSize) x = pageWidth - dotSize;
+    if (x < dotSize) x = dotSize;
+    if (y > pageHeight - dotSize) y = pageHeight - dotSize;
+    if (y < dotSize) y = dotSize;
+
+    // Set initial position of the dot based on the adjusted mouse location
     dot.style.left = `${x}px`;
     dot.style.top = `${y}px`;
 
@@ -15,10 +27,16 @@ function createDot(x, y) {
     const velocity = 50 + Math.random() * 100; // Random velocity (50 to 150 pixels)
 
     // Calculate new position based on the angle and velocity
-    const targetX = x + Math.cos(angle) * velocity;
-    const targetY = y + Math.sin(angle) * velocity;
+    let targetX = x + Math.cos(angle) * velocity;
+    let targetY = y + Math.sin(angle) * velocity;
 
-    // Move the dot to the calculated target position
+    // Ensure the dot stays within the scrollable page boundaries after moving
+    if (targetX > pageWidth - dotSize) targetX = pageWidth - dotSize;
+    if (targetX < dotSize) targetX = dotSize;
+    if (targetY > pageHeight - dotSize) targetY = pageHeight - dotSize;
+    if (targetY < dotSize) targetY = dotSize;
+
+    // Move the dot to the calculated target position if it's within bounds
     setTimeout(() => {
         dot.style.transform = `translate(${targetX - x}px, ${targetY - y}px)`;
     }, 10); // Small delay to ensure dot starts at the original position
@@ -42,6 +60,6 @@ document.body.addEventListener('mousemove', (event) => {
         const offsetY = Math.random() * 20 - 10;
 
         // Create the dot at the randomized position around the cursor
-        createDot(x + offsetX, y + offsetY, 10,);
+        createDot(x + offsetX, y + offsetY);
     }
 });
