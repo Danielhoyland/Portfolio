@@ -87,7 +87,7 @@ a {
 }
 
 .site-header nav ul li {
-  display: none;
+  display: inline;
   margin: 0 15px;
 }
 
@@ -239,10 +239,27 @@ a {
   /* Show pointer to indicate it's a link */
 }
 
-.portfolio-link a {
+/* Basic link styling */
+.portfolio-link {
   text-decoration: none;
+  color: black; 
+  padding: 8px 15px;
+  background-color: transparent; 
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  border-radius: 5px; 
 }
 
-.portfolio-link a:hover {
-  text-decoration: underline;
+/* Hover effect with subtle background color change */
+.portfolio-link:hover {
+  background-color: rgba(255, 87, 51, 0.1); 
+  color: #FF5733; 
+  transform: scale(1.05);
+}
+
+/* Active page styling (Background color to indicate active) */
+.portfolio-link.active {
+  background-color: #FF5733; 
+  color: white; 
+  font-weight: bold; 
+  border-radius: 5px; 
 }

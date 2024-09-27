@@ -71,7 +71,18 @@
     // Dynamically load the header and footer
     fetch("PortfolioWebsite/header.html")
       .then((response) => response.text())
-      .then((data) => (document.getElementById("header").innerHTML = data));
+      .then((data) => {
+        document.getElementById("header").innerHTML = data
+        // Get all the nav links
+        const navLinks = document.querySelectorAll('.portfolio-link');
+
+        // Loop through all links and check if the href matches the current page's URL
+        navLinks.forEach(link => {
+          if (link.href === window.location.href) {
+            link.classList.add('active'); // Add 'active' class to the current page link
+          }
+        });
+      });
 
     fetch("PortfolioWebsite/footer.html")
       .then((response) => response.text())
