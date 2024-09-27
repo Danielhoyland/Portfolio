@@ -276,6 +276,11 @@ h3 {
     display: inline-block;
 }
 
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+  }
 
 .index-link:hover {
     transform: scale(1.2);
