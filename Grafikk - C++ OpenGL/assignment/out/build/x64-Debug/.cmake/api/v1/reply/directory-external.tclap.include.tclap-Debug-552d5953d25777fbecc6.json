@@ -1,0 +1,68 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"external/tclap/include/tclap/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 4,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "lib",
+			"destination" : "include/tclap",
+			"paths" : 
+			[
+				"external/tclap/include/tclap/Arg.h",
+				"external/tclap/include/tclap/ArgContainer.h",
+				"external/tclap/include/tclap/ArgException.h",
+				"external/tclap/include/tclap/ArgGroup.h",
+				"external/tclap/include/tclap/ArgTraits.h",
+				"external/tclap/include/tclap/CmdLine.h",
+				"external/tclap/include/tclap/CmdLineInterface.h",
+				"external/tclap/include/tclap/CmdLineOutput.h",
+				"external/tclap/include/tclap/Constraint.h",
+				"external/tclap/include/tclap/DeferDelete.h",
+				"external/tclap/include/tclap/DocBookOutput.h",
+				"external/tclap/include/tclap/HelpVisitor.h",
+				"external/tclap/include/tclap/IgnoreRestVisitor.h",
+				"external/tclap/include/tclap/MultiArg.h",
+				"external/tclap/include/tclap/MultiSwitchArg.h",
+				"external/tclap/include/tclap/OptionalUnlabeledTracker.h",
+				"external/tclap/include/tclap/StandardTraits.h",
+				"external/tclap/include/tclap/StdOutput.h",
+				"external/tclap/include/tclap/SwitchArg.h",
+				"external/tclap/include/tclap/UnlabeledMultiArg.h",
+				"external/tclap/include/tclap/UnlabeledValueArg.h",
+				"external/tclap/include/tclap/ValueArg.h",
+				"external/tclap/include/tclap/ValuesConstraint.h",
+				"external/tclap/include/tclap/VersionVisitor.h",
+				"external/tclap/include/tclap/Visitor.h",
+				"external/tclap/include/tclap/sstream.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "external/tclap/include/tclap",
+		"source" : "external/tclap/include/tclap"
+	}
+}
