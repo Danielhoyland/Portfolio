@@ -1,27 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work in Progress</title>
-    <link rel="stylesheet" href="style.css"> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Cloud</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-</head>
-<body>
+  <body>
+    <!-- Include header -->
+    <div id="header"></div>
+    <div class="sectionDiv">
+      <!-- Main Header -->
+      <header class="main-header">
+        <h1>Cloud Technologies</h1>
+        <h2>PROG2005</h2>
+      </header>
 
-<div id="header"></div>
+      <!-- Description Section -->
+      <section class="description-section">
+        <h2>Subject Description</h2>
+        <p>
+          The field of cloud computing and cloud technologies is dynamic. It
+          changes rapidly. There are some fundamental concepts that stay
+          relatively unchanged, and there is an innovation in tools and
+          technologies that often change. Due to those characteristics, the
+          course lectures are subject to change, based on contemporary market
+          adjustments. The typical coverage includes, but is not limited to:<br />
 
-<main style="text-align: center; ">
-    <div style="height: 300px;"></div>
-    <h2>Work in Progress</h2>
-    <p>This page is currently under construction. Please check back later for updates!</p>
-    <div style="height: 300px;"></div>
-</main>
+          - Architectural Types and Principles (IaaS, PaaS, SaaS)<br />
 
-<div id="footer"></div>
+          - Cloud Technologies (Processing, Storage, Network, Virtualisation)<br />
 
-<script src="header&footer.js"></script>
-<script src="dots.js"></script>
+          - API Standards (e.g., REST) and Standardisation Bodies (i.e.,
+          IETF)<br />
 
-</body>
+          - Cloud Vendors and Economics of Cloud Services (Business models,
+          Pricing models, Service-level agreements)<br />
+
+          - Cloud Operations Basics<br />
+
+          - Development and Deployment of Cloud Applications
+        </p>
+        <p>
+          Read more at the
+          <a href="https://www.ntnu.edu/studies/courses/PROG2005/#tab=omEmnet"
+            >subject site</a
+          >
+        </p>
+      </section>
+
+      <!-- Learning and Technology Section -->
+      <section class="learning-tech-section">
+        <div class="what-i-learned">
+          <h2>What I Have Learned</h2>
+          <p>
+            In this subject, I gained a deeper understanding of APIs and learned
+            how to program in Golang to create and utilize APIs for sending and
+            receiving data.
+          </p>
+        </div>
+
+        <div class="tech-used">
+          <h3>Technologies Used</h3>
+          <ul>
+            <li>API</li>
+          </ul>
+          <h3>Programming Languages Used</h3>
+          <ul>
+            <li>Golang</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Alternating Text and Image Sections -->
+      <section class="alternating-sections">
+        <!-- Text Left, Image Right -->
+        <div class="row">
+          <div class="text">
+            <h3>Assignment 1</h3>
+            <p>
+              The first assignment was alone and here we used two APIs about
+              countries and universities to be able to use like "NOR" to find
+              all universities in Norway or find all neighboring countries of
+              Norway.
+            </p>
+          </div>
+          <div class="image">
+            <img
+              src="images/cloud0.png"
+              alt="Emotion detection"
+              style="width: 49.5%"
+            />
+            <img
+              src="images/cloud1.png"
+              alt="Emotion detection"
+              style="width: 49.5%"
+            />
+          </div>
+        </div>
+
+        <!-- Image Left, Text Right -->
+        <div class="row">
+          <div class="image">
+            <img src="images/cloud2.png" alt="Image description 2" />
+          </div>
+          <div class="text">
+            <h3>Assignment 2</h3>
+            <p>
+              The second assignment involved creating an API for a large CSV
+              file containing climate data for most countries. The API allowed
+              filtering the data based on parameters such as country, date, CO2
+              emissions, and more.
+            </p>
+            <p>
+              If you are interested in the code of the tasks I did in this
+              subject, click
+              <a
+                href="https://github.com/Danielhoyland/Portfolio/tree/main/Kunstliginteligens"
+                >here</a
+              >.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Include footer -->
+    <div id="footer"></div>
+    <script src="header&footer.js"></script>
+
+    <script src="dots.js"></script>
+  </body>
 </html>

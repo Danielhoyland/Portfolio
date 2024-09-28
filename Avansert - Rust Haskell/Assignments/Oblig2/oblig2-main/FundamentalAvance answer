@@ -1,0 +1,23 @@
+
+Fundamental:
+
+What is the difference between a compiled language and an interpreted language?
+A compiled language is translated entirely into machine code before execution, while an interpreted language is executed by an interpreter without being compiled into machine code.
+What is a variable and how is it used in programming?
+A variable is a named storage location in a program's memory where data can be stored and retrieved as needed. Variables are used to hold values that can be manipulated or compared by the program.
+What is a function and how is it used in programming?
+A function is a block of code that performs a specific task and can be called from other parts of a program. Functions can take input parameters, and can return output values.
+What is an if statement and how is it used in programming?
+An if statement is a control flow statement that allows a program to make decisions based on a boolean expression. If the boolean expression is true, the code inside the if statement is executed, otherwise it is skipped.
+What is a loop and how is it used in programming?
+A loop is a control flow statement that allows a program to repeatedly execute a block of code while a certain condition is true. Loops can be used to perform tasks such as iterating over data structures or performing calculations.
+Advanced:
+
+What is a closure and how is it used in programming?
+A closure is a function object that has access to variables in its lexical scope, even when the function is called outside that scope. Closures are often used to create functions with custom behavior or to create higher-order functions.
+What is the difference between static and dynamic typing?
+Static typing refers to a type system where variable types are determined at compile time, while dynamic typing refers to a type system where variable types are determined at runtime. Static typing can catch type errors at compile time, while dynamic typing can provide more flexibility and ease of use.
+What is a generic and how is it used in programming?
+A generic is a type or function that can be used with multiple types, without specifying the types beforehand. Generics are often used to create reusable code that can work with different types of data.
+What is a higher-order function and how is it used in programming?
+A higher-order function is a function that takes one or more functions as arguments, or returns a function as its result. Higher-order functions are often used to create abstractions and to create more reusable code.
