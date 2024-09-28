@@ -1,53 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work in Progress</title>
-    <link rel="stylesheet" href="style.css"> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Database</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-</head>
-<body>
+  <body>
+    <!-- Include header -->
+    <div id="header"></div>
+    <div class="sectionDiv">
+      <!-- Main Header -->
+      <header class="main-header">
+        <h1>Data modeling and database systems</h1>
+        <h2>IDATG2204</h2>
+      </header>
 
-<div id="header"></div>
+      <!-- Description Section -->
+      <section class="description-section">
+        <h2>Subject Description</h2>
+        <p>
+          • Basic introduction to data modeling with emphasis on conceptual
+          modeling.<br />
+          • The relational model, relational algebra, and SQL.<br />
+          • Normalization as a design theory for relational databases.<br />
+          • Other database models.<br />
+          • Database construction and development.<br />
+          • Testing database applications.<br />
+          • Security in database systems.<br />
+          • Storage technologies, file organization, and index structures.<br />
+          • Query processing.<br />
+          • Database management systems (DBMS).<br />
+          • Data integrity, transactions, concurrency, and recovery.
+        </p>
 
-<main style="text-align: center; ">
-    <div style="height: 300px;"></div>
-    <h2>Work in Progress</h2>
-    <p>This page is currently under construction. Please check back later for updates!</p>
-</main>
+        <p>
+          Read more at the
+          <a href="https://www.ntnu.edu/studies/courses/IDATG2204/#tab=omEmnet"
+            >subject site</a
+          >
+        </p>
+      </section>
 
-<div id="footer"></div>
+      <!-- Learning and Technology Section -->
+      <section class="learning-tech-section">
+        <div class="what-i-learned">
+          <h2>What I Have Learned</h2>
+          <p>
+            In this subject, I learned how to plan, create, and manage effective
+            databases in addition how to test the database with Python.
+          </p>
+        </div>
 
-<script src="header&footer.js"></script>
-<script src="dots.js"></script><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work in Progress</title>
-    <link rel="stylesheet" href="style.css"> 
+        <div class="tech-used">
+          <h3>Technologies Used</h3>
+          <ul>
+            <li>MySQL</li>
+            <li>MariaDB</li>
+          </ul>
+          <h3>Programming Languages Used</h3>
+          <ul>
+            <li>SQL</li>
+            <li>Python</li>
+          </ul>
+        </div>
+      </section>
 
-</head>
-<body>
+      <!-- Alternating Text and Image Sections -->
+      <section class="alternating-sections">
+        <!-- Text Left, Image Right -->
+        <div class="row">
+          <div class="text">
+            <h3>Course work</h3>
+            <p>
+              During the course, we were required to perform numerous SQL
+              queries to retrieve, sort, and insert data into a database. We
+              also created an ERD for the database up to BCNF normal form,
+              constructed and populated the database, and established functional
+              connections between tables. Additionally, we tested these
+              connections using Python.
+            </p>
+          </div>
+          <div class="image">
+            <img src="images/Python.png" alt="Python api" />
+          </div>
+        </div>
 
-<div id="header"></div>
+        <!-- Image Left, Text Right -->
+        <div class="row">
+          <div class="image">
+            <img src="images/ERD.png" alt="ERD" />
+          </div>
+          <div class="text">
+            <h3>Project</h3>
+            <p>
+              Here is the final ERD from the project in this subject. The goal
+              of the project was to create a database for teachers and students,
+              featuring different permission levels for booking rooms in various
+              buildings, as well as storing relevant information.
+            </p>
+            <p>
+              If you are interested in the code of the tasks I did in this
+              subject, click
+              <a
+                href="https://github.com/Danielhoyland/Portfolio/tree/main/Database"
+                >here</a
+              >.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Include footer -->
+    <div id="footer"></div>
+    <script src="header&footer.js"></script>
 
-<main style="text-align: center; ">
-    <div style="height: 300px;"></div>
-    <h2>Work in Progress</h2>
-    <p>This page is currently under construction. Please check back later for updates!</p>
-    <div style="height: 300px;"></div>
-</main>
-
-<div id="footer"></div>
-
-<script src="header&footer.js"></script>
-<script src="dots.js"></script>
-
-</body>
-</html>
-
-
-</body>
+    <script src="dots.js"></script>
+  </body>
 </html>
