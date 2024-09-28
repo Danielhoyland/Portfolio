@@ -269,6 +269,8 @@ h3 {
 
 .index-link {
     color: black;
+    text-align: center;
+    font-size: 2.5rem;
     /* Default color */
     text-decoration: none;
     /* Remove underline */
@@ -277,11 +279,6 @@ h3 {
     display: inline-block;
 }
 
-h1 {
-    text-align: center;
-    font-size: 2.5rem;
-    color: #333;
-  }
 
 .index-link:hover {
     transform: scale(1.2);
