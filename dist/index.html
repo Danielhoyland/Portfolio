@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" crossorigin href="/Portfolio/assets/index-BRkWHMu8.css">
+</head>
+
+<body>
+  <!-- Include header -->
+  <div id="header"></div>
+
+  <main class="portfolio-content">
+    <!-- Grid layout: 4 rows -->
+    <div class="grid">
+      <!-- Row 1 -->
+      <div class="row">
+        <div class="grid-item large">
+          <img src="images/portrett.jpg" alt="Project Image" style="width: 400px; height: auto" />
+          <p>My name is Daniel and this is my portfolio!</p>
+        </div>
+      </div>
+      <div style="padding: 30px; text-align: center;">
+        <h2>Project pages:</h2>
+      </div>
+      <!-- Row 2 -->
+      <div class="row">
+        <a href="ai.html" class="grid-link">
+          <div class="grid-item small">
+            Artificial Intelligence
+          </div>
+        </a>
+        <a href="avansert.html" class="grid-link">
+          <div class="grid-item small">
+            Advance Programming
+          </div>
+        </a>
+        <a href="bachelor.html" class="grid-link">
+          <div class="grid-item small">
+            Bachelor Project
+          </div>
+        </a>
+      </div>
+
+      <!-- Row 3 -->
+      <div class="row">
+        <a href="cloud.html" class="grid-link">
+          <div class="grid-item small">
+            Cloud Technologies
+          </div>
+        </a>
+        <a href="database.html" class="grid-link">
+          <div class="grid-item small">
+            Database
+          </div>
+        </a>
+        <a href="game.html" class="grid-link">
+          <div class="grid-item small">
+            Game Programming
+          </div>
+        </a>
+      </div>
+
+      <!-- Row 4 -->
+      <div class="row">
+        <a href="graphic.html" class="grid-link">
+          <div class="grid-item small">
+            Graphic Programming
+          </div>
+        </a>
+        <a href="intergrasjon.html" class="grid-link">
+          <div class="grid-item small">
+            Integration Project
+          </div>
+        </a>
+        <a href="mobile.html" class="grid-link">
+          <div class="grid-item small">
+            Mobile Programming
+          </div>
+        </a>
+      </div>
+
+
+  </main>
+
+  <!-- Include footer -->
+  <div id="footer"></div>
+
+  <script>
+    // Dynamically load the header and footer
+    fetch("header.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("header").innerHTML = data
+        // Get all the nav links
+        const navLinks = document.querySelectorAll('.portfolio-link');
+
+        // Loop through all links and check if the href matches the current page's URL
+        navLinks.forEach(link => {
+          if (link.href === window.location.href) {
+            link.classList.add('active'); // Add 'active' class to the current page link
+          }
+        });
+      });
+
+    fetch("footer.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("footer").innerHTML = data;
+
+        // Dynamically set the correct path based on the current URL location
+        const githubIcon = document.getElementById("github-icon");
+
+        let iconPath = "images/Octicons-mark-github.svg";
+
+        githubIcon.src = iconPath;
+      });
+  </script>
+
+  <script src="dots.js"></script>
+</body>
+
+</html>

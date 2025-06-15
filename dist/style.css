@@ -1,0 +1,314 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    /* Light background */
+    color: #333;
+}
+
+.sectionDiv {
+    padding: 20px;
+}
+
+.dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ff5733;
+    /* Starting color (Red) */
+    opacity: 1;
+    animation: colorChange 1s infinite ease-out, fadeOut 1s forwards;
+    /* Color change and fade-out */
+    transition: transform 1s ease-out;
+    /* Smooth movement */
+}
+
+/* Fade-out effect */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Color changing effect */
+@keyframes colorChange {
+    0% {
+        background-color: #ff5733;
+        /* Red */
+    }
+
+    25% {
+        background-color: #33ff57;
+        /* Green */
+    }
+
+    50% {
+        background-color: #3357ff;
+        /* Blue */
+    }
+
+    75% {
+        background-color: #f3ff33;
+        /* Yellow */
+    }
+
+    100% {
+        background-color: #ff5733;
+        /* Back to Red */
+    }
+}
+
+
+h1,
+h2,
+h3 {
+    margin-bottom: 15px;
+}
+
+/* Main Header */
+.main-header {
+    background-color: #4a90e2;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.main-header h1 {
+    font-size: 2.5rem;
+    color: white;
+}
+
+/* Description Section */
+.description-section {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #eee;
+    border-radius: 8px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* Learning and Technologies Section */
+.learning-tech-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.what-i-learned {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tech-used {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tech-used h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.tech-used ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.tech-used ul li {
+    padding: 5px 0;
+}
+
+/* Alternating Sections */
+.alternating-sections .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.alternating-sections .text {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.alternating-sections .image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+
+    .learning-tech-section,
+    .alternating-sections .row {
+        grid-template-columns: 1fr;
+    }
+
+    .alternating-sections .image img {
+        margin-top: 20px;
+    }
+}
+
+/* Header and footer styling */
+.site-header,
+.site-footer {
+    position: relative;
+    z-index: 1;
+    /* Content is above dots */
+    background-color: #f8f9fa;
+    /* Light header/footer background */
+    color: #333;
+    /* Darker text color */
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+    /* Subtle border for definition */
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.site-header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.site-header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.site-header nav ul li a {
+    color: #0077cc;
+}
+
+.site-footer {
+    background-color: #f9f9f9;
+    /* Light background */
+    padding: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    /* Align columns horizontally */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    /* Equal width for each column */
+    padding: 10px;
+}
+
+.footer-section h3 {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.footer-section p,
+.footer-section a {
+    font-size: 1rem;
+    color: #333;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-section a {
+    color: #0078d4;
+    /* Matching link color from your image */
+}
+
+/* GitHub icon styling (assuming you use Font Awesome) */
+.footer-section i {
+    margin-right: 5px;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 15px;
+    }
+}
+
+.index-link {
+    color: black;
+    text-align: center;
+    font-size: 2.5rem;
+    /* Default color */
+    text-decoration: none;
+    /* Remove underline */
+    transition: transform 0.3s ease, color 0.3s ease;
+    /* Smooth transition */
+    display: inline-block;
+}
+
+
+.index-link:hover {
+    transform: scale(1.2);
+    /* Slightly enlarge the text on hover */
+    cursor: pointer;
+    /* Show pointer to indicate it's a link */
+}
+
+/* Basic link styling */
+.portfolio-link {
+    text-decoration: none;
+    color: black; 
+    padding: 8px 15px;
+    background-color: transparent; 
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    border-radius: 5px; 
+}
+
+/* Hover effect with subtle background color change */
+.portfolio-link:hover {
+    background-color: rgba(255, 87, 51, 0.1); 
+    color: #FF5733; 
+    transform: scale(1.05);
+}
+
+/* Active page styling (Background color to indicate active) */
+.portfolio-link.active {
+    background-color: #FF5733; 
+    color: white; 
+    font-weight: bold; 
+    border-radius: 5px; 
+}
+

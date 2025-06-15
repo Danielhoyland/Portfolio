@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Graphics Programming</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Include header -->
+    <div id="header"></div>
+    <div class="sectionDiv">
+      <!-- Main Header -->
+      <header class="main-header">
+        <h1>Graphics Programming</h1>
+        <h2>PROG2002</h2>
+      </header>
+
+      <!-- Description Section -->
+      <section class="description-section">
+        <h2>Subject Description</h2>
+        <p>
+          • OpenGL Graphics Pipeline (2D/3D)<br />
+          • Geometric Transformations (2D/3D)<br />
+          • Colors, Textures, and Blending<br />
+          • Shader Programming with GLSL<br />
+          • Illumination Techniques<br />
+          • C++ Programming with CMake and Git
+        </p>
+
+        <p>
+          Read more at the
+          <a href="https://www.ntnu.edu/studies/courses/PROG2002#tab=omEmnet"
+            >subject site</a
+          >
+        </p>
+      </section>
+
+      <!-- Learning and Technology Section -->
+      <section class="learning-tech-section">
+        <div class="what-i-learned">
+          <h2>What I Have Learned</h2>
+          <p>
+            This subject focused heavily on low-level programming, which was a
+            significant shift from my other courses. Initially, it was
+            challenging, but as time went on, it became much more enjoyable and
+            manageable. I gained extensive knowledge in object creation through
+            programming, camera movements, rendering, shading, texturing, and
+            applying lighting effects in graphical programming. Additionally, I
+            became more conscious and aware of memory management and how to
+            prevent memory leaks throughout this course.
+          </p>
+        </div>
+
+        <div class="tech-used">
+          <h3>Technologies Used</h3>
+          <ul>
+            <li>CMake</li>
+            <li>OpenGL</li>
+            <li>GLFW</li>
+            <li>GLM</li>
+            <li>GLAD</li>
+            <li>tclap</li>
+            <li>stb</li>
+          </ul>
+          <h3>Programming Languages Used</h3>
+          <ul>
+            <li>C++</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Alternating Text and Image Sections -->
+      <section class="alternating-sections">
+        <!-- Text Left, Image Right -->
+        <div class="row">
+          <div class="text">
+            <h3>Project 1 of the Course</h3>
+            <p>
+              In the first project, we learned how to program using OpenGL and
+              CMake to create graphical boxes with textures, colors, and to
+              simulate camera movement around the objects. When I mention
+              "camera movement," it's actually an illusion; instead of moving
+              the camera, we moved the objects themselves. By the end of the
+              project, we had a chessboard with "camera" movements, multiple
+              textured objects, and the ability to move chess pieces. You can
+              see a demo video as a GIF to the right. If you look closely,
+              you'll notice the textures look a bit off—and they were! I applied
+              the textures incorrectly to both the chess pieces and the board,
+              which caused the texture to appear distorted. However, I learned
+              from this experience and improved on it significantly in the
+              second project.
+            </p>
+            <p>
+              <em>Disclaimer</em>: The GIF may appear laggy due to its lower frame rate,
+              which is a limitation of the format. If you'd like to see the
+              video with a smoother frame rate, you can find it in the code
+              linked below. Inside the <strong>Assignment</strong> folder,
+              there's a video with better quality.
+            </p>
+          </div>
+          <div class="image">
+            <img src="images/Chess.gif" alt="Chess Graphics" />
+          </div>
+        </div>
+
+        <!-- Image Left, Text Right -->
+        <div class="row">
+          <div class="image">
+            <img src="images/OtherGame.gif" alt="Game Graphics" />
+          </div>
+          <div class="text">
+            <h3>Project 2 of the Course</h3>
+            <p>
+              This project was a three-day exam where we were tasked with
+              creating a Sokoban lookalike just in 3D. Sokoban is a classic puzzle game in which the
+              player must push boxes to their correct locations in a warehouse.
+              You can play the original 2D version of the game
+              <a href="https://www.sokobanonline.com/" target="_blank">here</a>.
+            </p>
+            <p>
+              For this project, I used the objects and knowledge from Project 1
+              and applied them here. It was much easier to start and build the
+              program this time. The challenging parts were the lighting and
+              texturing. Both issues arose because I had changed how I applied
+              textures based on the mistakes from Project 1. In short, I had set
+              all the objects as one with texture coordinates at (0.0), instead
+              of treating each object separately. Additionally, since I hadn't
+              worked with lighting in the previous project, I wasn't sure how it
+              should look. Eventually, I managed to resolve the problems with
+              texturing and lighting.
+            </p>
+            <p>
+              <em>Disclaimer</em>: The GIF may appear laggy due to its lower
+              frame rate and quality, which is a limitation of the format. For a
+              smoother frame rate and better quality, you can check out the
+              video in the
+              <a
+                href="https://github.com/Danielhoyland/Portfolio/tree/main/Grafikk%20-%20C%2B%2B%20OpenGL/assignment"
+                target="_blank"
+                >code</a
+              >. Inside the <strong>Exam</strong> folder, there's a
+              higher-quality video.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- Include footer -->
+    <div id="footer"></div>
+    <script src="header&footer.js"></script>
+
+    <script src="dots.js"></script>
+  </body>
+</html>
