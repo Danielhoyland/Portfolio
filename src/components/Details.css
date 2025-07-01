@@ -1,0 +1,104 @@
+.album-details-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-height: 100vh;
+    overflow: hidden;
+    background: #fffaf0;
+  }
+  
+  .album-header {
+    background: linear-gradient(135deg, #ffdf88, #f6c06f); 
+    padding: 2rem 1.5rem 2.5rem 1.5rem;
+    color: #3a2f1b;
+    text-align: center;
+    border-radius: 0 0 0.5rem 0.5rem; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #e0b85a;
+  }
+  
+  .album-header h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  }
+  
+  .album-content-wrapper {
+    display: flex;
+    flex: 1; 
+    overflow: hidden;
+    padding: 0px 1.5rem 0px 2rem;
+  }
+  
+  .album-content-scrollable,
+  .album-image-viewer {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  
+  .album-image-viewer {
+    max-width: 50%;
+    padding: 0.25rem;
+    gap: 1rem;
+    background-color: #fffaeb;
+  }
+  
+  .album-content-scrollable { 
+    padding-right: 0.5rem;  
+    min-height: 0;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    scrollbar-width: thin;
+    scrollbar-color: #d4af37 #fff0c6;
+  }
+  
+  .album-footer {
+    background: linear-gradient(135deg, #ffdf88, #f6c06f);
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #3a2f1b;
+    border-top: 3px solid #e0b85a;
+    border-radius: 0.5rem 0.5rem 0 0;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    gap: 1rem;
+  }
+  
+  .footer-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    font-size: 1.5rem;
+  }
+  
+  .footer-link a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #3a2f1b;
+    font-weight: 600;
+    text-decoration: none;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .footer-link img.link-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+  
+  
+  .link-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+  

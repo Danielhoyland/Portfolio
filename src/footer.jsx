@@ -1,5 +1,6 @@
 import React from 'react';
 import '../style.css'; 
+import GHlogo from './svg/GitHub_logo.svg';
 
 const Footer = () => {
   return (
@@ -8,6 +9,7 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Daniel Høyland</h3>
           <a href="mailto:Danielhoyland@hotmail.com">Danielhoyland@hotmail.com</a>
+          <p>+472662229</p>
         </div>
 
         <div className="footer-section">
@@ -15,7 +17,7 @@ const Footer = () => {
             <img
               id="github-icon"
               alt="GitHub Icon"
-              src="./PortfolioWebsite/images/Octicons-mark-github.svg"
+              src={GHlogo}
               style={{ width: '24px', height: '24px' }}
             />
             <a href="https://github.com/Danielhoyland" target="_blank" rel="noopener noreferrer">

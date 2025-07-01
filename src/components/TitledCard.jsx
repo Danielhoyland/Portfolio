@@ -1,6 +1,12 @@
-import { useRef, useState } from "react";
-import { motion, useMotionValue, useSpring } from "framer-motion";
-import "./TitledCard.css";
+import { useRef, useState, useEffect } from "react";
+import {
+  motion,
+  useMotionValue,
+  useSpring,
+} from "framer-motion";
+import Modal from "./Modal"; 
+import "./TitledCard.css"; 
+import AlbumDetails from "./Details.jsx";
 
 const springValues = {
   damping: 30,
@@ -9,21 +15,30 @@ const springValues = {
 };
 
 export default function TiltedCard({
-  imageSrc,
   altText = "Tilted card image",
   captionText = "",
-  containerHeight = "300px",
-  containerWidth = "100%",
-  imageHeight = "300px",
-  imageWidth = "300px",
+  containerHeight = "400px",
+  containerWidth = "400px",
+  imageHeight = "400px",
+  imageWidth = "400px",
   scaleOnHover = 1.1,
   rotateAmplitude = 14,
   showMobileWarning = true,
-  showTooltip = true,
+  modalContent = null,
   overlayContent = null,
   displayOverlayContent = false,
+  svgIcons = [],
+  hoverText = "",
+  imageList = [],
 }) {
   const ref = useRef(null);
+  const [lastY, setLastY] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [prevIndex, setPrevIndex] = useState(null);
+  const [direction, setDirection] = useState(1); 
+
+  const images = imageList.length > 0 ? imageList : [];
 
   const x = useMotionValue();
   const y = useMotionValue();
@@ -37,8 +52,15 @@ export default function TiltedCard({
     mass: 1,
   });
 
-  const [lastY, setLastY] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setDirection(1); 
+      setPrevIndex(currentIndex);
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 4000);
 
+    return () => clearInterval(interval);
+  }, [currentIndex, images.length]);
   function handleMouse(e) {
     if (!ref.current) return;
 
@@ -73,66 +95,142 @@ export default function TiltedCard({
     rotateFigcaption.set(0);
   }
 
-  return (
-    <figure
-      ref={ref}
-      className="tilted-card-figure"
-      style={{
-        height: containerHeight,
-        width: containerWidth,
-      }}
-      onMouseMove={handleMouse}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      {showMobileWarning && (
-        <div className="tilted-card-mobile-alert">
-          This effect is not optimized for mobile. Check on desktop.
-        </div>
-      )}
+  function openModal() {
+    setIsModalOpen(true);
+  }
 
-      <motion.div
-        className="tilted-card-inner"
-        style={{
-          width: imageWidth,
-          height: imageHeight,
-          rotateX,
-          rotateY,
-          scale,
-        }}
+  function closeModal() {
+    setIsModalOpen(false);
+  }
+
+  return (
+    <>
+      <figure
+        ref={ref}
+        className="tilted-card-figure"
+        style={{ height: containerHeight, width: containerWidth }}
+        onMouseMove={handleMouse}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        onClick={openModal}
       >
-        <motion.img
-          src={imageSrc}
-          alt={altText}
+        {showMobileWarning && (
+          <div className="tilted-card-mobile-alert">
+            This effect is not optimized for mobile. Check on desktop.
+          </div>
+        )}
+
+        {svgIcons.length > 0 && (
+          <motion.div
+            className="svg-icon-container"
+            style={{ rotateX, rotateY, opacity, scale }}
+          >
+            {svgIcons.map((icon, i) => (
+              <span className="svg-icon" key={i}>
+                {icon}
+              </span>
+            ))}
+          </motion.div>
+        )}
+        <motion.div
+          className="dark-hover-overlay"
+          style={{ rotateX, rotateY, opacity, scale }}
+        />
+        <motion.div
+          className="card-title-overlay"
+          style={{ rotateX, rotateY, scale }}
+        >
+          {captionText}
+        </motion.div>
+
+        {/* Hover Text */}
+        {hoverText && (
+          <motion.div
+            className="tilted-card-hover-text"
+            style={{ rotateX, rotateY, opacity, scale }}
+          >
+            {hoverText}
+          </motion.div>
+        )}
+        <motion.div
           className="tilted-card-img"
           style={{
             width: imageWidth,
             height: imageHeight,
-          }}
-        />
-
-        {displayOverlayContent && overlayContent && (
-          <motion.div
-            className="tilted-card-overlay"
-          >
-            {overlayContent}
-          </motion.div>
-        )}
-      </motion.div>
-
-      {showTooltip && (
-        <motion.figcaption
-          className="tilted-card-caption"
-          style={{
-            x,
-            y,
-            opacity,
-            rotate: rotateFigcaption,
+            rotateX,
+            rotateY,
+            scale,
+            position: "relative",
+            overflow: "hidden",
           }}
         >
-          {captionText}
-        </motion.figcaption>
-      )}
-    </figure>
+          <div
+            className="tilted-card-img"
+            style={{
+              width: imageWidth,
+              height: imageHeight,
+              position: "relative",
+              overflow: "hidden",
+            }}
+          >
+            {prevIndex !== null && (
+              <motion.img
+                key={`prev-${prevIndex}`}
+                src={images[prevIndex]}
+                alt=""
+                className="tilted-card-img"
+                initial={{ x: 0 }}
+                animate={{ x: direction > 0 ? `-100%` : `100%` }}
+                transition={{ type: "spring", stiffness: 70, damping: 20 }}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                }}
+              />
+            )}
+
+            <motion.img
+              key={`curr-${currentIndex}`}
+              src={images[currentIndex]}
+              alt=""
+              className="tilted-card-img"
+              initial={{ x: direction > 0 ? `100%` : `-100%` }}
+              animate={{ x: 0 }}
+              transition={{ type: "spring", stiffness: 70, damping: 20 }}
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                position: "absolute",
+                top: 0,
+                left: 0,
+              }}
+            />
+          </div>
+
+          {displayOverlayContent && overlayContent && (
+            <motion.div className="tilted-card-overlay">
+              {overlayContent}
+            </motion.div>
+          )}
+        </motion.div>
+      </figure>
+
+      {/* Modal */}
+      <Modal isOpen={isModalOpen} onClose={closeModal}>
+      <AlbumDetails
+        header="Artificial Intelligence"
+        content={modalContent}
+        images={imageList}
+        icons={svgIcons}
+        link={{ href: "https://github.com/...", img: null, label: "Repo" }}
+      />
+
+      </Modal>
+    </>
   );
 }

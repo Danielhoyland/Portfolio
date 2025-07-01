@@ -4,59 +4,13 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #fff0c6; /* Light background */
+  background-color: #fff0c6; 
   color: #333;
 }
 
-.dot {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #ff5733; /* Starting color (Red) */
-  opacity: 1;
-  animation: colorChange 1s infinite ease-out, fadeOut 1s forwards; /* Color change and fade-out */
-  transition: transform 1s ease-out; /* Smooth movement */
-}
-
-/* Fade-out effect */
-@keyframes fadeOut {
-  0% { opacity: 1; }
-  100% { opacity: 0; }
-}
-
-/* Color changing effect */
-@keyframes colorChange {
-  0% {
-      background-color: #ff5733;
-      /* Red */
-  }
-
-  25% {
-      background-color: #33ff57;
-      /* Green */
-  }
-
-  50% {
-      background-color: #3357ff;
-      /* Blue */
-  }
-
-  75% {
-      background-color: #f3ff33;
-      /* Yellow */
-  }
-
-  100% {
-      background-color: #ff5733;
-      /* Back to Red */
-  }
-}
-
-/* Portfolio content styling */
 .portfolio-content {
   position: relative;
-  z-index: 1; /* Content is above dots */
+  z-index: 1;
   padding: 20px;
 }
 
@@ -71,10 +25,7 @@ a {
   color: #0077cc; 
 }
 
-
-/* Header and footer styling */
 .site-header, .site-footer {
-  position: relative;
   z-index: 1; 
   background-color: #ffdf88; 
   color: #333; 
@@ -97,8 +48,13 @@ a {
 .site-header nav ul li a {
   color: #0077cc;
 }
+.header-inline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem; /* space between elements */
+}
 
-/* Grid layout */
 .portfolio-content {
   margin: 0 auto;
   max-width: 1800px;
@@ -117,13 +73,12 @@ a {
   grid-gap: 20px;
 }
 
-/* Large grid item for images and description */
 .grid-item.large {
   grid-column: span 3;
-  background-color: #f5f5f5; /* Light grid background */
+  background-color: #f5f5f5;
   padding: 20px;
   text-align: center;
-  border: 1px solid #e0e0e0; /* Subtle border */
+  border: 1px solid #e0e0e0; 
 }
 
 .grid-item.large img {
@@ -133,47 +88,40 @@ a {
 }
 
 .grid-item.large p {
-  color: #666; /* Darker gray text for readability */
+  color: #666; 
   font-size: 1.2rem;
 }
 
-/* General grid item styles */
 .grid-item.small {
-  background-color: #ffffff; /* White background for smaller grid */
+  background-color: #ffffff; 
   padding: 20px;
   text-align: center;
   border: 1px solid #e0e0e0;
   transition: background-color 0.3s ease, transform 0.3s ease;
   font-size: 1rem;
-  color: #0077cc; /* Blue text */
+  color: #0077cc; 
 }
 
-/* Ensure the <a> tag covers the whole grid item */
 .grid-link {
   display: block;
   text-decoration: none;
-  color: inherit; /* Inherit text color from .grid-item */
+  color: inherit; 
 }
 
-/* Hover effect for the entire grid item (including link) */
 .grid-item.small:hover {
-  background-color: #f0f0f0; /* Light gray on hover */
-  transform: scale(1.05); /* Slight scale up effect */
+  background-color: #f0f0f0; 
+  transform: scale(1.05); 
   cursor: pointer;
 }
 
-/* Color change on hover for the text */
 .grid-link:hover .grid-item.small {
-  color: #005fa3; /* Darker blue on hover */
+  color: #005fa3; 
 }
 
-/* Optional: Underline the text on hover */
 .grid-item.small:hover {
   text-decoration: underline;
 }
 
-
-/* Responsive Design */
 @media (max-width: 768px) {
   .row {
     grid-template-columns: 1fr;
@@ -182,7 +130,7 @@ a {
 
 .portrett {
   width: 288px;
-  height: auto; /* Maintain aspect ratio */
+  height: auto; 
 }
 
 .site-footer {
@@ -192,13 +140,13 @@ a {
 
 .footer-content {
   display: flex;
-  justify-content: space-between; /* Align columns horizontally */
+  justify-content: space-between; 
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .footer-section {
-  flex: 1; /* Equal width for each column */
+  flex: 1; 
   padding: 10px;
 }
 
@@ -218,17 +166,15 @@ a {
 }
 
 .footer-section a {
-  color: #0078d4; /* Matching link color from your image */
+  color: #0078d4; 
 }
 
-/* GitHub icon styling (assuming you use Font Awesome) */
 .footer-section i {
   margin-right: 5px;
   color: #333;
   font-size: 1.2rem;
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
@@ -243,22 +189,17 @@ a {
 
 .index-link {
   color: black;
-  /* Default color */
   text-decoration: none;
   transition: transform 0.3s ease, color 0.3s ease;
-  /* Smooth transition */
   display: inline-block;
 }
 
 
 .index-link:hover {
   transform: scale(1.2);
-  /* Slightly enlarge the text on hover */
   cursor: pointer;
-  /* Show pointer to indicate it's a link */
 }
 
-/* Basic link styling */
 .portfolio-link {
   text-decoration: none;
   color: black; 
@@ -268,14 +209,12 @@ a {
   border-radius: 5px; 
 }
 
-/* Hover effect with subtle background color change */
 .portfolio-link:hover {
   background-color: rgba(255, 87, 51, 0.1); 
   color: #FF5733; 
   transform: scale(1.05);
 }
 
-/* Active page styling (Background color to indicate active) */
 .portfolio-link.active {
   background-color: #FF5733; 
   color: white; 
@@ -284,8 +223,8 @@ a {
 }
 .circular-top-left {
   position: absolute;
-  top: -40px; /* adjust for desired overlap */
-  left: -40px; /* adjust for desired overlap */
+  top: -40px;
+  left: -40px;
   z-index: 10;
 }
 
@@ -295,6 +234,7 @@ a {
   background-color: #ffd166;
   border-radius: 16px;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .about-row {
@@ -365,7 +305,11 @@ a {
   position: relative;
   z-index: 1; 
 }
-
+.logo {
+  width: 48px;
+  height: auto;
+  z-index: 1; 
+}
 
 .vertical-carousel {
   height: 30px;

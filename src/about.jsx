@@ -1,7 +1,8 @@
 import React from 'react';
 import CircularText from './components/CircularText';
-import '../style.css'; // Your own CSS
+import '../style.css'; 
 import InterestsSection from './components/InterestsSection';
+import Portrett from './images/DBrown.jpg';
 
 const AboutMe = () => {
   const myInterests = [
@@ -46,7 +47,7 @@ const AboutMe = () => {
               className="circular-top-left"
             />
             <img
-              src="PortfolioWebsite/images/DBrown.jpg"
+              src={Portrett}
               className="profile-image"
               alt="Daniel Høyland"
             />
