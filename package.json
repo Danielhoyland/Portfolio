@@ -1,12 +1,15 @@
 {
   "name": "portfolio",
-  "version": "2.0.1",
+  "version": "2.0.5",
+  "homepage": "https://danielhoyland.github.io/Portfolio/",
   "description": "Here is my repo for all projects I have done in school, as hobby or other",
   "main": "portfolio.jsx",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
