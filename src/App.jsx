@@ -1,5 +1,5 @@
 import React from 'react';
-import './Portfolio';
+import '../portfolio.jsx';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "slick-carousel/slick/slick.css";
