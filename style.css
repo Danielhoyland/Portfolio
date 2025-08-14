@@ -297,7 +297,7 @@ a {
 }
 
 .profile-image {
-  max-height: 500px;
+  max-height: 575px;
   border-radius: 8px;
   width: 100%;
   height: auto;
@@ -340,4 +340,63 @@ a {
   justify-content: center;
   width: 30%;
   padding-right: 16px;
+}
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-left: 4px solid #4cafef; /* Accent line */
+  padding-left: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.subsection-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0.3rem;
+  margin-top: 1.2rem;
+}
+
+.custom-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.custom-list li {
+  position: relative;
+  padding-left: 1.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.custom-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 8px;
+  height: 8px;
+  background-color: #4cafef; /* Accent color */
+  border-radius: 50%;
+}
+
+.highlight-link {
+  color: #4cafef;
+  font-weight: 500;
+  position: relative;
+  text-decoration: none;
+}
+
+.highlight-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: #4cafef;
+  transition: width 0.3s ease;
+}
+
+.highlight-link:hover::after {
+  width: 100%;
 }

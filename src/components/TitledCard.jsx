@@ -223,7 +223,7 @@ export default function TiltedCard({
       {/* Modal */}
       <Modal isOpen={isModalOpen} onClose={closeModal}>
       <AlbumDetails
-        header="Artificial Intelligence"
+        header= {captionText}
         content={modalContent}
         images={imageList}
         icons={svgIcons}

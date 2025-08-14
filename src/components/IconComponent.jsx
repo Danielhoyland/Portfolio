@@ -16,6 +16,10 @@ import SqliteLogo from "../svg/sqlite_logo.svg";
 import TailwindLogo from "../svg/Tailwind_CSS_logo.svg";
 import TypeScriptLogo from "../svg/TypeScript_logo.svg";
 import ViteLogo from "../svg/Vitejs_logo.svg";
+import JupyterLogo from "../svg/Jupyter_logo.svg";
+import PythonLogo from "../svg/Python_logo.svg";
+import CollabLogo from "../svg/Google_Colaboratory_Logo.svg";
+import LinkedInLogo from "../svg/LinkedIn_logo.svg";
 
 const iconStyle = { width: "24px", height: "24px" };
 
@@ -35,3 +39,7 @@ export const SqliteIcon = <img src={SqliteLogo} alt="SQLite" style={iconStyle} /
 export const TailwindIcon = <img src={TailwindLogo} alt="Tailwind CSS" style={iconStyle} />;
 export const TypeScriptIcon = <img src={TypeScriptLogo} alt="TypeScript" style={iconStyle} />;
 export const ViteIcon = <img src={ViteLogo} alt="Vite" style={iconStyle} />;
+export const JupyterIcon = <img src={JupyterLogo} alt="Jupyter" style={iconStyle} />;
+export const PythonIcon = <img src={PythonLogo} alt="Python" style={iconStyle} />;
+export const CollabIcon = <img src={CollabLogo} alt="Google Collab" style={iconStyle} />;
+export const LinkedInIcon = <img src={LinkedInLogo} alt="LinkedIn" style={iconStyle} />;

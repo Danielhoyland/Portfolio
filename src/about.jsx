@@ -1,39 +1,72 @@
-import React from 'react';
-import CircularText from './components/CircularText';
-import '../style.css'; 
-import InterestsSection from './components/InterestsSection';
-import Portrett from './images/DBrown.jpg';
+import React from "react";
+import CircularText from "./components/CircularText";
+import "../style.css";
+import InterestsSection from "./components/InterestsSection";
+import Portrett from "./images/DBrown.jpg";
 
 const AboutMe = () => {
-  const myInterests = [
-    'Web Development',
-    'AI & Machine Learning',
-    'Game Design',
-    'Creative Coding',
-    'Open Source',
-    'Problem Solving',
-  ];
-  
   return (
     <div className="about-container">
       <div className="about-row">
         {/* Left Side: Text */}
         <div className="about-text">
           <br></br>
-          <h2 className="about-heading" id="about-me">About Me</h2>
+          <h2 className="about-heading" id="about-me">
+            About Me
+          </h2>
           <p className="about-lead">
-            I'm Daniel Høyland from Sandnes, now based in Trondheim. I recently completed my bachelor's in Programming
-            at NTNU Gjøvik. I'm passionate about software development, continuous learning, and solving meaningful
-            problems with code.
+            I'm Daniel Høyland from Sandnes. I'm 23 years old and currently
+            studying a Masters degree in Informatics: Software Systems at NTNU
+            Trondheim. I recently completed my bachelor's in Programming at NTNU
+            Gjøvik.
           </p>
-        <InterestsSection interests={["Learning", "Coding", "Improving", "Repeat"]} Interval={2500} />
-        <InterestsSection interests={["Board Games", "Gaming", "Lego", "Travel"]} Interval={2400} />
-        <InterestsSection interests={["Bouldering", "D&D", "Gym", "Chess"]} Interval={2600} />
-         <br></br>
+          <InterestsSection
+            interests={[
+              "Web Development",
+              "Graphical Programming",
+              "Mobile Programming",
+              "Cloud Development",
+              "Database Management",
+              "Game Development",
+            ]}
+            Interval={2500}
+          />
+          <InterestsSection
+            interests={["D&D", "Chess", "Board Games", "Gaming"]}
+            Interval={2400}
+          />
+          <InterestsSection
+            interests={["Travel", "Cooking", "Bouldering", "Gym", "Running"]}
+            Interval={2600}
+          />
+          <br></br>
           <br></br>
           <p className="about-paragraph">
-            I love diving into new tech, building personal projects, and experimenting with ways to blend creativity and logic — 
-            whether it’s game development, system design, or web technologies.
+            Throughout my studies, I've gained experience with many programming
+            techniques, languages, and paradigms. As one of my professors put
+            it:
+            <br></br>
+            <em>
+              {" "}
+              “We don't want you to just learn a programming language, we want
+              you to learn how to code.” 
+            </em>
+            <br></br>
+            This philosophy has shaped the way I approach problems, focusing on
+            writing clean, efficient, and adaptable code. I've worked with
+            low-level languages like C and C++, which taught me transferable
+            skills applicable to almost any programming language. <br />
+            <br />
+            I'm a problem-oriented programmer who enjoys tackling challenges
+            that feel like puzzles. In my free time, I create apps to solve
+            everyday problems, and I also enjoy hobbies like gaming, chess, gym,
+            bouldering, and D&D. Chess has strengthened my problem-solving
+            skills by training me to consider multiple possibilities before
+            acting. D&D, where I'm often the Game Master, has boosted my
+            creativity, requiring me to design scenarios, adapt quickly to
+            unexpected player actions, and think outside the box. Both of these
+            hobbies complement my work as a programmer, combining logic with
+            creativity.
           </p>
         </div>
 
