@@ -1,14 +1,30 @@
+/* === Base Card Container === */
 .tilted-card-figure {
   position: relative;
-  width: fit-content; 
-  height: fit-content; 
+  max-width: 100%;
+  width: 20vw;
+  height: 20vw;
   perspective: 800px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+}
+@media (max-width: 640px) {
+  .tilted-card-figure {
+  width: 40vw;
+  height: 40vw;
+}
+}
+@media (max-width: 400px) {
+  .tilted-card-figure {
+  width: 80vw;
+  height: 80vw;
+}
 }
 
+/* === Mobile Alert === */
 .tilted-card-mobile-alert {
   position: absolute;
   top: 1rem;
@@ -26,11 +42,13 @@
   }
 }
 
+/* === Inner 3D Wrapper === */
 .tilted-card-inner {
   position: relative;
   transform-style: preserve-3d;
 }
 
+/* === Card Image === */
 .tilted-card-img {
   position: absolute;
   top: 0;
@@ -39,8 +57,10 @@
   border-radius: 15px;
   will-change: transform;
   transform: translateZ(0);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
+/* === Foreground Overlay Layer === */
 .tilted-card-overlay {
   position: absolute;
   top: 0;
@@ -50,6 +70,7 @@
   transform: translateZ(30px);
 }
 
+/* === Caption Tag === */
 .tilted-card-caption {
   pointer-events: none;
   position: absolute;
@@ -62,7 +83,10 @@
   color: #2d2d2d;
   opacity: 0;
   z-index: 3;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
+/* === Icon Row === */
 .svg-icon-container {
   position: absolute;
   top: 0.5rem;
@@ -82,8 +106,14 @@
 .svg-icon {
   width: 24px;
   height: 24px;
+  transition: transform 0.2s ease;
 }
 
+.svg-icon:hover {
+  transform: scale(1.15);
+}
+
+/* === Hover Text === */
 .tilted-card-hover-text {
   position: absolute;
   bottom: 1rem;
@@ -95,7 +125,10 @@
   pointer-events: none;
   opacity: 0;
   z-index: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
+
+/* === Dark Overlay === */
 .dark-hover-overlay {
   position: absolute;
   top: 0;
@@ -103,21 +136,42 @@
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.4);
-  z-index: 10000000;
   border-radius: 15px;
   pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
+
+/* === Title Overlay === */
 .card-title-overlay {
   position: absolute;
   top: 1rem;
-  left: 50%;
   transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.6); /* translucent dark background */
+  background: rgba(0, 0, 0, 0.6);
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 8px;
-  font-size: 1.2rem;
+  font-size: clamp(0.8rem, 2vw, 1.2rem); /* responsive font size */
   font-weight: bold;
   z-index: 4;
   pointer-events: none;
+  max-width: 100%;         
+  white-space: nowrap;  
+  overflow: hidden;      
+  text-overflow: ellipsis; 
+}
+@media (max-width: 640px) {
+.card-title-overlay {
+left: 0%;
+}
+}
+/* === Hover Interactions === */
+.tilted-card-figure:hover .tilted-card-caption,
+.tilted-card-figure:hover .tilted-card-hover-text,
+.tilted-card-figure:hover .dark-hover-overlay {
+  opacity: 1;
+}
+
+.tilted-card-figure:hover .tilted-card-hover-text {
+  transform: translateY(-5px);
 }

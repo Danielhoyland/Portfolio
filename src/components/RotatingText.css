@@ -3,15 +3,14 @@
   flex-wrap: wrap;
   white-space: pre-wrap;
   position: sticky;
-  
 }
 
 .text-rotate-sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
-  padding-right: 0;
   margin: -1px;
+  padding: 0;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
@@ -30,24 +29,38 @@
 
 .text-rotate-element {
   display: inline-block;
+  transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
 .text-rotate-space {
   white-space: pre;
 }
+
+/* Tools bar - unified style with hover reveal */
 .tools-bar {
-    position: absolute;
-    top: -42px;
-    width: 100%;
-    padding: 5px;
-    display: flex;
-    transition: all 0.3s ease;
+  position: absolute;
+  top: -42px;
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  transition: top 0.3s ease;
+  z-index: 1;
 }
+
 .project-card:hover .tools-bar {
-    top: 0;
+  top: 0;
 }
+
 .tool-icon {
   width: 24px;
   height: 24px;
   margin: 0 5px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.tool-icon:hover {
+  transform: scale(1.2);
+  color: #d4af37; /* subtle gold hover accent */
 }

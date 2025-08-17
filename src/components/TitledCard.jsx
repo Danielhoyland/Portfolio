@@ -1,9 +1,5 @@
 import { useRef, useState, useEffect } from "react";
-import {
-  motion,
-  useMotionValue,
-  useSpring,
-} from "framer-motion";
+import { motion, useMotionValue, useSpring } from "framer-motion";
 import Modal from "./Modal"; 
 import "./TitledCard.css"; 
 import AlbumDetails from "./Details.jsx";
@@ -15,12 +11,9 @@ const springValues = {
 };
 
 export default function TiltedCard({
-  altText = "Tilted card image",
   captionText = "",
-  containerHeight = "400px",
-  containerWidth = "400px",
-  imageHeight = "400px",
-  imageWidth = "400px",
+  containerHeight = "20vw",
+  containerWidth = "20vw",
   scaleOnHover = 1.1,
   rotateAmplitude = 14,
   showMobileWarning = true,
@@ -37,84 +30,102 @@ export default function TiltedCard({
   const [currentIndex, setCurrentIndex] = useState(0);
   const [prevIndex, setPrevIndex] = useState(null);
   const [direction, setDirection] = useState(1); 
-
+  const [isMobile, setIsMobile] = useState(false);
+  const [isWidth, setIsWidth] = useState(containerWidth);
+  const [isHeight, setIsHeight] = useState(containerHeight);
+  
   const images = imageList.length > 0 ? imageList : [];
 
-  const x = useMotionValue();
-  const y = useMotionValue();
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
   const rotateX = useSpring(useMotionValue(0), springValues);
   const rotateY = useSpring(useMotionValue(0), springValues);
   const scale = useSpring(1, springValues);
   const opacity = useSpring(0);
-  const rotateFigcaption = useSpring(0, {
-    stiffness: 350,
-    damping: 30,
-    mass: 1,
-  });
+  const rotateFigcaption = useSpring(0, { stiffness: 350, damping: 30, mass: 1 });
 
+  // Detect mobile
+// inside TiltedCard
+
+useEffect(() => {
+  function handleResize() {
+    const width = window.innerWidth;
+ if (width < 640) {
+      setIsMobile(true);
+
+    } 
+  }
+
+  handleResize();
+  window.addEventListener("resize", handleResize);
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
+
+  // Auto-slide images
   useEffect(() => {
+    if (!images.length) return;
     const interval = setInterval(() => {
-      setDirection(1); 
+      setDirection(1);
       setPrevIndex(currentIndex);
       setCurrentIndex((prev) => (prev + 1) % images.length);
     }, 4000);
-
     return () => clearInterval(interval);
   }, [currentIndex, images.length]);
-  function handleMouse(e) {
-    if (!ref.current) return;
 
+  // Mouse handlers only on desktop
+  function handleMouse(e) {
+    if (!ref.current || isMobile) return;
     const rect = ref.current.getBoundingClientRect();
     const offsetX = e.clientX - rect.left - rect.width / 2;
     const offsetY = e.clientY - rect.top - rect.height / 2;
-
-    const rotationX = (offsetY / (rect.height / 2)) * -rotateAmplitude;
-    const rotationY = (offsetX / (rect.width / 2)) * rotateAmplitude;
-
-    rotateX.set(rotationX);
-    rotateY.set(rotationY);
-
+    rotateX.set((offsetY / (rect.height / 2)) * -rotateAmplitude);
+    rotateY.set((offsetX / (rect.width / 2)) * rotateAmplitude);
     x.set(e.clientX - rect.left);
     y.set(e.clientY - rect.top);
-
     const velocityY = offsetY - lastY;
     rotateFigcaption.set(-velocityY * 0.6);
     setLastY(offsetY);
   }
 
   function handleMouseEnter() {
-    scale.set(scaleOnHover);
+    if (!isMobile) scale.set(scaleOnHover);
     opacity.set(1);
   }
 
   function handleMouseLeave() {
-    opacity.set(0);
-    scale.set(1);
+    if (!isMobile) scale.set(1);
     rotateX.set(0);
     rotateY.set(0);
     rotateFigcaption.set(0);
+    opacity.set(0);
   }
 
-  function openModal() {
-    setIsModalOpen(true);
+  useEffect(() => {
+  function handleImageSize() {
+    setIsHeight(window.innerHeight / 5);
+    setIsWidth(window.innerWidth / 5);
   }
 
-  function closeModal() {
-    setIsModalOpen(false);
-  }
+  handleImageSize();
+
+  window.addEventListener("resize", handleImageSize);
+  return () => window.removeEventListener("resize", handleImageSize);
+}, []);
+
+  function openModal() { setIsModalOpen(true); }
+  function closeModal() { setIsModalOpen(false); }
 
   return (
     <>
       <figure
         ref={ref}
         className="tilted-card-figure"
-        style={{ height: containerHeight, width: containerWidth }}
         onMouseMove={handleMouse}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
         onClick={openModal}
       >
-        {showMobileWarning && (
+        {showMobileWarning && isMobile && (
           <div className="tilted-card-mobile-alert">
             This effect is not optimized for mobile. Check on desktop.
           </div>
@@ -126,16 +137,16 @@ export default function TiltedCard({
             style={{ rotateX, rotateY, opacity, scale }}
           >
             {svgIcons.map((icon, i) => (
-              <span className="svg-icon" key={i}>
-                {icon}
-              </span>
+              <span className="svg-icon" key={i}>{icon}</span>
             ))}
           </motion.div>
         )}
+
         <motion.div
           className="dark-hover-overlay"
           style={{ rotateX, rotateY, opacity, scale }}
         />
+
         <motion.div
           className="card-title-overlay"
           style={{ rotateX, rotateY, scale }}
@@ -143,7 +154,6 @@ export default function TiltedCard({
           {captionText}
         </motion.div>
 
-        {/* Hover Text */}
         {hoverText && (
           <motion.div
             className="tilted-card-hover-text"
@@ -152,11 +162,12 @@ export default function TiltedCard({
             {hoverText}
           </motion.div>
         )}
+
         <motion.div
           className="tilted-card-img"
           style={{
-            width: imageWidth,
-            height: imageHeight,
+            width: "100%",
+            height: "100%",
             rotateX,
             rotateY,
             scale,
@@ -164,53 +175,28 @@ export default function TiltedCard({
             overflow: "hidden",
           }}
         >
-          <div
-            className="tilted-card-img"
-            style={{
-              width: imageWidth,
-              height: imageHeight,
-              position: "relative",
-              overflow: "hidden",
-            }}
-          >
-            {prevIndex !== null && (
-              <motion.img
-                key={`prev-${prevIndex}`}
-                src={images[prevIndex]}
-                alt=""
-                className="tilted-card-img"
-                initial={{ x: 0 }}
-                animate={{ x: direction > 0 ? `-100%` : `100%` }}
-                transition={{ type: "spring", stiffness: 70, damping: 20 }}
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                }}
-              />
-            )}
-
+          {prevIndex !== null && (
             <motion.img
-              key={`curr-${currentIndex}`}
-              src={images[currentIndex]}
+              key={`prev-${prevIndex}`}
+              src={images[prevIndex]}
               alt=""
               className="tilted-card-img"
-              initial={{ x: direction > 0 ? `100%` : `-100%` }}
-              animate={{ x: 0 }}
+              initial={{ x: 0 }}
+              animate={{ x: direction > 0 ? `-100%` : `100%` }}
               transition={{ type: "spring", stiffness: 70, damping: 20 }}
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                position: "absolute",
-                top: 0,
-                left: 0,
-              }}
+              style={{ width: "100%", height: "100%", objectFit: "cover", position: "absolute", top: 0, left: 0 }}
             />
-          </div>
+          )}
+          <motion.img
+            key={`curr-${currentIndex}`}
+            src={images[currentIndex]}
+            alt=""
+            className="tilted-card-img"
+            initial={{ x: direction > 0 ? `100%` : `-100%` }}
+            animate={{ x: 0 }}
+            transition={{ type: "spring", stiffness: 70, damping: 20 }}
+            style={{ width: "100%", height: "100%", objectFit: "cover", position: "absolute", top: 0, left: 0 }}
+          />
 
           {displayOverlayContent && overlayContent && (
             <motion.div className="tilted-card-overlay">
@@ -220,16 +206,14 @@ export default function TiltedCard({
         </motion.div>
       </figure>
 
-      {/* Modal */}
       <Modal isOpen={isModalOpen} onClose={closeModal}>
-      <AlbumDetails
-        header= {captionText}
-        content={modalContent}
-        images={imageList}
-        icons={svgIcons}
-        link={{ href: "https://github.com/...", img: null, label: "Repo" }}
-      />
-
+        <AlbumDetails
+          header={captionText}
+          content={modalContent}
+          images={imageList}
+          icons={svgIcons}
+          link={{ href: "https://github.com/...", img: null, label: "Repo" }}
+        />
       </Modal>
     </>
   );
