@@ -15,7 +15,7 @@ import TailwindLogo from "../svg/Tailwind_CSS_logo.svg";
 import TypeScriptLogo from "../svg/TypeScript_logo.svg";
 import ViteLogo from "../svg/Vitejs_logo.svg";
 import JupyterLogo from "../svg/Jupyter_logo.svg";
-import PythonLogo from "../svg/Python_logo.svg";
+import PythonLogo from "../svg/python_logo.svg";
 import CollabLogo from "../svg/Google_Colaboratory_Logo.svg";
 import LinkedInLogo from "../svg/LinkedIn_logo.svg";
 import PyTorchLogo from "../svg/pyTorch_logo.svg";
