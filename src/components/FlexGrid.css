@@ -1,0 +1,25 @@
+.flex-grid {
+  display: grid;
+  grid-template-columns: repeat(4, max-content); 
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media (max-width: 880px) {
+  .flex-grid {
+    grid-template-columns: repeat(3, max-content);
+  }
+}
+
+@media (max-width: 640px) {
+  .flex-grid {
+    grid-template-columns: repeat(2, max-content);
+  }
+}
+
+@media (max-width: 400px) {
+  .flex-grid {
+    grid-template-columns: repeat(1, max-content);
+    justify-content: center;
+  }
+}

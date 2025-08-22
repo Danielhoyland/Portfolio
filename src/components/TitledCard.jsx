@@ -31,8 +31,6 @@ export default function TiltedCard({
   const [prevIndex, setPrevIndex] = useState(null);
   const [direction, setDirection] = useState(1); 
   const [isMobile, setIsMobile] = useState(false);
-  const [isWidth, setIsWidth] = useState(containerWidth);
-  const [isHeight, setIsHeight] = useState(containerHeight);
   
   const images = imageList.length > 0 ? imageList : [];
 
@@ -44,15 +42,11 @@ export default function TiltedCard({
   const opacity = useSpring(0);
   const rotateFigcaption = useSpring(0, { stiffness: 350, damping: 30, mass: 1 });
 
-  // Detect mobile
-// inside TiltedCard
-
 useEffect(() => {
   function handleResize() {
     const width = window.innerWidth;
  if (width < 640) {
       setIsMobile(true);
-
     } 
   }
 
@@ -60,6 +54,15 @@ useEffect(() => {
   window.addEventListener("resize", handleResize);
   return () => window.removeEventListener("resize", handleResize);
 }, []);
+
+useEffect(() => {
+  if (isModalOpen) {
+    document.body.classList.add("modal-open");
+  } else {
+    document.body.classList.remove("modal-open");
+  }
+  return () => document.body.classList.remove("modal-open");
+}, [isModalOpen]);
 
   // Auto-slide images
   useEffect(() => {
@@ -99,18 +102,6 @@ useEffect(() => {
     rotateFigcaption.set(0);
     opacity.set(0);
   }
-
-  useEffect(() => {
-  function handleImageSize() {
-    setIsHeight(window.innerHeight / 5);
-    setIsWidth(window.innerWidth / 5);
-  }
-
-  handleImageSize();
-
-  window.addEventListener("resize", handleImageSize);
-  return () => window.removeEventListener("resize", handleImageSize);
-}, []);
 
   function openModal() { setIsModalOpen(true); }
   function closeModal() { setIsModalOpen(false); }

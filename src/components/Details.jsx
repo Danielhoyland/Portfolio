@@ -40,8 +40,7 @@ export default function AlbumDetailsTemplate({
         <div
           className="album-content-scrollable"
           style={{
-            maxHeight: `calc(90vh - 180px)`, // adjust 120px based on header/footer size
-            overflowY: "auto",
+
           }}
         >
           {content}

@@ -1,6 +1,6 @@
 import React from "react";
 import CircularText from "./components/CircularText";
-import "../style.css";
+import "./css/about.css";
 import InterestsSection from "./components/InterestsSection";
 import Portrett from "./images/DBrown.jpg";
 
@@ -49,7 +49,7 @@ const AboutMe = () => {
             <em>
               {" "}
               “We don't want you to just learn a programming language, we want
-              you to learn how to code.” 
+              you to learn how to code.”
             </em>
             <br></br>
             This philosophy has shaped the way I approach problems, focusing on

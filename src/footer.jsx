@@ -1,5 +1,5 @@
 import React from "react";
-import "../style.css";
+import "./css/footer.css";
 import { GitHubIcon, LinkedInIcon } from "./components/IconComponent";
 
 const Footer = () => {
@@ -24,7 +24,7 @@ const Footer = () => {
             DanielHoyland
           </a>
 
-          <div style={{height: "10px"}}></div>
+          <div style={{ height: "10px" }}></div>
 
           {LinkedInIcon}
           <a

@@ -11,6 +11,12 @@
   justify-content: center;
 
 }
+@media (max-width: 880px) {
+  .tilted-card-figure {
+  width: 30vw;
+  height: 30vw;
+}
+}
 @media (max-width: 640px) {
   .tilted-card-figure {
   width: 40vw;

@@ -1,8 +1,23 @@
 .text-rotate {
   display: flex;
   flex-wrap: wrap;
-  white-space: pre-wrap;
-  position: sticky;
+  gap: 0.5rem;              /* Even gap between boxes */
+  justify-content: center;  /* Center align for mobile */
+  white-space: normal;      /* Let words wrap naturally */
+  position: relative;       /* remove sticky, cleaner */
+  flex-shrink: 0;           /* Prevent shrinking */
+}
+
+
+/* Animate each char inside smoothly */
+.text-rotate-element {
+  display: inline-block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Ensure spacing works between words */
+.text-rotate-space {
+  display: none; /* hide extra space since we have gap */
 }
 
 .text-rotate-sr-only {

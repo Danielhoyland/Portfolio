@@ -1,18 +1,18 @@
 .album-details-container {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 100dvh;
   max-height: 100vh;
   overflow: hidden;
   background: #fffaf0;
 }
 
 .album-header {
-  background: linear-gradient(135deg, #ffdf88, #f6c06f); 
+  background: linear-gradient(135deg, #ffdf88, #f6c06f);
   padding: 2rem 1.5rem 2.5rem;
   color: #3a2f1b;
   text-align: center;
-  border-radius: 0 0 0.5rem 0.5rem; 
+  border-radius: 0 0 0.5rem 0.5rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-bottom: 3px solid #e0b85a;
 }
@@ -27,6 +27,9 @@
 
 /* Responsive header font */
 @media (max-width: 768px) {
+  .album-header {
+    padding: 0.75rem 0.5rem 1rem;
+  }
   .album-header h1 {
     font-size: 1.4rem;
   }
@@ -34,18 +37,11 @@
 
 .album-content-wrapper {
   display: flex;
-  flex: 1; 
-  overflow: hidden;
+  flex: 1;
+  min-height: 0;            /* allows inner scrolling to work */
+  overflow: hidden;         /* desktop: children can scroll independently */
   padding: 0 1.5rem 0 2rem;
   gap: 1rem;
-}
-
-/* Stack vertically on small screens */
-@media (max-width: 768px) {
-  .album-content-wrapper {
-    flex-direction: column;
-    padding: 0 1rem;
-  }
 }
 
 .album-content-scrollable,
@@ -54,7 +50,6 @@
   overflow-y: auto;
   overflow-x: hidden;
 }
-
 .album-image-viewer {
   max-width: 50%;
   padding: 0.25rem;
@@ -62,19 +57,37 @@
   background-color: #fffaeb;
 }
 
-/* Make images full width on mobile */
 @media (max-width: 768px) {
+  .album-header { padding: 0.75rem 0.5rem 1rem; }
+  .album-header h1 { font-size: 1.4rem; }
+
+  .album-content-wrapper {
+    flex-direction: column;
+    padding: 0 1rem;
+    overflow-y: auto;       
+    overflow-x: hidden;
+  }
+
+  .album-content-scrollable,
   .album-image-viewer {
+    order: initial;        
+    flex: 0 0 auto;         
+    overflow: visible;      
     max-width: 100%;
+  }
+
+  .album-image-viewer {
+    margin-top: 0.5rem;   
   }
 }
 
-.album-content-scrollable { 
+.album-content-scrollable {
   padding: 0.75rem 0.5rem;
   min-height: 0;
   scrollbar-width: thin;
   scrollbar-color: #d4af37 #fff0c6;
 }
+
 
 .album-footer {
   background: linear-gradient(135deg, #ffdf88, #f6c06f);
@@ -94,8 +107,8 @@
 /* Footer stacks on small screens */
 @media (max-width: 768px) {
   .album-footer {
-    flex-direction: column;
     align-items: flex-start;
+    padding: 0.5rem 0.75rem;
   }
 }
 

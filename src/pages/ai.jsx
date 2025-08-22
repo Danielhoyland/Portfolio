@@ -6,25 +6,10 @@ import tsne from "../images/tsne_plot.png"
 import normConMat from "../images/normConMat.png"
 import TiltedCard from "../components/TitledCard.jsx";
 import {
-  AxiosIcon,
-  CMakeIcon,
   CollabIcon,
-  CPPIcon,
-  DockerIcon,
-  GitHubIcon,
-  GoIcon,
-  GodotIcon,
   JupyterIcon,
-  NginXIcon,
-  NtnuIcon,
-  OpenGLIcon,
   PythonIcon,
-  ReactIcon,
-  RenderDocIcon,
-  SqliteIcon,
-  TailwindIcon,
-  TypeScriptIcon,
-  ViteIcon,
+  PyTorchIcon
 } from "../components/IconComponent.jsx";
 import AlbumDetails from "./detailPages/aiDetail.jsx"; 
 
@@ -40,7 +25,7 @@ const AI = () => {
                   normConMat
                 ]}
                 captionText="Artificial Inteligence"
-                svgIcons={[CollabIcon, JupyterIcon, PythonIcon]}
+                svgIcons={[CollabIcon, JupyterIcon, PythonIcon, PyTorchIcon]}
                 hoverText="Click for details"
                 modalContent={<AlbumDetails />}
               />
