@@ -3,10 +3,7 @@ import Quote from "../images/Quote.jpg"
 import DndApp from "../images/DndApp.jpg"
 import TiltedCard from "../components/TitledCard.jsx";
 import {
-  CollabIcon,
-  JupyterIcon,
-  PythonIcon,
-  PyTorchIcon
+  GoIcon
 } from "../components/IconComponent.jsx";
 import AlbumDetails from "./detailPages/mobileDetail.jsx"; 
 
@@ -16,10 +13,10 @@ const Mobile = () => {
                 imageList={[
                   InkReader,
                   Quote,
-                  DndApp,
+                  DndApp
                 ]}
                 captionText="Mobile Programming"
-                svgIcons={[CollabIcon, JupyterIcon, PythonIcon, PyTorchIcon]}
+                svgIcons={[GoIcon]}
                 hoverText="Click for details"
                 modalContent={<AlbumDetails />}
               />
