@@ -9,7 +9,7 @@ export default function ImageCarousel({ images = [] }) {
       showThumbs={false}
       infiniteLoop={true}
       useKeyboardArrows={true}
-      autoPlay
+      autoPlay={false}
       emulateTouch={true}
       showStatus={false}
       dynamicHeight={false} 

@@ -12,8 +12,6 @@ const springValues = {
 
 export default function TiltedCard({
   captionText = "",
-  containerHeight = "20vw",
-  containerWidth = "20vw",
   scaleOnHover = 1.1,
   rotateAmplitude = 14,
   showMobileWarning = true,
@@ -71,7 +69,7 @@ useEffect(() => {
       setDirection(1);
       setPrevIndex(currentIndex);
       setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 4000);
+    }, 10000);
     return () => clearInterval(interval);
   }, [currentIndex, images.length]);
 

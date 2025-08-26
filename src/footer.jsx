@@ -6,44 +6,47 @@ const Footer = () => {
   return (
     <footer className="site-footer">
       <div className="footer-content">
-        <div className="footer-section">
+        {/* Identity */}
+        <div className="footer-section identity">
           <h3>Daniel Høyland</h3>
           <a href="mailto:Danielhoyland@hotmail.com">
             Danielhoyland@hotmail.com
           </a>
-          <p>+472662229</p>
+          <p>+47 266 2229</p>
         </div>
 
-        <div className="footer-section">
-          {GitHubIcon}
+        {/* Links */}
+        <div className="footer-section links">
+          <h4>Connect</h4>
           <a
             href="https://github.com/Danielhoyland"
             target="_blank"
             rel="noopener noreferrer"
           >
-            DanielHoyland
+            {GitHubIcon} GitHub
           </a>
-
-          <div style={{ height: "10px" }}></div>
-
-          {LinkedInIcon}
           <a
-            href="www.linkedin.com/in/daniel-høyland-21468a17a"
+            href="https://www.linkedin.com/in/daniel-høyland-21468a17a"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Daniel Høyland
+            {LinkedInIcon} LinkedIn
           </a>
         </div>
 
-        <div className="footer-section">
+
+        <div className="footer-section cta">
           <p>
-            My portfolio, preview some of my skills and previous projects I have
-            worked with!
+            Explore my portfolio to preview some of my projects and skills.
             <br />
-            Feel free to send me an E-mail!
+            <strong>Let's connect and create something together!</strong>
           </p>
         </div>
+      </div>
+
+      {/* Copyright bar */}
+      <div className="footer-bottom">
+        <p>© {new Date().getFullYear()} Daniel Høyland. All rights reserved.</p>
       </div>
     </footer>
   );

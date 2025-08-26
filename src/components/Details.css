@@ -4,17 +4,17 @@
   height: 100dvh;
   max-height: 100vh;
   overflow: hidden;
-  background: #fffaf0;
+  background: #fdf0c4;
 }
 
 .album-header {
-  background: linear-gradient(135deg, #ffdf88, #f6c06f);
+  background: linear-gradient(135deg, #00509e, #6096d0);
   padding: 2rem 1.5rem 2.5rem;
-  color: #3a2f1b;
+  color: #fff;
   text-align: center;
   border-radius: 0 0 0.5rem 0.5rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-bottom: 3px solid #e0b85a;
+  border-bottom: 3px solid #f7d019;
 }
 
 .album-header h1 {
@@ -22,7 +22,7 @@
   font-weight: 700;
   margin: 0;
   letter-spacing: 0.5px;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive header font */
@@ -38,8 +38,8 @@
 .album-content-wrapper {
   display: flex;
   flex: 1;
-  min-height: 0;            /* allows inner scrolling to work */
-  overflow: hidden;         /* desktop: children can scroll independently */
+  min-height: 0;
+  overflow: hidden;
   padding: 0 1.5rem 0 2rem;
   gap: 1rem;
 }
@@ -50,34 +50,39 @@
   overflow-y: auto;
   overflow-x: hidden;
 }
+
 .album-image-viewer {
   max-width: 50%;
   padding: 0.25rem;
   gap: 1rem;
-  background-color: #fffaeb;
+  background-color: #fdf0c4; /* light blue */
 }
 
 @media (max-width: 768px) {
-  .album-header { padding: 0.75rem 0.5rem 1rem; }
-  .album-header h1 { font-size: 1.4rem; }
+  .album-header {
+    padding: 0.75rem 0.5rem 1rem;
+  }
+  .album-header h1 {
+    font-size: 1.4rem;
+  }
 
   .album-content-wrapper {
     flex-direction: column;
     padding: 0 1rem;
-    overflow-y: auto;       
+    overflow-y: auto;
     overflow-x: hidden;
   }
 
   .album-content-scrollable,
   .album-image-viewer {
-    order: initial;        
-    flex: 0 0 auto;         
-    overflow: visible;      
+    order: initial;
+    flex: 0 0 auto;
+    overflow: visible;
     max-width: 100%;
   }
 
   .album-image-viewer {
-    margin-top: 0.5rem;   
+    margin-top: 0.5rem;
   }
 }
 
@@ -85,25 +90,24 @@
   padding: 0.75rem 0.5rem;
   min-height: 0;
   scrollbar-width: thin;
-  scrollbar-color: #d4af37 #fff0c6;
+  scrollbar-color: #00509e #fdf0c4; /* navy thumb, cream track */
+  color: #253a55; /* text color */
 }
 
-
 .album-footer {
-  background: linear-gradient(135deg, #ffdf88, #f6c06f);
+  background: linear-gradient(135deg, #00509e, #6096d0); /* same as header */
   padding: 1rem 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #3a2f1b;
-  border-top: 3px solid #e0b85a;
+  color: #fff;
+  border-top: 3px solid #f7d019; /* yellow accent */
   border-radius: 0.5rem 0.5rem 0 0;
   box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
   width: 100%;
   gap: 1rem;
   flex-wrap: wrap;
 }
-
 /* Footer stacks on small screens */
 @media (max-width: 768px) {
   .album-footer {
@@ -117,24 +121,18 @@
   flex-wrap: wrap;
   gap: 1.25rem;
   font-size: 1.5rem;
+  color: #253a55; /* icons pop in yellow */
 }
 
 .footer-link a {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #3a2f1b;
+  color: #ffffff; /* yellow links in footer */
   font-weight: 600;
   text-decoration: none;
-  max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
-
-.footer-link img.link-icon,
-.link-icon {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
+.footer-link a:hover {
+  text-decoration: underline;
+  color: #f7d019;
 }

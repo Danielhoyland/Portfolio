@@ -20,25 +20,32 @@ const AboutMe = () => {
             Trondheim. I recently completed my bachelor's in Programming at NTNU
             Gjøvik.
           </p>
-          <InterestsSection
-            interests={[
-              "Web Development",
-              "Graphical Programming",
-              "Mobile Programming",
-              "Cloud Development",
-              "Database Management",
-              "Game Development",
-            ]}
-            Interval={2500}
-          />
-          <InterestsSection
-            interests={["D&D", "Chess", "Board Games", "Gaming"]}
-            Interval={2400}
-          />
-          <InterestsSection
-            interests={["Travel", "Cooking", "Bouldering", "Gym", "Running"]}
-            Interval={2600}
-          />
+          <div
+            style={{
+              display: "flex", 
+              justifyContent: "space-around",
+            }}
+          >
+            <InterestsSection
+              interests={[
+                "Web Development",
+                "Graphical Programming",
+                "Mobile Programming",
+                "Cloud Development",
+                "Database Management",
+                "Game Development",
+              ]}
+              Interval={7000}
+            />
+            <InterestsSection
+              interests={["D&D", "Chess", "Board Games", "Gaming"]}
+              Interval={7000}
+            />
+            <InterestsSection
+              interests={["Travel", "Cooking", "Bouldering", "Gym", "Running"]}
+              Interval={7000}
+            />
+          </div>
           <br></br>
           <br></br>
           <p className="about-paragraph">

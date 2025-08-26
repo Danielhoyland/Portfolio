@@ -12,13 +12,6 @@ export default function AlbumDetailsTemplate({
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showCounter, setShowCounter] = useState(true);
 
-  useEffect(() => {
-    let timeout;
-    if (showCounter) {
-      timeout = setTimeout(() => setShowCounter(false), 2500);
-    }
-    return () => clearTimeout(timeout);
-  }, [currentIndex, showCounter]);
 
   const handlePrev = () => {
     setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));

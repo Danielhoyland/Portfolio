@@ -1,31 +1,31 @@
-.interests-section {
-  margin-top: 1rem;
-  display: inline-block;
-  text-align: center;
-  justify-content: center;
-  width: 30%;
-  padding-right: 16px;
-}
-@media (max-width: 640px) {
-  .interests-section {
-    width: 100%;
-  }
-}
-
 .section-title {
   font-size: 1.5rem;
   font-weight: 600;
-  border-left: 4px solid #4cafef;
+  border-left: 4px solid #00509E; 
   padding-left: 0.6rem;
+  padding-right: 16px;
   margin-bottom: 0.8rem;
+  color: #00509E; /* stronger section title color */
+  display: inline-block; /* border only fits the text */
+  width: auto;
 }
 
 .subsection-title {
   font-size: 1.2rem;
   font-weight: 500;
-  border-bottom: 2px solid #ddd;
+  border-bottom: 2px solid #cfdaf1; /* soft blue-gray divider */
   padding-bottom: 0.3rem;
   margin-top: 1.2rem;
+  color: #00509E; /* dark supporting blue */
+}
+
+section {
+  margin-bottom: 2rem; /* more breathing room between sections */
+}
+
+p,
+li {
+  line-height: 1.6; /* improves readability */
 }
 
 .custom-list {
@@ -43,18 +43,23 @@
   content: "";
   position: absolute;
   left: 0;
-  top: 0.5rem;
+  top: 0.6rem; /* better vertical alignment */
   width: 8px;
   height: 8px;
   background-color: #4cafef;
   border-radius: 50%;
 }
 
+/* Highlight link */
 .highlight-link {
-  color: #4cafef;
+  color: #00509E; /* navy link */
   font-weight: 500;
   position: relative;
   text-decoration: none;
+  transition: color 0.3s ease;
+  display: inline-block;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
 }
 
 .highlight-link::after {
@@ -64,10 +69,41 @@
   bottom: -2px;
   width: 0;
   height: 2px;
-  background: #4cafef;
+  background: #f7d019; /* yellow underline */
   transition: width 0.3s ease;
+}
+
+.highlight-link:hover {
+  color: #f7d019; /* link turns yellow on hover */
 }
 
 .highlight-link:hover::after {
   width: 100%;
+}
+
+/* Alternating rows for Examples Section */
+.alternating-sections .row {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.alternating-sections .row:nth-child(even) {
+  flex-direction: row-reverse; /* alternate sides */
+}
+
+.alternating-sections .text {
+  flex: 1;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .alternating-sections .row {
+    flex-direction: column !important;
+  }
+
+  .interests-section {
+    width: 100%;
+  }
 }

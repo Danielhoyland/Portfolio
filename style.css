@@ -1,15 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400&display=swap");
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #fff0c6;
-  color: #333;
+  background-color: #fdf0c4; /* soft neutral */
+  color: #3d3628; /* softer dark */
 }
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  color: #00509e; /* main blue */
+}
+
 body.modal-open {
   overflow: hidden;
-  height: 100vh; /* ensure no weird jumps */
+  height: 100vh;
 }
 
 .portfolio-content {
@@ -23,44 +31,25 @@ body.modal-open {
 h1 {
   text-align: center;
   font-size: clamp(1.8rem, 2.5vw, 2.5rem);
-  color: #333;
   font-family: "Playfair Display", serif;
 }
 
-a {
-  color: #0077cc;
+a,
+.portfolio-link {
+  color: #00509e;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-.site-header,
-.site-footer {
-  z-index: 1;
-  background-color: #ffdf88;
-  color: #333;
-  padding: 20px;
-  text-align: center;
-  border-top: 1px solid #e0e0e0;
-  border-bottom: 1px solid #e0e0e0;
+a:hover,
+.portfolio-link:hover {
+  color: #f7d019;
 }
 
-.site-header nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-.site-header nav ul li {
-  display: inline-block;
-  margin: 0 15px;
-}
-
-.site-header nav ul li a {
-  color: #0077cc;
-}
-
-.header-inline {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
+.portfolio-link.active {
+  background-color: #00509e;
+  color: #fff;
+  font-weight: bold;
 }
 
 .grid {
@@ -96,12 +85,15 @@ a {
 
 .grid-item.small {
   background-color: #ffffff;
-  padding: 20px;
-  text-align: center;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #cfdaf1; /* soft border */
   transition: background-color 0.3s ease, transform 0.3s ease;
-  font-size: 1rem;
-  color: #0077cc;
+  color: #00509e;
+}
+
+.grid-item.small:hover {
+  background-color: #f7d019;
+  color: #3d3628;
+  transform: scale(1.05);
 }
 
 .grid-link {
@@ -141,53 +133,5 @@ a {
 .index-link:hover {
   transform: scale(1.2);
   cursor: pointer;
-}
-
-.portfolio-link {
-  text-decoration: none;
-  color: black;
-  padding: 8px 15px;
-  background-color: transparent;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-  border-radius: 5px;
-}
-
-.portfolio-link:hover {
-  background-color: rgba(255, 87, 51, 0.1);
-  color: #ff5733;
-  transform: scale(1.05);
-}
-
-.portfolio-link.active {
-  background-color: #ff5733;
-  color: white;
-  font-weight: bold;
-  border-radius: 5px;
-}
-
-.logo {
-  width: 48px;
-  height: auto;
-  z-index: 1;
-}
-
-.vertical-carousel {
-  height: 30px;
-  overflow: hidden;
-  position: relative;
-}
-
-.vertical-carousel-item {
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(100%);
-  transition: all 0.5s ease-in-out;
-}
-
-.vertical-carousel-item.active {
-  opacity: 1;
-  transform: translateY(0);
 }
 
