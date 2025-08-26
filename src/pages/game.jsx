@@ -2,7 +2,7 @@ import game from "../images/game.png"
 import Mechanic from "../images/Mechanic.png"
 import TiltedCard from "../components/TitledCard.jsx";
 import {
-  C,
+  JupyterIcon,
   PythonIcon,
   PyTorchIcon
 } from "../components/IconComponent.jsx";
@@ -17,7 +17,7 @@ const Game = () => {
 
                 ]}
                 captionText="Game Programming"
-                svgIcons={[CollabIcon, JupyterIcon, PythonIcon, PyTorchIcon]}
+                svgIcons={[JupyterIcon, PythonIcon, PyTorchIcon]}
                 hoverText="Click for details"
                 modalContent={<AlbumDetails />}
               />
