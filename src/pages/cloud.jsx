@@ -8,10 +8,8 @@ import cloud1 from "../images/cloud1.png"
 import cloud2 from "../images/cloud2.png"
 import TiltedCard from "../components/TitledCard.jsx";
 import {
-  CollabIcon,
-  JupyterIcon,
-  PythonIcon,
-  PyTorchIcon
+  GoIcon,
+  PostIcon
 } from "../components/IconComponent.jsx";
 import AlbumDetails from "./detailPages/cloudDetail.jsx"; 
 
@@ -24,7 +22,7 @@ const Cloud = () => {
                   cloud2
                 ]}
                 captionText="Cloud Technologies"
-                svgIcons={[CollabIcon, JupyterIcon, PythonIcon, PyTorchIcon]}
+                svgIcons={[GoIcon, PostIcon]}
                 hoverText="Click for details"
                 modalContent={<AlbumDetails />}
               />

@@ -1,13 +1,8 @@
-import carmask from "../images/CarMask.jpg"
-import fear from "../images/fearSad.png"
-import suprise from "../images/suprise.png"
-import Kmeans from "../images/k-means.png"
 import game from "../images/game.png"
 import Mechanic from "../images/Mechanic.png"
 import TiltedCard from "../components/TitledCard.jsx";
 import {
-  CollabIcon,
-  JupyterIcon,
+  C,
   PythonIcon,
   PyTorchIcon
 } from "../components/IconComponent.jsx";
@@ -19,7 +14,7 @@ const Game = () => {
                 imageList={[
                   Mechanic,
                   game,
-                  
+
                 ]}
                 captionText="Game Programming"
                 svgIcons={[CollabIcon, JupyterIcon, PythonIcon, PyTorchIcon]}

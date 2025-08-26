@@ -19,6 +19,11 @@ import PythonLogo from "../svg/python_logo.svg";
 import CollabLogo from "../svg/Google_Colaboratory_Logo.svg";
 import LinkedInLogo from "../svg/LinkedIn_logo.svg";
 import PyTorchLogo from "../svg/pyTorch_logo.svg";
+import PostLogo from "../svg/postman_logo.svg";
+import CPlusLogo from "../svg/CPlus_logo.svg";
+import HaskellLogo from "../svg/Haskell_logo.svg";
+import RustLogo from "../svg/Rust_logo.svg";
+import SDL2Logo from "../svg/SDL2_logo.svg";
 
 const iconStyle = { width: "24px", height: "24px" };
 
@@ -74,4 +79,19 @@ export const PyTorchIcon = (
     style={iconStyle}
     title="PyTorch logo by PyTorch (BSD License, Wikimedia Commons)"
   />
+);
+export const PostIcon = (
+  <img src={PostLogo} alt="Postman" style={iconStyle} />
+);
+export const CPlusIcon = (
+  <img src={CPlusLogo} alt="C++" style={iconStyle} />
+);
+export const HaskellIcon = (
+  <img src={HaskellLogo} alt="Haskell" style={iconStyle} />
+);
+export const RustIcon = (
+  <img src={RustLogo} alt="Rust Programming Language" style={iconStyle} />
+);
+export const SDL2Icon = (
+  <img src={SDL2Logo} alt="SDL2" style={iconStyle} />
 );

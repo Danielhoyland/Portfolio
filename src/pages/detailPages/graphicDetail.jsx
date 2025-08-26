@@ -78,16 +78,15 @@ export default function GraphicsProgramming() {
                 The second project was a three-day exam creating a Sokoban-like 3D game. Using knowledge from Project 1, I applied textures, lighting, and object manipulation to build the game. Challenges included lighting and texturing, which I solved based on previous experience.
               </p>
               <p>
-                <em>Disclaimer</em>: Demo videos may appear laggy; higher-quality videos are available in the{" "}
+                <em>Disclaimer</em>: Demo videos may appear laggy; higher-quality videos are available in the project code.
                 <a
                   className="highlight-link"
                   href="https://github.com/Danielhoyland/Portfolio/tree/main/Grafikk%20-%20C%2B%2B%20OpenGL/assignment"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  project code
+                  View the project on GitHub
                 </a>
-                .
               </p>
             </div>
           </div>

@@ -23,8 +23,8 @@ export default function MobileProgramming() {
           <div className="what-i-learned">
             <h2 className="section-title">Key Takeaways</h2>
             <p>
-              I learned Kotlin and how to develop Android mobile applications.
-              I also gained knowledge in mobile UI design best practices and
+              I learned Kotlin and how to develop Android mobile applications. I
+              also gained knowledge in mobile UI design best practices and
               effectively integrating mobile sensors and functionalities.
             </p>
           </div>
@@ -69,7 +69,9 @@ export default function MobileProgramming() {
 
           <div className="row">
             <div className="text">
-              <h3 className="section-title">Personal Projects and Post-Course Learning</h3>
+              <h3 className="section-title">
+                Personal Projects and Post-Course Learning
+              </h3>
               <p>
                 After the course, I developed several personal projects:
                 <ul>
@@ -80,6 +82,14 @@ export default function MobileProgramming() {
                   <li>
                     A tabletop game companion app to streamline game-related
                     tasks previously done manually.
+                  </li>
+                  <li>
+                    Database SQL tester with random questions. It tests if your
+                    sql query gets the same result as the question asks for, so
+                    its not checking for exactly syntax
+                  </li>
+                  <li>
+                    Calorie Tracking app with calorie goal and a calendar to see what you ate and how many calories you eaten each day.
                   </li>
                 </ul>
                 These projects enhanced my understanding of mobile development,

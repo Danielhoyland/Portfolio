@@ -3,10 +3,11 @@ import mariaDBStruktur from "../images/mariaDBStruktur.png"
 import HomescreenWireframe from "../images/HomescreenWireframe.png"
 import TiltedCard from "../components/TitledCard.jsx";
 import {
-  CollabIcon,
-  JupyterIcon,
-  PythonIcon,
-  PyTorchIcon
+  ReactIcon,
+  ViteIcon,
+  DockerIcon,
+  GoIcon,
+  SqliteIcon
 } from "../components/IconComponent.jsx";
 import AlbumDetails from "./detailPages/integrationDetail.jsx"; 
 
@@ -19,7 +20,7 @@ const Inte = () => {
                   HomescreenWireframe
                 ]}
                 captionText="Integration Project"
-                svgIcons={[CollabIcon, JupyterIcon, PythonIcon, PyTorchIcon]}
+                svgIcons={[ReactIcon, ViteIcon, DockerIcon, GoIcon, SqliteIcon]}
                 hoverText="Click for details"
                 modalContent={<AlbumDetails />}
               />

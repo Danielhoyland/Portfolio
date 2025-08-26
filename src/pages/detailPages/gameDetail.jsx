@@ -9,7 +9,8 @@ export default function GameProgramming() {
         <section className="description-section">
           <h2 className="section-title">Course Overview</h2>
           <p>
-            This course covered essential knowledge for students to advance in game development using modern technology. Topics included:
+            This course covered essential knowledge for students to advance in
+            game development using modern technology. Topics included:
           </p>
           <ul className="custom-list">
             <li>Design patterns</li>
@@ -42,7 +43,11 @@ export default function GameProgramming() {
           <div className="what-i-learned">
             <h2 className="section-title">Key Takeaways</h2>
             <p>
-              I gained experience with animation, event-driven function handling, control mechanisms, and UI design to enhance user experience in video games. Most of my learning was specific to game programming using Unity, making transitions to other engines more challenging.
+              I gained experience with animation, event-driven function
+              handling, control mechanisms, and UI design to enhance user
+              experience in video games. Most of my learning was specific to
+              game programming using Unity, making transitions to other engines
+              more challenging.
             </p>
           </div>
 
@@ -65,7 +70,11 @@ export default function GameProgramming() {
             <div className="text">
               <h3 className="section-title">The Game Idea</h3>
               <p>
-                The project involved creating a running game where the player tries to reach the finish line in various levels, with a unique mechanic that allows the player to throw a ball and teleport to its location. We experimented with controls, camera movements, camera shake, sound effects, and particle effects.
+                The project involved creating a running game where the player
+                tries to reach the finish line in various levels, with a unique
+                mechanic that allows the player to throw a ball and teleport to
+                its location. We experimented with controls, camera movements,
+                camera shake, sound effects, and particle effects.
               </p>
             </div>
           </div>
@@ -73,20 +82,16 @@ export default function GameProgramming() {
           <div className="row">
             <div className="text">
               <h3 className="section-title">The Game</h3>
+              <p>The finished game demonstrates the gameplay and mechanics.</p>
               <p>
-                The finished game demonstrates the gameplay and mechanics. 
-              </p>
-              <p>
-                Project code is available on{" "}
                 <a
                   className="highlight-link"
                   href="https://github.com/Danielhoyland/Portfolio/tree/main/Gameprog%20-%20c%23%20Unity"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  GitHub
+                  View the project on GitHub
                 </a>
-                .
               </p>
             </div>
           </div>
