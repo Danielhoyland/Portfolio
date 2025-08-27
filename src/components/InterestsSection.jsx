@@ -2,17 +2,17 @@ import React from 'react';
 import RotatingText from './RotatingText';
 import './RotatingText.css'; 
 
-const InterestsSection = ({ interests, Interval }) => {
+const InterestsSection = ({ interests, Interval, staggerDuration }) => {
   return (
     <div className="interests-section">
       <RotatingText
         texts={interests}
-        mainClassName="px-4 py-2 rounded-2xl font-semibold text-lg shadow-md"
+        mainClassName="interest px-4 py-2 rounded-2xl font-semibold text-lg shadow-md"
         staggerFrom="first"
         initial={{ y: '100%', opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         exit={{ y: '-120%', opacity: 0 }}
-        staggerDuration={0.04}
+        staggerDuration={staggerDuration}
         splitLevelClassName="overflow-hidden"
         transition={{ type: 'spring', damping: 25, stiffness: 300 }}
         rotationInterval={Interval}
@@ -26,7 +26,6 @@ const InterestsSection = ({ interests, Interval }) => {
           justifyContent: 'center',
           alignItems: 'center',
           boxShadow: '0 4px 8px rgba(0, 80, 158, 0.15)',
-          width: 'clamp(180px, 20vw, 350px)',
         }}
       />
     </div>

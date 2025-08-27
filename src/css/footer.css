@@ -18,6 +18,10 @@
 .footer-section {
   flex: 1 1 250px;
   padding: 10px;
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .footer-section h3,
@@ -51,15 +55,9 @@
 /* Mobile style 768px width and below, phone */
 @media (max-width: 768px) {
   .footer-content {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    grid-template-columns: 1fr;
   }
 
-  .footer-section {
-    flex: 1 1 25px;
-    margin-bottom: 15px;
-  }
 }
 .footer-bottom {
   margin-top: 2rem;

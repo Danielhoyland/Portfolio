@@ -6,10 +6,9 @@ import Python from "../images/Python.png"
 import erd from "../images/ERD.png"
 import TiltedCard from "../components/TitledCard.jsx";
 import {
-  CollabIcon,
-  JupyterIcon,
+  MySqlIcon,
+  SqliteIcon,
   PythonIcon,
-  PyTorchIcon
 } from "../components/IconComponent.jsx";
 import AlbumDetails from "./detailPages/databaseDetail.jsx"; 
 
@@ -21,7 +20,7 @@ const DB = () => {
                   erd
                 ]}
                 captionText="Data Modelling, Databases and Database Management Systems"
-                svgIcons={[CollabIcon, JupyterIcon, PythonIcon, PyTorchIcon]}
+                svgIcons={[MySqlIcon, SqliteIcon, PythonIcon]}
                 hoverText="Click for details"
                 modalContent={<AlbumDetails />}
               />

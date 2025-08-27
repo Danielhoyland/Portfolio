@@ -20,12 +20,12 @@ const AboutMe = () => {
             Trondheim. I recently completed my bachelor's in Programming at NTNU
             Gjøvik.
           </p>
-          <div
-            style={{
-              display: "flex", 
-              justifyContent: "space-around",
-            }}
-          >
+          <div className="interests">
+            <InterestsSection
+              interests={["D&D", "Chess", "Board Games", "Gaming"]}
+              Interval={7000}
+              staggerDuration={0.04}
+            />
             <InterestsSection
               interests={[
                 "Web Development",
@@ -36,14 +36,12 @@ const AboutMe = () => {
                 "Game Development",
               ]}
               Interval={7000}
-            />
-            <InterestsSection
-              interests={["D&D", "Chess", "Board Games", "Gaming"]}
-              Interval={7000}
+              staggerDuration={0.02}
             />
             <InterestsSection
               interests={["Travel", "Cooking", "Bouldering", "Gym", "Running"]}
               Interval={7000}
+              staggerDuration={0.04}
             />
           </div>
           <br></br>

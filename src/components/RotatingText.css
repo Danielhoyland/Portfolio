@@ -79,3 +79,11 @@
   transform: scale(1.2);
   color: #d4af37; /* subtle gold hover accent */
 }
+.interest{
+  width: clamp(180px, 20vw, 350px);
+}
+@media (max-width: 768px) {
+  .interest{
+  width: 100%;
+}
+}

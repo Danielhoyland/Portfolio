@@ -4,7 +4,7 @@
   height: 100dvh;
   max-height: 100vh;
   overflow: hidden;
-  background: #fdf0c4;
+  background: #ffffff;
 }
 
 .album-header {
@@ -40,8 +40,7 @@
   flex: 1;
   min-height: 0;
   overflow: hidden;
-  padding: 0 1.5rem 0 2rem;
-  gap: 1rem;
+  padding: 0 0 0 2rem;
 }
 
 .album-content-scrollable,
@@ -53,9 +52,9 @@
 
 .album-image-viewer {
   max-width: 50%;
-  padding: 0.25rem;
+  padding: 1.5rem;
   gap: 1rem;
-  background-color: #fdf0c4; /* light blue */
+  background-color: #d2dfee;
 }
 
 @media (max-width: 768px) {
@@ -90,7 +89,7 @@
   padding: 0.75rem 0.5rem;
   min-height: 0;
   scrollbar-width: thin;
-  scrollbar-color: #00509e #fdf0c4; /* navy thumb, cream track */
+  scrollbar-color: #00509e #ffffff; /* navy thumb, cream track */
   color: #253a55; /* text color */
 }
 

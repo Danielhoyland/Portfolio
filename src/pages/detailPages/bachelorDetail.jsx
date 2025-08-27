@@ -86,6 +86,7 @@ export default function AlbumDetails() {
               <li>ShadCN</li>
               <li>Chirpstack</li>
               <li>Vite</li>
+              <li>LoRaWAN</li>
               <li>
                 <a
                   className="highlight-link"

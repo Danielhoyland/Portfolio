@@ -93,6 +93,15 @@ export default function GameProgramming() {
                   View the project on GitHub
                 </a>
               </p>
+              <p>
+                <a
+                  className="highlight-link"
+                  href="./src/download/AcrobaticBall2D.zip"
+                  download
+                >
+                  Download game
+                </a>
+              </p>
             </div>
           </div>
         </section>

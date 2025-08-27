@@ -6,16 +6,14 @@ const Footer = () => {
   return (
     <footer className="site-footer">
       <div className="footer-content">
-        {/* Identity */}
         <div className="footer-section identity">
           <h3>Daniel Høyland</h3>
           <a href="mailto:Danielhoyland@hotmail.com">
             Danielhoyland@hotmail.com
           </a>
-          <p>+47 266 2229</p>
+          <p>+4747266229</p>
         </div>
 
-        {/* Links */}
         <div className="footer-section links">
           <h4>Connect</h4>
           <a
@@ -33,7 +31,6 @@ const Footer = () => {
             {LinkedInIcon} LinkedIn
           </a>
         </div>
-
 
         <div className="footer-section cta">
           <p>

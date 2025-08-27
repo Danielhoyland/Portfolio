@@ -57,6 +57,8 @@ export default function AlbumDetails() {
             <h3 className="subsection-title">Technologies & Tools</h3>
             <ul className="custom-list">
               <li>API development</li>
+              <li>Firebase</li>
+              <li>Postman</li>
             </ul>
 
             <h3 className="subsection-title">Programming Languages</h3>

@@ -5,7 +5,8 @@ import TiltedCard from "../components/TitledCard.jsx";
 import {
   HaskellIcon,
   RustIcon,
-  SDL2Icon
+  SDL2Icon,
+  GoIcon
 } from "../components/IconComponent.jsx";
 import AlbumDetails from "./detailPages/advanceDetail.jsx"; 
 
@@ -18,7 +19,7 @@ const Advance = () => {
 
                 ]}
                 captionText="Advance Programming"
-                svgIcons={[HaskellIcon, RustIcon, SDL2Icon]}
+                svgIcons={[HaskellIcon, RustIcon, SDL2Icon, GoIcon]}
                 hoverText="Click for details"
                 modalContent={<AlbumDetails />}
               />

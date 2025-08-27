@@ -33,11 +33,13 @@ export default function MobileProgramming() {
             <h3 className="subsection-title">Technologies & Tools</h3>
             <ul className="custom-list">
               <li>Android Studios</li>
+              <li>Expo Go</li>
             </ul>
 
             <h3 className="subsection-title">Programming Languages</h3>
             <ul className="custom-list">
               <li>Kotlin</li>
+              <li>React Native</li>
             </ul>
           </div>
         </section>

@@ -24,6 +24,18 @@ import CPlusLogo from "../svg/CPlus_logo.svg";
 import HaskellLogo from "../svg/Haskell_logo.svg";
 import RustLogo from "../svg/Rust_logo.svg";
 import SDL2Logo from "../svg/SDL2_logo.svg";
+import UnityLogo from "../svg/unity_logo.svg";
+import KotlinLogo from "../svg/Kotlin_logo.svg";
+import AndroidStudLogo from "../svg/Android_Studio_logo.svg";
+import CSharpLogo from "../svg/CSharp_logo.svg";
+import ExpoGoLogo from "../svg/expo_go_logo.svg";
+import LoRaWANLogo from "../svg/LoRaWAN_logo.svg";
+import mySqlLogo from "../svg/mysql_logo.svg";
+import ReactNLogo from "../svg/react_native_logo.svg";
+import WisgateLogo from "../svg/wisgate_logo.svg";
+import ShadcnLogo from "../svg/shadcn_logo.svg";
+import ChirpStackLogo from "../svg/ChirpStack_logo.svg";
+import FirebaseLogo from "../svg/Firebase_logo.svg";
 
 const iconStyle = { width: "24px", height: "24px" };
 
@@ -80,18 +92,48 @@ export const PyTorchIcon = (
     title="PyTorch logo by PyTorch (BSD License, Wikimedia Commons)"
   />
 );
-export const PostIcon = (
-  <img src={PostLogo} alt="Postman" style={iconStyle} />
-);
-export const CPlusIcon = (
-  <img src={CPlusLogo} alt="C++" style={iconStyle} />
-);
+export const PostIcon = <img src={PostLogo} alt="Postman" style={iconStyle} />;
+export const CPlusIcon = <img src={CPlusLogo} alt="C++" style={iconStyle} />;
 export const HaskellIcon = (
   <img src={HaskellLogo} alt="Haskell" style={iconStyle} />
 );
 export const RustIcon = (
   <img src={RustLogo} alt="Rust Programming Language" style={iconStyle} />
 );
-export const SDL2Icon = (
-  <img src={SDL2Logo} alt="SDL2" style={iconStyle} />
+export const SDL2Icon = <img src={SDL2Logo} alt="SDL2" style={iconStyle} />;
+export const UnityIcon = (
+  <img src={UnityLogo} alt="Unity Logo" style={iconStyle} />
+);
+export const KotlinIcon = (
+  <img src={KotlinLogo} alt="Kotlin Logo" style={iconStyle} />
+);
+export const AndroidStudIcon = (
+  <img src={AndroidStudLogo} alt="Android Studio Logo" style={iconStyle} />
+);
+export const CSharpIcon = (
+  <img src={CSharpLogo} alt="C# Logo" style={iconStyle} />
+);
+export const ExpoGoIcon = (
+  <img src={ExpoGoLogo} alt="Expo Go Logo" style={iconStyle} />
+);
+export const LoRaWANIcon = (
+  <img src={LoRaWANLogo} alt="LoRaWAN Logo" style={iconStyle} />
+);
+export const MySqlIcon = (
+  <img src={mySqlLogo} alt="MySQL Logo" style={iconStyle} />
+);
+export const ReactNIcon = (
+  <img src={ReactNLogo} alt="React Native Logo" style={iconStyle} />
+);
+export const WisgateIcon = (
+  <img src={WisgateLogo} alt="Wisgate Logo" style={iconStyle} />
+);
+export const ShadcnIcon = (
+  <img src={ShadcnLogo} alt="Shadcn Logo" style={iconStyle} />
+);
+export const ChirpStackIcon = (
+  <img src={ChirpStackLogo} alt="ChirpStack Logo" style={iconStyle} />
+);
+export const FirebaseIcon = (
+  <img src={FirebaseLogo} alt="Firebase Logo" style={iconStyle} />
 );
