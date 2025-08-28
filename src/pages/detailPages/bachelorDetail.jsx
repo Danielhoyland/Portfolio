@@ -53,7 +53,7 @@ export default function AlbumDetails() {
             <ul className="custom-list">
               <li>
                 Overview page with multiple views:
-                <ul>
+                <ul className="custom-list">
                   <li>Graph view</li>
                   <li>Table view</li>
                   <li>
@@ -68,7 +68,7 @@ export default function AlbumDetails() {
               <li>Access rights and permissions</li>
               <li>
                 ENØK measures:
-                <ul>
+                <ul className="custom-list">
                   <li>Accepted/proposed measures</li>
                   <li>
                     Superuser permissions to accept/discard proposed measures
