@@ -1,0 +1,9 @@
+name: modelenv
+channels:
+  - defaults
+dependencies:
+  - python
+  - pandas
+  - numpy
+  - scikit-learn
+  - ipykernel

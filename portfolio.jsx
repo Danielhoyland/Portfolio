@@ -10,6 +10,7 @@ import Header from "./src/header";
 import Footer from "./src/footer";
 import Advance from "./src/pages/advance";
 import AI from "./src/pages/ai";
+import Applied from "./src/pages/applied";
 import Algo from "./src/pages/algo";
 import Bach from "./src/pages/bachelor";
 import Cloud from "./src/pages/cloud";
@@ -18,6 +19,7 @@ import Game from "./src/pages/game";
 import Graphic from "./src/pages/graphic";
 import Inte from "./src/pages/integration";
 import Mobile from "./src/pages/mobile";
+import Model from "./src/pages/model";
 import FlexGrid from './src/components/Flexcard';
 
 
@@ -38,7 +40,8 @@ const icons = [
   const projectArray = [
     [<Advance />, "Bachelor", "Advance Programming", ["Haskell", "Rust", "SDL2", "Go"]],
     [<AI />, "Bachelor", "AI", ["Python", "TensorFlow"]],
-    [<Algo />, "Bachelor", "Algorithms", ["C++", "Python"]],
+    [<Applied />, "Master", "Applied Data Science", ["Python"]],
+    //[<Algo />, "Bachelor", "Algorithms", ["C++", "Python"]],
     [<Bach />, "Bachelor", "Bachelor", []],
     [<Cloud />, "Bachelor", "Cloud Programming", ["AWS", "Docker"]],
     [<DB />, "Bachelor", "Database", ["SQL", "MongoDB"]],
@@ -46,6 +49,7 @@ const icons = [
     [<Graphic />, "Bachelor", "Graphics", ["Blender", "OpenGL"]],
     [<Inte />, "Bachelor", "Integration Project", ["Node.js", "React"]],
     [<Mobile />, "Bachelor", "Mobile Programming", ["Flutter", "Kotlin"]],
+    [<Model />, "Master", "Model-Driven Software Engineering", ["Python"]],
   ];
 
   // Compute grouped projects based on toggleMode
