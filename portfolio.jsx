@@ -10,7 +10,7 @@ import Header from "./src/header";
 import Footer from "./src/footer";
 import Advance from "./src/pages/advance";
 import AI from "./src/pages/ai";
-import Applied from "./src/pages/applied";
+import Applied from "./src/pages/applied"
 import Algo from "./src/pages/algo";
 import Bach from "./src/pages/bachelor";
 import Cloud from "./src/pages/cloud";

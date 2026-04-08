@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="no.ntnu.idatg2001.frontend.dialogControllers.SettingsDialogController"
+      alignment="CENTER" spacing="15"
+      prefWidth="480" prefHeight="280"
+      stylesheets="@/css/common-dialog.css"
+      styleClass="dialog-root">
+
+    <GridPane hgap="10" vgap="10">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" />
+            <ColumnConstraints hgrow="ALWAYS" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+        </rowConstraints>
+
+        <Label fx:id="languageLabel" text="Language" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+        <ChoiceBox fx:id="languageSelection" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+
+        <Label fx:id="volumeLabel" text="Volume" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+        <Slider fx:id="volumeSlider" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+
+        <Label fx:id="muteLabel" text="Mute" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+        <CheckBox fx:id="muteCheckBox" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+    </GridPane>
+
+    <HBox alignment="CENTER" spacing="10">
+        <JFXButton fx:id="saveButton" text="Save" onAction="#onSavePressed" buttonType="RAISED" styleClass="primary-button"/>
+        <JFXButton fx:id="cancelButton" text="Cancel" onAction="#onCancelPressed" buttonType="RAISED" styleClass="secondary-button"/>
+    </HBox>
+</VBox>

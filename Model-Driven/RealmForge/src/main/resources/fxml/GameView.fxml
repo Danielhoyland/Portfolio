@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="rootPane"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="no.ntnu.idatg2001.frontend.controller.GameController"
+            stylesheets="@/css/GameView.css"
+            xmlns="http://javafx.com/javafx"
+            style="-fx-background-color: rgba(25, 25, 25, 0.9);">
+
+    <!-- Top Separator -->
+    <top>
+        <Separator fx:id="separatorTop" orientation="HORIZONTAL">
+            <padding>
+                <Insets top="10" bottom="10"/>
+            </padding>
+        </Separator>
+    </top>
+
+    <!-- Center: Passage content and link buttons -->
+    <center>
+        <VBox alignment="CENTER" spacing="10">
+            <padding>
+                <Insets top="10" left="10" right="10" bottom="10"/>
+            </padding>
+
+            <!-- Passage Title/Label at top -->
+            <VBox alignment="CENTER">
+                <padding>
+                    <Insets top="100" bottom="10" left="10" right="10"/>
+                </padding>
+                <Label fx:id="passageLabel" text="%gameView.label.passageTitle" style="-fx-font-size: 24px;"/>
+            </VBox>
+
+            <!-- Content TextArea -->
+            <TextArea fx:id="contentTextArea" editable="false" wrapText="true" VBox.vgrow="ALWAYS"/>
+
+            <!-- FlowPane for Link Buttons -->
+            <FlowPane fx:id="buttonHbox" alignment="CENTER" hgap="10" vgap="10"/>
+        </VBox>
+    </center>
+
+    <!-- Right: Player Stats and Inventory -->
+    <right>
+        <VBox spacing="10">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+
+            <!-- Player Stats Container -->
+            <StackPane fx:id="container">
+                <GridPane fx:id="playerStatsGridPane" alignment="TOP_CENTER" hgap="10" vgap="10">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="CENTER"/>
+                        <ColumnConstraints halignment="CENTER"/>
+                    </columnConstraints>
+
+                    <!-- Row 0: Name -->
+                    <Label fx:id="nameLabel" text="%gameView.label.name" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                    <Label fx:id="playerNameLabel" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+                    <!-- Row 1: Health -->
+                    <ProgressBar fx:id="healthBar" prefWidth="100" progress="1.0" styleClass="health-bar"
+                                 GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                    <Label fx:id="healthLabel" text="%gameView.label.health" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+                    <!-- Row 2: Mana -->
+                    <ProgressBar fx:id="manaBar" progress="1.0" styleClass="mana-bar"
+                                 GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                    <Label fx:id="manaLabel" text="%gameView.label.mana" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+                    <!-- Row 3: Gold -->
+                    <Label fx:id="goldLabel" text="%gameView.label.gold" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                    <Label fx:id="goldAmountLabel" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+                    <!-- Row 4: Score -->
+                    <Label fx:id="scoreLabel" text="%gameView.label.score" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+                    <Label fx:id="scoreAmountLabel" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+                </GridPane>
+            </StackPane>
+
+            <!-- Inventory Label -->
+            <Label fx:id="inventoryLabel" text="%gameView.label.inventory"/>
+
+            <!-- Inventory ListView -->
+            <ListView fx:id="playerInventoryListView" VBox.vgrow="ALWAYS"/>
+
+            <!-- Buttons -->
+            <VBox alignment="CENTER" spacing="10">
+                <padding>
+                    <Insets top="20"/>
+                </padding>
+                <JFXButton fx:id="goalButton" text="%gameView.button.goal" prefWidth="200" onAction="#onGoalButtonPressed"/>
+                <JFXButton fx:id="menuButton" text="%gameView.button.menu" prefWidth="200" onAction="#onMenuButtonPressed"/>
+            </VBox>
+        </VBox>
+    </right>
+
+    <!-- Bottom Separator -->
+    <bottom>
+        <Separator fx:id="separatorBottom" orientation="HORIZONTAL">
+            <padding>
+                <Insets top="10" bottom="10"/>
+            </padding>
+        </Separator>
+    </bottom>
+</BorderPane>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="no.ntnu.idatg2001.frontend.dialogControllers.SaveGameDialogController"
+      alignment="CENTER"
+      spacing="16"
+      stylesheets="@/css/common-dialog.css"
+      styleClass="dialog-root"
+      prefWidth="650" prefHeight="380">
+
+    <!-- Title -->
+    <Label fx:id="titleLabel" text="Save Game" styleClass="dialog-title"/>
+
+    <!-- Table of saves -->
+    <TableView fx:id="savedGamesTableView" prefHeight="250">
+        <columns>
+            <TableColumn fx:id="nameColumn" text="Name" prefWidth="200"/>
+            <TableColumn fx:id="dateTimeColumn" text="Date" prefWidth="250"/>
+            <TableColumn fx:id="playerColumn" text="Player" prefWidth="150"/>
+        </columns>
+    </TableView>
+
+    <!-- Buttons -->
+    <HBox alignment="CENTER" spacing="16">
+        <JFXButton fx:id="saveGameButton" text="Save Game" onAction="#onSaveGameButtonPressed" buttonType="RAISED" styleClass="primary-button"/>
+        <JFXButton fx:id="backButton" text="Back" onAction="#onBackButtonPressed" buttonType="RAISED" styleClass="secondary-button"/>
+    </HBox>
+</VBox>

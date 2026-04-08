@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: no.ntnu.tdt4250.rfdsl.ide
+Bundle-ManifestVersion: 2
+Bundle-Name: no.ntnu.tdt4250.rfdsl.ide
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: no.ntnu.tdt4250.rfdsl.ide; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: no.ntnu.tdt4250.rfdsl,
+ no.ntnu.tdt4250.rf,
+ org.eclipse.xtext.ide,
+ org.eclipse.xtext.xbase.ide,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-21
+Export-Package: no.ntnu.tdt4250.rf.ide.contentassist.antlr,
+ no.ntnu.tdt4250.rf.ide.contentassist.antlr.internal

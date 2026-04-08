@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="no.ntnu.idatg2001.frontend.dialogControllers.LoadGameDialogController"
+      alignment="CENTER" spacing="20"
+      stylesheets="@/css/LoadGameDialog.css"
+      prefWidth="700" prefHeight="400"
+      style="-fx-background-color: rgba(25,25,25,0.95); -fx-padding: 20; -fx-background-radius: 10; -fx-border-radius: 10;">
+
+    <Label fx:id="titleLabel" text="Load Game" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <TableView fx:id="savedGamesTableView" prefHeight="280">
+        <columns>
+            <TableColumn fx:id="nameColumn" text="Story" prefWidth="320"/>
+            <TableColumn fx:id="dateTimeColumn" text="Time of Save" prefWidth="220"/>
+            <TableColumn fx:id="playerColumn" text="Player" prefWidth="160"/>
+        </columns>
+    </TableView>
+
+    <HBox alignment="CENTER" spacing="20">
+        <JFXButton fx:id="loadGameButton" text="Load" onAction="#onLoadGameButtonPressed"/>
+        <JFXButton fx:id="deleteGameButton" text="Delete" onAction="#onDeleteGameButtonPressed"/>
+        <JFXButton fx:id="backButton" text="Back" onAction="#onBackButtonPressed"/>
+    </HBox>
+</VBox>

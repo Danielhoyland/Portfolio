@@ -1,0 +1,15 @@
+*.xtextbin
+*.xtendbin
+*.java._trace
+
+Game/bin/
+*/bin/*
+
+*.class
+
+/.metadata
+/.settings
+
+.idea
+
+target/

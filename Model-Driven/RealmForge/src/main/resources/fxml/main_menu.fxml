@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.Color?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="no.ntnu.idatg2001.frontend.controller.MainMenuController"
+            stylesheets="@/css/MainMenuStyleSheet.css"
+            prefWidth="800" prefHeight="600"
+            xmlns="http://javafx.com/javafx">
+
+    <center>
+        <StackPane fx:id="rootPane">
+            <!-- Fullscreen background image -->
+            <ImageView fx:id="logoImage"
+                       preserveRatio="false"
+                       fitWidth="${rootPane.width}"
+                       fitHeight="${rootPane.height}"
+                       pickOnBounds="true"
+                       StackPane.alignment="CENTER"
+                       style="-fx-opacity: 0.95;"
+            />
+
+            <!-- Menu Buttons -->
+            <VBox fx:id="buttonBox"
+                  alignment="CENTER"
+                  spacing="10"
+                  StackPane.alignment="BOTTOM_CENTER">
+                <padding>
+                    <Insets top="300" />
+                </padding>
+
+                <JFXButton fx:id="newGameButton"
+                           text="New Game"
+                           onAction="#onNewGameButtonPressed"
+                           buttonType="RAISED" />
+
+                <JFXButton fx:id="loadGameButton"
+                           text="Load Game"
+                           onAction="#onLoadGameButtonPressed" />
+
+                <JFXButton fx:id="settingsButton"
+                           text="Settings"
+                           onAction="#onSettingsViewButtonPressed" />
+
+                <JFXButton fx:id="exitGameButton"
+                           text="Exit Game"
+                           onAction="#onExitViewButtonPressed" />
+            </VBox>
+        </StackPane>
+    </center>
+
+    <!-- Optional background color behind the image -->
+    <background>
+        <Background>
+            <fills>
+                <BackgroundFill>
+                    <fill>#000000</fill> <!-- fallback background color -->
+                    <radii>
+                        <CornerRadii topLeft="0" />
+                    </radii>
+                    <insets>
+                        <Insets top="0" right="0" bottom="0" left="0"/>
+                    </insets>
+                </BackgroundFill>
+            </fills>
+        </Background>
+    </background>
+</BorderPane>

@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: no.ntnu.tdt4250.rfdsl.ui
+Bundle-ManifestVersion: 2
+Bundle-Name: no.ntnu.tdt4250.rfdsl.ui
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: no.ntnu.tdt4250.rfdsl.ui; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: no.ntnu.tdt4250.rfdsl,
+ no.ntnu.tdt4250.rfdsl.ide,
+ no.ntnu.tdt4250.rf,
+ org.eclipse.xtext.ui,
+ org.eclipse.xtext.ui.shared,
+ org.eclipse.xtext.ui.codetemplates.ui,
+ org.eclipse.ui.editors;bundle-version="3.14.300",
+ org.eclipse.ui.ide;bundle-version="3.18.500",
+ org.eclipse.ui,
+ org.eclipse.compare,
+ org.eclipse.xtext.builder
+Import-Package: org.apache.log4j
+Bundle-RequiredExecutionEnvironment: JavaSE-21
+Export-Package: no.ntnu.tdt4250.rfdsl.ui.internal,
+ no.ntnu.tdt4250.rf.ui.contentassist,
+ no.ntnu.tdt4250.rf.ui.quickfix
+Bundle-Activator: no.ntnu.tdt4250.rfdsl.ui.internal.RfdslActivator

@@ -1,12 +1,9 @@
-import applied0 from "../images/applied0.png"
-import applied1 from "../images/applied1.png"
-import applied2 from "../images/applied2.png"
-import applied3 from "../images/applied3.png"
+import model0 from "../images/kidsmath.gif"
+import model1 from "../images/mixedquiz.gif"
+import model2 from "../images/lotr.gif"
 import TiltedCard from "../components/TitledCard.jsx";
 import {
-  CollabIcon,
-  JupyterIcon,
-  PythonIcon,
+  
 } from "../components/IconComponent.jsx";
 import AlbumDetails from "./detailPages/modelDetail.jsx"; 
 
@@ -14,17 +11,16 @@ const Model = () => {
     return (
     <TiltedCard
                 imageList={[
-                  applied0,
-                  applied1,
-                  applied2,
-                  applied3
+                  model0,
+                  model1,
+                  model2
                 ]}
-                captionText="Applied Data Science"
-                svgIcons={[CollabIcon, JupyterIcon, PythonIcon]}
+                captionText="Model-Driven Software Engineering"
+                svgIcons={[]}
                 hoverText="Click for details"
                 modalContent={<AlbumDetails />}
               />
             );
 };
 
-export default Cloud;
+export default Model;

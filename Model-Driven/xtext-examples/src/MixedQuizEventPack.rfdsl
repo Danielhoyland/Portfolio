@@ -1,0 +1,94 @@
+name MixedQuizPack
+description "A general knowledge quiz featuring geography, history, and science 🌍📜🔬"
+unit "points 🏆"
+
+QuestionEvent{
+	difficulty EASY
+	retries 3 
+	question "Which of these planets are gas giants?"
+	result {
+		message "Great astronomy knowledge!"
+	}
+	options {
+		{ text "Jupiter" isCorrectAnswer },
+		{ text "Saturn" isCorrectAnswer },
+		{ text "Earth" },
+		{ text "Mars" }
+	}
+}
+
+QuestionEvent{
+	difficulty EASY
+	retries 3 
+	question "Which planet is known as the Red Planet?"
+	result {
+		message "Correct!"
+	}
+	options {
+		{ text "Mars" isCorrectAnswer },
+		{ text "Venus" },
+		{ text "Jupiter" },
+		{ text "Mercury" }
+	}
+}
+
+QuestionEvent{
+	difficulty NORMAL
+	retries 3 
+	question "Who is credited with inventing the light bulb?"
+	result {
+		message "Bright thinking!"
+	}
+	options {
+		{ text "Thomas Edison" isCorrectAnswer },
+		{ text "Alexander Graham Bell" },
+		{ text "Nikola Tesla" },
+		{ text "Albert Einstein" }
+	}
+}
+
+QuestionEvent{
+	difficulty NORMAL
+	retries 3 
+	question "Which country has the largest population in the world?"
+	result {
+		message "You know your world facts!"
+	}
+	options {
+		{ text "China" },
+		{ text "India" isCorrectAnswer },
+		{ text "USA" },
+		{ text "Indonesia" }
+	}
+}
+
+QuestionEvent{
+	difficulty NORMAL
+	retries 3 
+	question "In which century did the French Revolution take place?"
+	result {
+		message "That is correct!"
+	}
+	options {
+		{ text "18th century" isCorrectAnswer },
+		{ text "17th century" },
+		{ text "19th century" },
+		{ text "16th century" }
+	}
+}
+
+QuestionEvent{
+	difficulty HARD
+	retries 3 
+	question 
+	"Which elements are noble gases?"
+	result {
+		message "You know your chemistry!"
+	}
+	options {
+		{ text "Helium" isCorrectAnswer },
+		{ text "Neon" isCorrectAnswer },
+		{ text "Oxygen" },
+		{ text "Hydrogen" }
+	}
+}

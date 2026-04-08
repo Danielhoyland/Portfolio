@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx"
+            fx:controller="no.ntnu.idatg2001.frontend.controller.EndViewController"
+            stylesheets="@/css/EndGameView.css"
+            prefWidth="800" prefHeight="600"
+            style="-fx-background-color: rgba(25,25,25,0.9);">
+    <center>
+        <VBox alignment="CENTER" spacing="20">
+            <padding>
+                <Insets top="40" right="20" bottom="40" left="20"/>
+            </padding>
+            <Label text="%endGameMessage" styleClass="end-game-message"/>
+            <JFXButton text="%returnButton" onAction="#onBackToMainMenuButtonPressed"/>
+        </VBox>
+    </center>
+</BorderPane>

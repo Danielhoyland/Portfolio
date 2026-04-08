@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="no.ntnu.idatg2001.frontend.dialogControllers.PauseMenuController"
+      spacing="15"
+      alignment="CENTER"
+      stylesheets="@/css/common-dialog.css"
+      styleClass="dialog-root">
+
+    <!-- Header -->
+    <Label fx:id="headerLabel" text="Pause" styleClass="dialog-title"/>
+
+    <!-- Main Buttons -->
+    <VBox fx:id="mainButtonVBox" spacing="10" alignment="CENTER">
+        <JFXButton fx:id="resumeButton" text="Resume" buttonType="RAISED" styleClass="primary-button"/>
+        <JFXButton fx:id="saveButton" text="Save" buttonType="RAISED" styleClass="secondary-button"/>
+        <JFXButton fx:id="loadButton" text="Load" buttonType="RAISED" styleClass="secondary-button"/>
+        <JFXButton fx:id="settingsButton" text="Settings" buttonType="RAISED" styleClass="secondary-button"/>
+    </VBox>
+
+    <!-- Exit Buttons -->
+    <HBox fx:id="exitButtonHBox" spacing="10" alignment="CENTER">
+        <JFXButton fx:id="exitToMenuButton" text="Exit to Menu" buttonType="RAISED" styleClass="secondary-button"/>
+        <JFXButton fx:id="exitToDesktopButton" text="Exit to Desktop" buttonType="RAISED" styleClass="danger-button"/>
+    </HBox>
+</VBox>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import com.jfoenix.controls.JFXButton?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="no.ntnu.idatg2001.frontend.dialogControllers.GoalsDialogController"
+      spacing="12"
+      alignment="CENTER"
+      stylesheets="@/css/common-dialog.css"
+      styleClass="dialog-root">
+
+    <!-- Header with title and close button -->
+    <HBox spacing="10" alignment="CENTER_LEFT" styleClass="header-bar">
+        <Label fx:id="titleLabel" text="Goals" styleClass="dialog-title"/>
+        <Pane HBox.hgrow="ALWAYS" />
+        <JFXButton fx:id="closeButton" text="✕" onAction="#onCloseButtonPressed" buttonType="RAISED" styleClass="secondary-button"/>
+    </HBox>
+
+    <!-- Scrollable goals list -->
+    <ScrollPane fitToWidth="true" prefHeight="300">
+        <VBox fx:id="goalsVBox" spacing="5">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+        </VBox>
+    </ScrollPane>
+
+    <!-- Action buttons -->
+    <HBox spacing="12" alignment="CENTER">
+        <JFXButton fx:id="endGameButton" text="End Game" onAction="#onEndGameButtonPressed" buttonType="RAISED" styleClass="primary-button"/>
+        <JFXButton fx:id="restartButton" text="Restart" onAction="#onRestartButtonPressed" buttonType="RAISED" styleClass="secondary-button"/>
+        <JFXButton fx:id="cancelButton" text="OK" onAction="#onCancelButtonPressed" buttonType="RAISED" styleClass="secondary-button"/>
+    </HBox>
+
+</VBox>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane styleClass="dialog-root" stylesheets="@../../css/addGoalDialog.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/25" fx:controller="no.ntnu.idatg2001.frontend.dialogControllers.AddGoalDialogController">
+
+    <VBox alignment="CENTER" focusTraversable="true" maxWidth="450" spacing="20">
+        <!-- Header -->
+        <Label styleClass="dialog-header" text="%addGoal.title" />
+
+        <!-- Goal type selection with icon -->
+        <HBox alignment="CENTER_LEFT" spacing="15">
+            <VBox spacing="5">
+                <Label text="%addGoal.goalType" textFill="WHITE" />
+                <ComboBox fx:id="goalTypeComboBox" prefWidth="250" promptText="%addGoal.goalTypePlaceholder">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets></ComboBox>
+            <padding>
+               <Insets left="10.0" />
+            </padding>
+            </VBox>
+        </HBox>
+
+        <!-- Value input -->
+        <VBox alignment="CENTER_LEFT" spacing="5">
+            <Label text="%addGoal.value" textFill="#f8f8f8" />
+            <TextField fx:id="goalValueField" prefWidth="250" promptText="%addGoal.value" styleClass="text-field" stylesheets="@../../css/addGoalDialog.css" />
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+        </VBox>
+
+        <!-- Preview -->
+        <Label fx:id="previewLabel" styleClass="dialog-preview" text="Preview: " />
+
+        <!-- Buttons -->
+        <HBox alignment="CENTER_RIGHT" spacing="15">
+            <Button fx:id="addButton" onAction="#onAddButtonPressed" styleClass="dialog-button" text="%addGoal.addButton" />
+            <Button fx:id="cancelButton" onAction="#onCancelButtonPressed" styleClass="dialog-back-button" text="%addGoal.cancelButton" />
+        </HBox>
+    </VBox>
+</StackPane>

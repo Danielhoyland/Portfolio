@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="no.ntnu.idatg2001.frontend.controller.EventController"
+            fx:id="rootPane"
+            stylesheets="@/css/minigame.css"
+            styleClass="mini-root"
+            prefWidth="800" prefHeight="500">
+
+    <!-- TOP BAR: Back button only -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="10" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets top="16" right="24" bottom="8" left="24"/>
+            </padding>
+
+            <!-- Back button -->
+            <Button fx:id="backButton"
+                    text="⟵ Back"
+                    onAction="#onBackButtonPressed"
+                    styleClass="secondary-button"/>
+
+            <Region HBox.hgrow="ALWAYS"/>
+        </HBox>
+    </top>
+
+    <!-- CENTER: Card with everything -->
+    <center>
+        <VBox alignment="CENTER" BorderPane.alignment="CENTER">
+            <StackPane maxWidth="700" maxHeight="400" styleClass="card-root">
+                <VBox spacing="18" alignment="TOP_CENTER">
+                    <padding>
+                        <Insets top="24" right="24" bottom="24" left="24"/>
+                    </padding>
+
+                    <!-- Title -->
+                    <Label fx:id="eventHeader"
+                           styleClass="header-label"
+                           maxWidth="Infinity"
+                           alignment="CENTER"/>
+
+                    <!-- TIMER ROW: label + big progress bar -->
+                    <HBox spacing="10" alignment="CENTER">
+                        <padding>
+                            <Insets top="4" bottom="4"/>
+                        </padding>
+
+                        <Label fx:id="timerLabel"
+                               styleClass="timer-label"
+                               alignment="CENTER_RIGHT"/>
+
+                        <ProgressBar fx:id="timerBar"
+                                     styleClass="timer-bar"
+                                     prefWidth="320"
+                                     maxWidth="320"
+                                     progress="1.0"/>
+                    </HBox>
+
+                    <!-- Info label (difficulty, retries, etc.) -->
+                    <Label fx:id="infoLabel"
+                           styleClass="info-label"
+                           wrapText="true"
+                           maxWidth="650"/>
+
+                    <!-- Question text -->
+                    <Label fx:id="questionLabel"
+                           styleClass="question-label"
+                           wrapText="true"
+                           maxWidth="650"/>
+
+                    <!-- Options list -->
+                    <VBox fx:id="optionsBox"
+                          spacing="10"
+                          alignment="CENTER"
+                          maxWidth="Infinity"/>
+
+                    <!-- Text input + submit row -->
+                    <VBox spacing="8" alignment="CENTER">
+                        <TextField fx:id="inputField"
+                                   styleClass="answer-field"
+                                   promptText="Your answer…"
+                                   maxWidth="450"
+                                   visible="false"/>
+
+                        <Button fx:id="submitButton"
+                                text="Submit"
+                                styleClass="primary-button"
+                                maxWidth="150"
+                                visible="false"/>
+                    </VBox>
+
+                    <!-- Feedback text -->
+                    <Label fx:id="feedbackLabel"
+                           styleClass="feedback-label"
+                           wrapText="true"
+                           maxWidth="650"/>
+
+                    <Label fx:id="resultMessageLabel"
+                           styleClass="result-label"
+                           wrapText="true"
+                           maxWidth="650"
+                           visible="false"/>
+
+                    <Label fx:id="unitsEarnedLabel"
+                           styleClass="rewards-label"
+                           wrapText="true"
+                           maxWidth="650"
+                           visible="false"/>
+
+                    <!-- Bottom buttons: Next event -->
+                    <HBox spacing="10" alignment="CENTER_RIGHT" maxWidth="Infinity">
+                        <Region HBox.hgrow="ALWAYS"/>
+                        <Button fx:id="nextButton"
+                                text="Next Event"
+                                visible="false"
+                                styleClass="secondary-button"
+                                maxWidth="150"/>
+                    </HBox>
+                </VBox>
+            </StackPane>
+        </VBox>
+    </center>
+
+</BorderPane>

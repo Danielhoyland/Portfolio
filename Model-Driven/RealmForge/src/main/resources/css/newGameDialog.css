@@ -1,0 +1,42 @@
+.dialog-root {
+    -fx-background-color: rgba(0, 0, 0, 0.2);
+    -fx-background-radius: 20px;
+    -fx-padding: 30px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 20, 0, 0, 4);
+}
+
+.dialog-header {
+    -fx-text-fill: white;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+
+.dialog-button {
+    -fx-background-color: #4D4D4D;
+    -fx-text-fill: white;
+    -fx-background-radius: 25px;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 16px;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+}
+
+.dialog-button:hover {
+    -fx-background-color: #808080;
+}
+
+.dialog-back-button {
+    -fx-background-color: #3a3a3a;
+    -fx-text-fill: #FFFFFF;
+    -fx-background-radius: 20px;
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-padding: 5 15;
+}
+
+.dialog-back-button:hover {
+    -fx-background-color: #555555;
+}
+

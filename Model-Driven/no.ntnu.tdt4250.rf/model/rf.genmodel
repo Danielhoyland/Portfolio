@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/no.ntnu.tdt4250.rf/src-gen" creationIcons="false"
+    editDirectory="/no.ntnu.tdt4250.rf.edit/src-gen" editorDirectory="/no.ntnu.tdt4250.rf.editor/src-gen"
+    modelPluginID="no.ntnu.tdt4250.rf" modelName="Rf" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="21.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>rf.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Rf" basePackage="no.ntnu.tdt4250" disposableProviderFactory="true"
+      ecorePackage="rf.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="rf.ecore#//Difficulty">
+      <genEnumLiterals ecoreEnumLiteral="rf.ecore#//Difficulty/EASY"/>
+      <genEnumLiterals ecoreEnumLiteral="rf.ecore#//Difficulty/NORMAL"/>
+      <genEnumLiterals ecoreEnumLiteral="rf.ecore#//Difficulty/HARD"/>
+    </genEnums>
+    <genClasses ecoreClass="rf.ecore#//EventPack">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rf.ecore#//EventPack/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rf.ecore#//EventPack/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rf.ecore#//EventPack/unit"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference rf.ecore#//EventPack/events"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="rf.ecore#//Event">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rf.ecore#//Event/difficulty"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rf.ecore#//Event/timeLimit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rf.ecore#//Event/retries"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference rf.ecore#//Event/result"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rf.ecore#//Event/eventpack"/>
+    </genClasses>
+    <genClasses ecoreClass="rf.ecore#//TypeRacerEvent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rf.ecore#//TypeRacerEvent/sentence"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rf.ecore#//TypeRacerEvent/isCaseSensitive"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute rf.ecore#//TypeRacerEvent/timeToTypeSentence"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="rf.ecore#//QuestionEvent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rf.ecore#//QuestionEvent/question"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference rf.ecore#//QuestionEvent/options"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute rf.ecore#//QuestionEvent/multipleChoice"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute rf.ecore#//QuestionEvent/multipleCorrectAnswers"/>
+    </genClasses>
+    <genClasses ecoreClass="rf.ecore#//Option">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rf.ecore#//Option/text"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rf.ecore#//Option/isCorrectAnswer"/>
+    </genClasses>
+    <genClasses ecoreClass="rf.ecore#//EventResult">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute rf.ecore#//EventResult/message"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute rf.ecore#//EventResult/unitsEarnedMessage"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference rf.ecore#//EventResult/event"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,79 @@
+name KidsMathPack
+description "A child-friendly math practice set with simple arithmetic challenges 🧮✨"
+unit "stars ⭐"
+
+QuestionEvent{
+	difficulty EASY
+	retries 3 
+	question "Which numbers are even?"
+	result {
+		message "Correct!"
+	}
+	options {
+		{ text "2" isCorrectAnswer },
+		{ text "4" isCorrectAnswer },
+		{ text "7" },
+		{ text "9" }
+	}
+}
+
+QuestionEvent{
+	difficulty EASY
+	retries 3 
+	question "What is 3 + 4?"
+	result {
+		message "Great adding skills!"
+	}
+	options {
+		{ text "7" isCorrectAnswer },
+		{ text "6" },
+		{ text "9" },
+		{ text "8" }
+	}
+}
+
+QuestionEvent{
+	difficulty EASY
+	retries 3 
+	question "What is 12 - 5?"
+	result {
+		message "Subtraction master!"
+	}
+	options {
+		{ text "7" isCorrectAnswer },
+		{ text "5" },
+		{ text "8" },
+		{ text "9" }
+	}
+}
+
+QuestionEvent{
+	difficulty EASY
+	retries 3 
+	question "How many sides does a triangle have?"
+	result {
+		message "You know your shapes!"
+	}
+	options {
+		{ text "3" isCorrectAnswer },
+		{ text "4" },
+		{ text "5" },
+		{ text "6" }
+	}
+}
+
+QuestionEvent{
+	difficulty EASY
+	retries 3 
+	question 
+	"What is the value of 5 × 2?"
+	result {
+		message "Multiplication hero!"
+	}
+	options {
+		{ text "10" isCorrectAnswer },
+		{ text "12" },
+		{ text "8" },
+		{ text "15" }
+	}
+}

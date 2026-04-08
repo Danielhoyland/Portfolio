@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="no.ntnu.idatg2001.frontend.dialogControllers.YouDiedDialogController"
+      spacing="20"
+      alignment="CENTER"
+      style="-fx-background-color: rgba(0,0,0,0.85); -fx-padding: 40; -fx-border-radius: 10; -fx-background-radius: 10;">
+
+    <!-- Title -->
+    <Label fx:id="titleLabel" text="You Died!" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #FF5555;" />
+
+    <!-- Message -->
+    <Label fx:id="messageLabel" text="Your unit has fallen. Choose an option to continue." style="-fx-font-size: 16px; -fx-text-fill: white;" wrapText="true" maxWidth="400"/>
+
+    <!-- Buttons -->
+    <HBox fx:id="buttonHBox" spacing="15" alignment="CENTER">
+        <JFXButton fx:id="retryButton" text="Retry" prefWidth="120"/>
+        <JFXButton fx:id="mainMenuButton" text="Main Menu" prefWidth="120"/>
+    </HBox>
+</VBox>

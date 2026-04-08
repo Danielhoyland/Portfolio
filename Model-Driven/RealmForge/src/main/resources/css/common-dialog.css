@@ -1,0 +1,86 @@
+/* Common dialog styling for all modal dialogs */
+
+.dialog-root {
+  -fx-background-color: rgba(20,20,20,0.98);
+  -fx-background-radius: 14;
+  -fx-border-radius: 14;
+  -fx-padding: 18;
+  -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 24, 0.2, 0, 6);
+}
+
+/* Ensure high-contrast text by default inside dialogs */
+.dialog-root .label { -fx-text-fill: #f0f0f0; }
+.dialog-root .text { -fx-fill: #f0f0f0; }
+
+.dialog-title {
+  -fx-text-fill: #ffffff;
+  -fx-font-size: 18px;
+  -fx-font-weight: bold;
+}
+
+.dialog-text { -fx-text-fill: #e2e2e2; }
+
+.header-bar {
+  -fx-alignment: CENTER_LEFT;
+}
+
+/* Table dark theme tweaks */
+.table-view {
+  -fx-background-color: transparent;
+  -fx-control-inner-background: rgba(16,16,16,0.98);
+  -fx-background-insets: 0;
+  -fx-text-background-color: #f0f0f0;
+  -fx-padding: 0.0em;
+  -fx-background-radius: 10;
+}
+.table-view:focused { -fx-background-color: transparent; }
+.table-view .column-header-background { -fx-background-color: rgba(60,60,60,0.98); }
+.table-view .column-header, .table-view .filler { -fx-size: 32px; }
+.table-row-cell { -fx-background-color: transparent; }
+.table-row-cell:odd { -fx-background-color: rgba(255,255,255,0.03); }
+.table-row-cell:selected { -fx-background-color: #3b6c92; }
+
+/* JFoenix button styles */
+.jfx-button {
+  -fx-text-fill: #f3f4f6;
+}
+
+.primary-button {
+  -fx-background-color: #3b82f6;
+  -fx-background-radius: 8;
+  -fx-text-fill: white;
+}
+.primary-button:hover { -fx-background-color: #2563eb; }
+.primary-button:pressed { -fx-background-color: #1d4ed8; }
+
+.secondary-button {
+  -fx-background-color: #6b7280;
+  -fx-background-radius: 8;
+  -fx-text-fill: white;
+}
+.secondary-button:hover { -fx-background-color: #4b5563; }
+.secondary-button:pressed { -fx-background-color: #374151; }
+
+.danger-button {
+  -fx-background-color: #ef4444;
+  -fx-background-radius: 8;
+  -fx-text-fill: white;
+}
+.danger-button:hover { -fx-background-color: #dc2626; }
+.danger-button:pressed { -fx-background-color: #b91c1c; }
+
+/* Choice buttons in GameView */
+.choice-button {
+  -fx-background-color: #374151;
+  -fx-background-radius: 8;
+  -fx-text-fill: #f3f4f6;
+  -fx-padding: 10 16 10 16;
+}
+.choice-button:hover { -fx-background-color: #4b5563; }
+.choice-button:pressed { -fx-background-color: #1f2937; }
+
+/* ScrollPane tweaks for dark theme */
+.scroll-pane {
+  -fx-background-color: transparent;
+}
+.scroll-pane > .viewport { -fx-background-color: transparent; }

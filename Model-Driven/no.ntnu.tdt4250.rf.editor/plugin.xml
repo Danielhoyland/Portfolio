@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated rf -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="no.ntnu.tdt4250.rf.presentation.RfModelWizardID"
+            name="%_UI_RfModelWizard_label"
+            class="no.ntnu.tdt4250.rf.presentation.RfModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/RfModelFile.gif">
+         <description>%_UI_RfModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated rf -->
+      <editor
+            id="no.ntnu.tdt4250.rf.presentation.RfEditorID"
+            name="%_UI_RfEditor_label"
+            icon="icons/full/obj16/RfModelFile.gif"
+            extensions="rf"
+            class="no.ntnu.tdt4250.rf.presentation.RfEditor"
+            contributorClass="no.ntnu.tdt4250.rf.presentation.RfActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

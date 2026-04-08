@@ -1,0 +1,71 @@
+name LotRPack
+description "A collection of challenges inspired by Middle-earth 🧙‍♂️🗡️"
+unit "gold 🪙"
+
+TypeRacerEvent {	
+	isCaseSensitive
+	difficulty HARD
+	timeLimit 20.0
+	retries 3
+	sentence "One ring to rule them all, one ring to find them"
+	result {
+		message "You wield the power of the Ring!"
+	}
+}
+
+
+
+TypeRacerEvent {	
+	difficulty NORMAL
+	timeLimit 15.0
+	retries 3
+	sentence "Not all those who wander are lost"
+	result {
+		message "A true wanderer of Middle-earth!"
+	}
+}
+
+
+
+QuestionEvent{
+	difficulty HARD
+	retries 3 
+	question "Which characters were members of the Fellowship of the Ring?"
+	result {
+		message "You know your Fellowship!"
+	}
+	options {
+		{ text "Aragorn" isCorrectAnswer },
+		{ text "Gandalf" isCorrectAnswer },
+		{ text "Legolas" isCorrectAnswer },
+		{ text "Denethor" }
+	}
+}
+
+QuestionEvent{
+	difficulty HARD
+	retries 3 
+	question "What is the name of Frodo's loyal gardener who accompanies him to Mordor?"
+	result {
+		message "You know your hobbits well!"
+	}
+	options {
+		{ text "Samwise" isCorrectAnswer },
+		{ text "Pippin" },
+		{ text "Merry" },
+		{ text "Bilbo" }
+	}
+}
+
+QuestionEvent{
+	difficulty HARD
+	retries 3
+	question 
+	"I am alive without breath, as cold as death; I am never thirsty, though I always drink. What am I?"
+	result {
+		message "A riddle worthy of Gollum."
+	}
+	options {
+		{ text "Fish" isCorrectAnswer }
+	}
+}

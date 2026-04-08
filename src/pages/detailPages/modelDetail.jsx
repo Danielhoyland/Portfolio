@@ -21,7 +21,7 @@ export default function AlbumDetails() {
           <p>
             <a
               className="highlight-link"
-              href="https://www.ntnu.edu/studies/courses/TDT4250"
+              href="https://www.ntnu.edu/studies/courses/TDT4250#tab=omEmnet"
               target="_blank"
               rel="noopener noreferrer"
             >

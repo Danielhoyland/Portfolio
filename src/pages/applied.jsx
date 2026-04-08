@@ -27,4 +27,4 @@ const Applied = () => {
             );
 };
 
-export default Cloud;
+export default Applied;

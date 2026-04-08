@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: no.ntnu.tdt4250.rfdsl
+Bundle-ManifestVersion: 2
+Bundle-Name: no.ntnu.tdt4250.rfdsl
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: no.ntnu.tdt4250.rfdsl; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: no.ntnu.tdt4250.rf,
+ org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.19.0",
+ org.eclipse.xtext.xbase.lib;bundle-version="2.39.0",
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)",
+ no.ntnu.tdt4250.rf.genjava;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-21
+Export-Package: no.ntnu.tdt4250.rf,
+ no.ntnu.tdt4250.rf.parser.antlr,
+ no.ntnu.tdt4250.rf.generator,
+ no.ntnu.tdt4250.rf.scoping,
+ no.ntnu.tdt4250.rf.parser.antlr.internal,
+ no.ntnu.tdt4250.rf.validation,
+ no.ntnu.tdt4250.rf.services,
+ no.ntnu.tdt4250.rf.formatting2,
+ no.ntnu.tdt4250.rf.serializer
+Import-Package: org.apache.log4j
