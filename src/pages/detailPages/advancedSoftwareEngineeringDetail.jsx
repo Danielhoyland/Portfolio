@@ -129,7 +129,7 @@ export default function AdvancedSoftwareEngineeringDetail() {
               <p>
                 <a
                   className="highlight-link"
-                  href="YOUR_GITHUB_LINK"
+                  href="https://github.com/Danielhoyland/Portfolio/tree/main/projects/Advance%20Software%20Engineering"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
