@@ -20,6 +20,17 @@ import Graphic from "./src/pages/graphic";
 import Inte from "./src/pages/integration";
 import Mobile from "./src/pages/mobile";
 import Model from "./src/pages/model";
+import Gym from "./src/pages/gym";
+import Bryllup from "./src/pages/bryllup";
+import ScriptBlackboard from "./src/pages/scriptBlackboard";
+import NotificationDiscord from "./src/pages/notificationDiscord";
+import InformationRetrieval from "./src/pages/informationRetrieval";
+import Personvern from "./src/pages/personvern";
+import CollectingCardsMaker from "./src/pages/collectingCardsMaker";
+import EkspertInTeams from "./src/pages/ekspertInTeams";
+import AdvancedSoftwareEngineering from "./src/pages/advancedSoftwareEngineering";
+import AppliedData from "./src/pages/appliedData";
+import MachineLearning from "./src/pages/machineLearning";
 import FlexGrid from './src/components/Flexcard';
 
 
@@ -50,6 +61,17 @@ const icons = [
     [<Inte />, "Bachelor", "Integration Project", ["Node.js", "React"]],
     [<Mobile />, "Bachelor", "Mobile Programming", ["Flutter", "Kotlin"]],
     [<Model />, "Master", "Model-Driven Software Engineering", ["Python"]],
+    [<Gym />, "Personal", "Gym", []],
+    [<Bryllup />, "Personal", "Bryllup", []],
+    [<ScriptBlackboard />, "Personal", "Script for Blackboard", []],
+    [<NotificationDiscord />, "Personal", "Notification Integration with Discord", []],
+    [<InformationRetrieval />, "Master", "Information Retrieval", []],
+    [<Personvern />, "Personal", "Personvern", []],
+    [<CollectingCardsMaker />, "Personal", "Collecting Cards Maker", []],
+    [<EkspertInTeams />, "Personal", "Ekspert in Teams", []],
+    [<AdvancedSoftwareEngineering />, "Master", "Advanced Software Engineering", []],
+    [<AppliedData />, "Master", "Applied Data", []],
+    [<MachineLearning />, "Master", "Machine Learning", []],
   ];
 
   // Compute grouped projects based on toggleMode
