@@ -59,7 +59,7 @@ export default function MobileProgramming() {
               <p>
                 <a
                   className="highlight-link"
-                  href="https://github.com/Danielhoyland/Portfolio/tree/main/Mobile%20-%20Kotlin/MobileProject"
+                  href="https://github.com/Danielhoyland/Portfolio/tree/main/projects/Mobile%20-%20Kotlin/MobileProject"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

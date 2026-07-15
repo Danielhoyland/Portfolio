@@ -81,7 +81,7 @@ export default function GraphicsProgramming() {
                 <em>Disclaimer</em>: Demo videos may appear laggy; higher-quality videos are available in the project code.
                 <a
                   className="highlight-link"
-                  href="https://github.com/Danielhoyland/Portfolio/tree/main/Grafikk%20-%20C%2B%2B%20OpenGL/assignment"
+                  href="https://github.com/Danielhoyland/Portfolio/tree/main/projects/Grafikk%20-%20C%2B%2B%20OpenGL/assignment"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

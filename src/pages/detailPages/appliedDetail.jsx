@@ -119,7 +119,7 @@ export default function AlbumDetails() {
               <p>
                 <a
                   className="highlight-link"
-                  href="https://github.com/Danielhoyland/Portfolio/tree/main/Applied%20datascience%20-%20Python"
+                  href="https://github.com/Danielhoyland/Portfolio/tree/main/projects/Applied%20datascience%20-%20Python"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

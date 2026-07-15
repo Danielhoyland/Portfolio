@@ -140,7 +140,7 @@ export default function AlbumDetails() {
               <p>
                 <a
                   className="highlight-link"
-                  href="https://github.com/Danielhoyland/Portfolio/tree/main/Model-Driven"
+                  href="https://github.com/Danielhoyland/Portfolio/tree/main/projects/Model-Driven"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

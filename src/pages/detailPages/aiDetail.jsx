@@ -99,7 +99,7 @@ export default function AlbumDetails() {
               <p>
                 <a
                   className="highlight-link"
-                  href="https://github.com/Danielhoyland/Portfolio/tree/main/Kunstliginteligens"
+                  href="https://github.com/Danielhoyland/Portfolio/tree/main/projects/Kunstliginteligens"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

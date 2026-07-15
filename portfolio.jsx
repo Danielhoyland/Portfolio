@@ -70,7 +70,6 @@ const icons = [
     [<CollectingCardsMaker />, "Personal", "Collecting Cards Maker", []],
     [<EkspertInTeams />, "Personal", "Ekspert in Teams", []],
     [<AdvancedSoftwareEngineering />, "Master", "Advanced Software Engineering", []],
-    [<AppliedData />, "Master", "Applied Data", []],
     [<MachineLearning />, "Master", "Machine Learning", []],
   ];
 

@@ -15,31 +15,33 @@ const AboutMe = () => {
             About Me
           </h2>
           <p className="about-lead">
-            I'm Daniel Høyland from Sandnes. I'm 23 years old and currently
-            studying a Masters degree in Informatics: Software Systems at NTNU
-            Trondheim. I recently completed my bachelor's in Programming at NTNU
+            I'm Daniel Høyland from Sandnes. I'm 24 years old and currently
+            studying a Masters degree in Informatics: Software Engineering at NTNU
+            Trondheim. I completed my bachelor's in Programming at NTNU
             Gjøvik.
           </p>
           <div className="interests">
             <InterestsSection
-              interests={["D&D", "Chess", "Board Games", "Gaming"]}
+              interests={["D&D", "Chess", "Board Games", "Gaming", "Travel", "Cooking", "Bouldering", "Gym", "Running"]}
               Interval={7000}
               staggerDuration={0.04}
             />
             <InterestsSection
+              interests={["ReactJs", "Golang", ".NET", "C", "C++", "JavaScript", "Haskell", "Rust", "Kotlin", "C#", "OpenGL", "Typescript/Tailwind", "NodeJS", "SQL", "Machine learning", "Angular","Docker", "Sever hosting"]}
+              Interval={7000}
+              staggerDuration={0.02}
+            />
+            <InterestsSection
               interests={[
+                "Agile Development",
                 "Web Development",
                 "Graphical Programming",
                 "Mobile Programming",
                 "Cloud Development",
                 "Database Management",
                 "Game Development",
+                "UX design"
               ]}
-              Interval={7000}
-              staggerDuration={0.02}
-            />
-            <InterestsSection
-              interests={["Travel", "Cooking", "Bouldering", "Gym", "Running"]}
               Interval={7000}
               staggerDuration={0.04}
             />

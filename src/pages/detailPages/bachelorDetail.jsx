@@ -160,7 +160,7 @@ export default function AlbumDetails() {
               <p>
                 <a
                   className="highlight-link"
-                  href="https://github.com/Danielhoyland/Portfolio/tree/main/Bachelor%20-%20Full%20stack"
+                  href="https://github.com/Danielhoyland/Portfolio/tree/main/projects/Bachelor%20-%20Full%20stack"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

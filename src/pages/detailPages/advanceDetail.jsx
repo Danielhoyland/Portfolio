@@ -122,7 +122,7 @@ export default function AlbumDetails() {
               <p>
                 <a
                   className="highlight-link"
-                  href="https://github.com/Danielhoyland/Portfolio/tree/main/Avansert%20-%20Rust%20Haskell"
+                  href="https://github.com/Danielhoyland/Portfolio/tree/main/projects/Avansert%20-%20Rust%20Haskell"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

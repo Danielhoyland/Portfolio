@@ -84,7 +84,7 @@ export default function IntegrationProject() {
               <p>
                 <a
                   className="highlight-link"
-                  href="https://github.com/Danielhoyland/Portfolio/tree/main/Intergrasjon%20-%20Full%20stack"
+                  href="https://github.com/Danielhoyland/Portfolio/tree/main/projects/Intergrasjon%20-%20Full%20stack"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

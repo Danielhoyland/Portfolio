@@ -36,6 +36,7 @@ import WisgateLogo from "../svg/wisgate_logo.svg";
 import ShadcnLogo from "../svg/shadcn_logo.svg";
 import ChirpStackLogo from "../svg/ChirpStack_logo.svg";
 import FirebaseLogo from "../svg/Firebase_logo.svg";
+import JavaScriptLogo from "../svg/JavaScript_logo.svg"
 
 const iconStyle = { width: "24px", height: "24px" };
 
@@ -136,4 +137,7 @@ export const ChirpStackIcon = (
 );
 export const FirebaseIcon = (
   <img src={FirebaseLogo} alt="Firebase Logo" style={iconStyle} />
+);
+export const JavaScriptIcon = (
+  <img src={JavaScriptLogo} alt="Javascript Logo" style={iconStyle} />
 );

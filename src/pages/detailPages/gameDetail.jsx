@@ -86,7 +86,7 @@ export default function GameProgramming() {
               <p>
                 <a
                   className="highlight-link"
-                  href="https://github.com/Danielhoyland/Portfolio/tree/main/Gameprog%20-%20c%23%20Unity"
+                  href="https://github.com/Danielhoyland/Portfolio/tree/main/projects/Gameprog%20-%20c%23%20Unity"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

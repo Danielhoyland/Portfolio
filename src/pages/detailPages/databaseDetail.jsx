@@ -93,7 +93,7 @@ export default function DatabaseSystems() {
               <p>
                 <a
                   className="highlight-link"
-                  href="https://github.com/Danielhoyland/Portfolio/tree/main/Database"
+                  href="https://github.com/Danielhoyland/Portfolio/tree/main/projects/Database"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
