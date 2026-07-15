@@ -84,7 +84,6 @@ export default function AdvancedSoftwareEngineeringDetail() {
             <h3 className="subsection-title">Programming Languages</h3>
             <ul className="custom-list">
               <li>JavaScript</li>
-              <li>TypeScript</li>
             </ul>
           </div>
         </section>
@@ -126,8 +125,7 @@ export default function AdvancedSoftwareEngineeringDetail() {
                 quality assurance.
               </p>
 
-              {/* Replace with your repository if public */}
-              {/* 
+
               <p>
                 <a
                   className="highlight-link"
@@ -138,7 +136,6 @@ export default function AdvancedSoftwareEngineeringDetail() {
                   View the project on GitHub
                 </a>
               </p>
-              */}
             </div>
           </div>
         </section>
