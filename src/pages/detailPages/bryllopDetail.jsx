@@ -9,24 +9,47 @@ export default function BryllopDetail() {
         <section className="description-section">
           <h2 className="section-title">Project Overview</h2>
           <p>
-            My sister wanted a website for both PC and Phones where one could
-            see the wedding program, the food menu, the seating map and find
-            easily where one self sits and song texts. She wanted it in the
-            style of the wedding invitation in addition to be a website that
-            didn't cost any money to host.
+            My sister wanted a wedding website that worked well on both desktop
+            and mobile devices. The website needed to display the wedding
+            program, menu, seating arrangements, song lyrics, and make it easy
+            for guests to find where they were seated.
+          </p>
+          <p>
+            She also wanted the website to match the style of the wedding
+            invitation while remaining completely free to host.
           </p>
         </section>
 
         {/* Learning and Technology Section */}
         <section className="learning-tech-section">
+          <div className="what-i-learned">
+            <h2 className="section-title">Key Takeaways</h2>
+            <p>
+              This project gave me experience designing a website for
+              non-technical users with a strong focus on usability, responsive
+              design, and creating a polished visual experience that matched an
+              existing design language.
+            </p>
+            <ul className="custom-list">
+              <li>Designed a responsive user interface for mobile and desktop</li>
+              <li>Created a consistent design based on an existing invitation</li>
+              <li>Configured automatic deployment using GitHub Pages</li>
+            </ul>
+          </div>
+
           <div className="tech-used">
             <h3 className="subsection-title">Technologies & Tools</h3>
             <ul className="custom-list">
-              <li>github-pages</li>
+              <li>React</li>
+              <li>GitHub Pages</li>
+              <li>GitHub Actions</li>
             </ul>
+
             <h3 className="subsection-title">Programming Languages</h3>
             <ul className="custom-list">
-              <li>React</li>
+              <li>JavaScript</li>
+              <li>HTML</li>
+              <li>CSS</li>
             </ul>
           </div>
         </section>
@@ -36,25 +59,30 @@ export default function BryllopDetail() {
           <div className="row">
             <div className="text">
               <h3 className="section-title">Project Details</h3>
+
               <p>
-                I started by making a template based on the wedding invitation
-                with the color themes and the style with lines and text fonts,
-                in addition to add a title that was fitting for a wedding. This
-                was done in react.
+                I began by creating a template inspired by the wedding
+                invitation, recreating its colors, typography, and decorative
+                elements to provide a consistent visual identity. The entire
+                interface was built using React.
               </p>
+
               <p>
-                After that I set up a workflow to automatically push changes
-                from main to github-pages and tinker with the URL to not having
-                "github" in the URL. Since it cost money with a domain the URL
-                stayed unchanged.
+                Once the design was complete, I configured automatic deployment
+                with GitHub Pages so every change pushed to the main branch was
+                published automatically. I also explored using a custom domain,
+                but decided against it since the project was intended to remain
+                completely free to host.
               </p>
+
               <p>
-                After that I waited on the data she wanted in and added it when
-                i got it, where my focus was on usability and styling both on
-                desktop and especially on a phone view. Additional functionality
-                was added, like scrolling on song text, navigation and a custom
-                navigation for the seating map.
+                As the wedding details became available, I gradually added new
+                content while keeping usability as the main priority. The final
+                website included responsive navigation, searchable seating
+                arrangements, song lyrics with smooth scrolling, and layouts
+                optimized for both desktop and mobile devices.
               </p>
+
               <p>
                 <a
                   className="highlight-link"
@@ -62,7 +90,7 @@ export default function BryllopDetail() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  View on GitHub
+                  View the project on GitHub
                 </a>
               </p>
             </div>
