@@ -8,7 +8,7 @@ const EkspertInTeams = () => {
     <TiltedCard
                 imageList={[]}
                 captionText="Ekspert in Teams"
-                svgIcons={[ReactIcon, MySqlIcon, MarsIcon, GoIcon, TypeScriptIcon]}
+                svgIcons={[ReactIcon, MySqlIcon, GoIcon, TypeScriptIcon]}
                 hoverText="Click for details"
                 modalContent={<AlbumDetails />}
               />
