@@ -29,7 +29,6 @@ import Personvern from "./src/pages/personvern";
 import CollectingCardsMaker from "./src/pages/collectingCardsMaker";
 import EkspertInTeams from "./src/pages/ekspertInTeams";
 import AdvancedSoftwareEngineering from "./src/pages/advancedSoftwareEngineering";
-import AppliedData from "./src/pages/appliedData";
 import MachineLearning from "./src/pages/machineLearning";
 import FlexGrid from './src/components/Flexcard';
 
