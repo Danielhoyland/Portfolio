@@ -9,7 +9,7 @@ export default function EkspertInTeamsDetail() {
         <section className="description-section">
           <h2 className="section-title">Project Overview</h2>
           <p>
-            Add project description here.
+            This subject has a goal of
           </p>
         </section>
 

@@ -1,3 +1,4 @@
+import { JavaScriptIcon } from "../components/IconComponent.jsx";
 import TiltedCard from "../components/TitledCard.jsx";
 import AlbumDetails from "./detailPages/scriptBlackboardDetail.jsx"; 
 
@@ -6,7 +7,7 @@ const ScriptBlackboard = () => {
     <TiltedCard
                 imageList={[]}
                 captionText="Script for Blackboard"
-                svgIcons={[]}
+                svgIcons={[JavaScriptIcon]}
                 hoverText="Click for details"
                 modalContent={<AlbumDetails />}
               />
