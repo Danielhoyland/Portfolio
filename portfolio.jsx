@@ -67,7 +67,7 @@ const icons = [
     [<InformationRetrieval />, "Master", "Information Retrieval", []],
     [<Personvern />, "Personal", "Personvern", []],
     [<CollectingCardsMaker />, "Personal", "Collecting Cards Maker", []],
-    [<EkspertInTeams />, "Personal", "Ekspert in Teams", []],
+    [<EkspertInTeams />, "Master", "Ekspert in Teams", []],
     [<AdvancedSoftwareEngineering />, "Master", "Advanced Software Engineering", []],
     [<MachineLearning />, "Master", "Machine Learning", []],
   ];
@@ -126,47 +126,38 @@ const categoryOrder = ["Personal", "Master", "Bachelor"];
     setToggleMode((prev) => (prev + 1) % 3);
   };
     const CurrentIcon = icons[index].component;
+  const sortControl = (
+    <div className="sort-control">
+      <label htmlFor="sort-select">Sort by:</label>
+      <select
+        id="sort-select"
+        value={sortMode}
+        onChange={(e) => setSortMode(e.target.value)}
+      >
+        <option value="category">Project Type</option>
+        <option value="technology">Programming Language / Technology</option>
+        <option value="none">None</option>
+      </select>
+    </div>
+  );
+
   return (
     <>
       <Header />
       <main className="portfolio-content">
         <AboutMe />
 
-       <div
-  style={{
-    display: "flex",
-    alignItems: "center",
-    gap: "12px",
-    marginBottom: "24px",
-  }}
->
-  <label htmlFor="sort-select" style={{ fontWeight: 600 }}>
-    Sort by:
-  </label>
-
-  <select
-    id="sort-select"
-    value={sortMode}
-    onChange={(e) => setSortMode(e.target.value)}
-    style={{
-      padding: "8px 12px",
-      borderRadius: "8px",
-      border: "1px solid #ccc",
-      fontSize: "1rem",
-    }}
-  >
-    <option value="category">Project Type</option>
-    <option value="technology">Programming Language / Technology</option>
-    <option value="none">None</option>
-  </select>
-</div>
-
         {sortMode === "none" ? (
-  <FlexGrid gap="16px">
-    {groupedProjects.map(([Component], idx) => (
-      <div key={idx}>{Component}</div>
-    ))}
-  </FlexGrid>
+  <>
+    <div className="group-heading-row group-heading-row--controls-only">
+      {sortControl}
+    </div>
+    <FlexGrid gap="16px">
+      {groupedProjects.map(([Component], idx) => (
+        <div key={idx}>{Component}</div>
+      ))}
+    </FlexGrid>
+  </>
 ) : (
   Object.keys(groupedProjects)
     .sort((a, b) => {
@@ -176,10 +167,12 @@ const categoryOrder = ["Personal", "Master", "Bachelor"];
       }
       return a.localeCompare(b);
     })
-    .map((group) => (
+    .map((group, groupIndex) => (
       <div key={group} style={{ marginBottom: "24px" }}>
-        <h2>{group}</h2>
-
+        <div className="group-heading-row">
+          <h2>{group}</h2>
+          {groupIndex === 0 && sortControl}
+        </div>
         <FlexGrid gap="16px">
           {groupedProjects[group].map(([Component], idx) => (
             <div key={idx}>{Component}</div>
