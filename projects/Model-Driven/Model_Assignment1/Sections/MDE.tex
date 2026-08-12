@@ -1,0 +1,19 @@
+\section{Possible Extensions Using MDE}
+\subsection{Generalization}
+
+Much of the project currently has its functionality hardcoded in the backend and frontend. To generalize the project further,some parts of the application could instead be described by models, which may conform to a domain metamodel like "food items", "expiration date", and "recipes".
+
+An example is a Recipe Model that could define the structure of a recipe. The structure could describe title, steps, required ingredients, and optionally metadata like tags, difficulty, or preparation time. Instead of having a makeshift and clunky way to make steps and description based on frontend processing, the application could instead interpret the model to support recipes in a more systematic way:
+\begin{itemize}
+    \item By generating code API endpoints/react components from the model
+    \item By interpreting the model the model structure at run-time to dynamically build forms, ingredient lists, and UI layouts
+\end{itemize}
+
+Another model we can define, that more different from the recipe page is an Inventory/Alert page. This could capture which item attributes to track like expiration date, nutrition, or quantity. It could also track what would trigger a alert like warning for food 3 days before expiration date or if you begin to run empty on like flour. Right now, the only "alert" is a hardcoded list of soon expiring food items on the inventory page. With a model based approach, users could even customize their own inventory view or define personalized alert rules.
+
+\subsection{Modifying the application behavior}
+
+First thing I would try is the Code generation approach. It could be the model-to-text(M2T) approach. With a high-level model of recipes the application could generate boilerplate CRUD operations, form layouts, and API endpoints. This would dramatically reduce repetitive coding in the project so the modularity and extension of the program is easier to implement. So in practice this would let me get a better systematic way to structure, store and implement this recipe page.
+
+Second thing we could try is the Interpretation approach. The application could store the model in a DSL, like a custom Ecore model. At run-time, the app interprets the model to configure behaviors dynamically to for example, automatically displaying new item types in the UI or updating expiration logic without redeployment. For the Inventory/Alert model, it could allow the application to adapt its behavior on the fly. If the user defines a new type of alert for example notifying when there is less than 2 liters of milk, the model interpreter could immediately update the alert system without requiring changes in the backend logic.
+

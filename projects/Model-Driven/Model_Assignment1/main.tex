@@ -1,0 +1,20 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{packages}
+\usepackage{verbatim}
+\usepackage{tikz}
+\usepackage{pdflscape} % in the preamble
+
+\usetikzlibrary{trees,shapes}
+\begin{document}
+
+\import{./Sections/}{Frontpage}
+
+\tableofcontents
+\newpage
+\import{./Sections/}{Description}
+\import{./Sections/}{Features}
+\import{./Sections/}{Variability mechanisms}
+\import{./Sections/}{MDE}
+
+\end{document}

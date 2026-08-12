@@ -29,9 +29,9 @@ import Personvern from "./src/pages/personvern";
 import CollectingCardsMaker from "./src/pages/collectingCardsMaker";
 import EkspertInTeams from "./src/pages/ekspertInTeams";
 import AdvancedSoftwareEngineering from "./src/pages/advancedSoftwareEngineering";
-import AppliedData from "./src/pages/appliedData";
 import MachineLearning from "./src/pages/machineLearning";
 import FlexGrid from './src/components/Flexcard';
+
 
 
 const Portfolio = () => {
@@ -46,14 +46,14 @@ const icons = [
 
 
 
-  const [toggleMode, setToggleMode] = useState(0);
+  const [sortMode, setSortMode] = useState("category");
 
   const projectArray = [
     [<Advance />, "Bachelor", "Advance Programming", ["Haskell", "Rust", "SDL2", "Go"]],
     [<AI />, "Bachelor", "AI", ["Python", "TensorFlow"]],
     [<Applied />, "Master", "Applied Data Science", ["Python"]],
     //[<Algo />, "Bachelor", "Algorithms", ["C++", "Python"]],
-    [<Bach />, "Bachelor", "Bachelor", []],
+    [<Bach />, "Bachelor", "Bachelor", ["React", "Go", "MySQL"]],
     [<Cloud />, "Bachelor", "Cloud Programming", ["AWS", "Docker"]],
     [<DB />, "Bachelor", "Database", ["SQL", "MongoDB"]],
     [<Game />, "Bachelor", "GameProg", ["C#", "Unity"]],
@@ -61,52 +61,60 @@ const icons = [
     [<Inte />, "Bachelor", "Integration Project", ["Node.js", "React"]],
     [<Mobile />, "Bachelor", "Mobile Programming", ["Flutter", "Kotlin"]],
     [<Model />, "Master", "Model-Driven Software Engineering", ["Python"]],
-    [<Gym />, "Personal", "Gym", []],
-    [<Bryllup />, "Personal", "Bryllup", []],
-    [<ScriptBlackboard />, "Personal", "Script for Blackboard", []],
+    [<Gym />, "Personal", "Gym", ["Kotlin"]],
+    [<Bryllup />, "Personal", "Wedding Website", []],
+    [<ScriptBlackboard />, "Personal", "Script for Blackboard", ["Javascript"]],
     [<NotificationDiscord />, "Personal", "Notification Integration with Discord", []],
-    [<InformationRetrieval />, "Master", "Information Retrieval", []],
-    [<Personvern />, "Personal", "Personvern", []],
-    [<CollectingCardsMaker />, "Personal", "Collecting Cards Maker", []],
-    [<EkspertInTeams />, "Personal", "Ekspert in Teams", []],
+    [<InformationRetrieval />, "Master", "Information Retrieval", ["Python", "TensorFlow"]],
+    [<Personvern />, "Master", "Software Security and Data Privacy", []],
+    [<CollectingCardsMaker />, "Personal", "Collecting Cards Maker", ["Python"]],
+    [<EkspertInTeams />, "Master", "Ekspert in Teams", ["React", "Go"]],
     [<AdvancedSoftwareEngineering />, "Master", "Advanced Software Engineering", []],
-    [<MachineLearning />, "Master", "Machine Learning", []],
+    [<MachineLearning />, "Master", "Intro to Machine Learning", ["Python", "TensorFlow"]],
   ];
 
-  // Compute grouped projects based on toggleMode
   const groupedProjects = useMemo(() => {
-    if (toggleMode === 0) {
-      // No grouping, just sort alphabetically by name
-      return projectArray
-        .slice()
-        .sort((a, b) => a[2].localeCompare(b[2]));
-    }
+  // No sorting / grouping
+  if (sortMode === "none") {
+    return projectArray;
+  }
 
-    const groups = {};
-    projectArray.forEach(([Component, category, name, techs]) => {
-      if (toggleMode === 1) {
-        // Group by category
-        if (!groups[category]) groups[category] = [];
-        groups[category].push([Component, name]);
-      } else if (toggleMode === 2) {
-        // Group by technology
-        if (techs && techs.length > 0) {
-          techs.forEach((tech) => {
-            if (!groups[tech]) groups[tech] = [];
-            groups[tech].push([Component, name]);
-          });
-        }
-      }
+  const groups = {};
+
+  if (sortMode === "category") {
+    projectArray.forEach(([Component, category, name]) => {
+      if (!groups[category]) groups[category] = [];
+      groups[category].push([Component, name]);
     });
 
-    // Sort project names within each group alphabetically
-    Object.keys(groups).forEach((key) => {
-      groups[key].sort((a, b) => a[1].localeCompare(b[1]));
-    });
+    Object.keys(groups).forEach((key) =>
+      groups[key].sort((a, b) => a[1].localeCompare(b[1]))
+    );
 
     return groups;
-  }, [toggleMode]);
+  }
 
+  if (sortMode === "technology") {
+    projectArray.forEach(([Component, category, name, techs]) => {
+      if (!techs.length) return;
+
+      techs.forEach((tech) => {
+        if (!groups[tech]) groups[tech] = [];
+        groups[tech].push([Component, name]);
+      });
+    });
+
+    Object.keys(groups).forEach((key) =>
+      groups[key].sort((a, b) => a[1].localeCompare(b[1]))
+    );
+
+    return groups;
+  }
+
+  return {};
+}, [sortMode]);
+
+const categoryOrder = ["Personal", "Master", "Bachelor"];
   // Get button label for next mode
   const getButtonText = () => {
     if (toggleMode === 0) return "Group by Category";
@@ -119,71 +127,61 @@ const icons = [
     setToggleMode((prev) => (prev + 1) % 3);
   };
     const CurrentIcon = icons[index].component;
+  const sortControl = (
+    <div className="sort-control">
+      <label htmlFor="sort-select">Sort by:</label>
+      <select
+        id="sort-select"
+        value={sortMode}
+        onChange={(e) => setSortMode(e.target.value)}
+      >
+        <option value="category">Project Type</option>
+        <option value="technology">Programming Language / Technology</option>
+        <option value="none">None</option>
+      </select>
+    </div>
+  );
+
   return (
     <>
       <Header />
       <main className="portfolio-content">
         <AboutMe />
 
-       <button
-      onClick={handleToggle}
-      style={{
-        background: "transparent",
-        border: "none",
-        cursor: "pointer",
-        padding: "8px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      <motion.div
-        key={index}
-        animate={{ rotate: icons[index].rotate, scale: 1.2 }}
-        initial={{ scale: 0.8 }}
-        transition={{ type: "spring", stiffness: 300, damping: 20 }}
-        style={{ display: "flex", alignItems: "center", justifyContent: "center" }}
-      >
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={index + "-icon"}
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.8 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            style={{ position: "absolute" }}
-          >
-            <CurrentIcon size={28} />
-          </motion.div>
-        </AnimatePresence>
-      </motion.div>
-    </button>
-
-        {toggleMode === 0 ? (
-          <FlexGrid gap="16px">
-            {groupedProjects.map(([Component, _, name], idx) => (
-              <div key={idx}> 
-                {Component}
-              </div>
-            ))}
-          </FlexGrid>
-        ) : (
-          // Grouped view (category or technology)
-          Object.keys(groupedProjects)
-            .sort() // sort group headers alphabetically
-            .map((groupKey) => (
-              <div key={groupKey} style={{ marginBottom: "24px" }}>
-                <h2>{groupKey}</h2>
-                <FlexGrid gap="16px">
-                  {groupedProjects[groupKey].map(([Component, name], idx) => (
-                    <div key={idx}>
-                      {Component}
-                    </div>
-                  ))}
-                </FlexGrid>
-              </div>
-            ))
-        )}
+        {sortMode === "none" ? (
+  <>
+    <div className="group-heading-row group-heading-row--controls-only">
+      {sortControl}
+    </div>
+    <FlexGrid gap="16px">
+      {groupedProjects.map(([Component], idx) => (
+        <div key={idx}>{Component}</div>
+      ))}
+    </FlexGrid>
+  </>
+) : (
+  Object.keys(groupedProjects)
+    .sort((a, b) => {
+      if (sortMode === "category") {
+        const order = ["Personal", "Master", "Bachelor"];
+        return order.indexOf(a) - order.indexOf(b);
+      }
+      return a.localeCompare(b);
+    })
+    .map((group, groupIndex) => (
+      <div key={group} style={{ marginBottom: "24px" }}>
+        <div className="group-heading-row">
+          <h2>{group}</h2>
+          {groupIndex === 0 && sortControl}
+        </div>
+        <FlexGrid gap="16px">
+          {groupedProjects[group].map(([Component], idx) => (
+            <div key={idx}>{Component}</div>
+          ))}
+        </FlexGrid>
+      </div>
+    ))
+)}
       </main>
       <Footer />
     </>

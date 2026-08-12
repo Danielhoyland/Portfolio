@@ -28,6 +28,36 @@ body.modal-open {
   max-width: 1800px;
 }
 
+.group-heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.group-heading-row--controls-only {
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+.sort-control {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+}
+
+.sort-control label {
+  font-weight: 600;
+}
+
+.sort-control select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font: inherit;
+}
+
 h1 {
   text-align: center;
   font-size: clamp(1.8rem, 2.5vw, 2.5rem);
