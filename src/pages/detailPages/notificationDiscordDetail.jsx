@@ -112,7 +112,7 @@ export default function NotificationDiscordDetail() {
               <p>
                 <a
                   className="highlight-link"
-                  href="#"
+                  href="https://github.com/Danielhoyland/Portfolio/tree/main/projects/DiscordBot"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

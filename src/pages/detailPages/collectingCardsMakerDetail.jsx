@@ -108,7 +108,7 @@ export default function CollectingCardsMakerDetail() {
               <p>
                 <a
                   className="highlight-link"
-                  href="https://github.com/Danielhoyland/Portfolio/tree/main/projects/collectingCards"
+                  href="https://github.com/Danielhoyland/Portfolio/tree/main/projects/collecting-cards"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

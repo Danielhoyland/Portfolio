@@ -131,7 +131,7 @@ export default function MachineLearningDetail() {
               <p>
                 <a
                   className="highlight-link"
-                  href="#"
+                  href="https://github.com/Danielhoyland/Portfolio/tree/main/projects/Introduction%20To%20Machine%20Learning"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

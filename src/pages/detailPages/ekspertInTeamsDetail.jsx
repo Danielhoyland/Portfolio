@@ -116,16 +116,16 @@ export default function EkspertInTeamsDetail() {
               </p>
 
               {/* Add report or GitHub link if public */}
-              {/* <p>
+              /* <p>
                 <a
                   className="highlight-link"
-                  href="#"
+                  href="https://github.com/Danielhoyland/Portfolio/tree/main/projects/Experts%20in%20Teams"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   View the project
                 </a>
-              </p> */}
+              </p> */
             </div>
           </div>
         </section>

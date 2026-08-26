@@ -111,7 +111,7 @@ export default function ScriptBlackboardDetail() {
               <p>
                 <a
                   className="highlight-link"
-                  href="#"
+                  href="https://github.com/Danielhoyland/Portfolio/tree/main/projects/Blackboard%20crawler%20and%20downloader"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

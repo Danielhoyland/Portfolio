@@ -103,7 +103,7 @@ export default function InformationRetrievalDetail() {
               <p>
                 <a
                   className="highlight-link"
-                  href="#"
+                  href="https://github.com/Danielhoyland/Portfolio/tree/main/projects/Information%20Retrival"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

@@ -30,6 +30,7 @@ const Bach = () => {
       ]}
       hoverText="Click for details"
       modalContent={<AlbumDetails />}
+      link={"https://github.com/Danielhoyland/Portfolio/tree/main/projects/Bachelor%20-%20Full%20stack"}
     />
   );
 };
